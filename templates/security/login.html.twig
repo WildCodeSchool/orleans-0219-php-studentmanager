@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+    <div class="form container-fluid">
+        <form class="d-flex justify-content-center" method="post">
+            <div class=" col-sm-offset-1 col-md-offset-3 col-xs-10 col-sm-6 col-md-4">
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+                <h1 class="h1 mb-3 font-weight-bold ">Hello wilder !</h1>
+                <h3>par <a target="_blank" href="https://odyssey.wildcodeschool.com/?locale=fr">wildcodeschool.com</a>
+                </h3>
+                <p>L'avenir appartient au wilder qui pointe tôt <i class="far fa-smile"></i></p>
+                <label for="inputEmail" class="sr-only">Email</label>
+                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control"
+                       placeholder="Email" required autofocus>
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password"
+                       required>
+
+                <input type="hidden" name="_csrf_token"
+                       value="{{ csrf_token('authenticate') }}"
+                >
+
+                {#
+                    Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                    See https://symfony.com/doc/current/security/remember_me.html
+
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" name="_remember_me"> Remember me
+                        </label>
+                    </div>
+                #}
+
+                <button class="btn btn-lg" type="submit">
+                    Connexion
+                </button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                <div class="justify-content-right">
+                    <a href="#">Tu as oublié ton mot de passe ?</a>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
+
