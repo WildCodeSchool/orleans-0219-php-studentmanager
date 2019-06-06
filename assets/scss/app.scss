@@ -7,3 +7,102 @@ body {
 a {
     color: $warm-color;
 }
+/* Base
+   -------------------------------------------------- */
+
+html {
+    max-width: 23em;
+    margin: 0 auto;
+    padding: 1.25em;
+    font: 100% "Helvetica Neue", sans-serif;
+    text-align: center;
+    color: #222;
+}
+a {
+    color: #f76c6c;
+}
+a:hover,
+a:focus {
+    color: #f76c6c;
+}
+
+/* Intro
+   -------------------------------------------------- */
+
+.intro {
+    margin-bottom: 0.85em;
+    border-radius: 0.25rem;
+    padding: 1.25rem;
+    font-size: 1.2em;
+    font-weight: 200;
+    text-align: center;
+    color: #f76c6c;
+}
+
+/* Today
+   -------------------------------------------------- */
+
+.today-piece {
+
+    padding: 1.6rem;
+    font-size: 1.25em;
+    text-align: center;
+    background: white;
+}
+
+/* Piece positions
+   -------------------------------------------------- */
+
+.top {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.middle {
+    border-radius: 0;
+}
+.bottom {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+
+/* Piece categories
+   -------------------------------------------------- */
+
+.day,
+.year {
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: white;
+    background: #f76c6c;
+}
+.month {
+    padding-top: 1.75rem;
+    padding-bottom: 0;
+    font-size: 3em;
+    font-weight: 200;
+    color: #f76c6c;
+}
+.date {
+    padding-top: 0;
+    padding-bottom: 1.75rem;
+    font-size: 3em;
+    font-weight: 100;
+    color: #f76c6c;
+}
+
+/* heure -----------------------------------*/
+
+#heure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 75px;
+    font-weight: 500;
+    color: #f76c6c;
+    background-color: #ffffff;
+}
