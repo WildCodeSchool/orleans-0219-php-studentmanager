@@ -12,8 +12,6 @@ class CheckinDateController extends AbstractController
      */
     public function index()
     {
-        return $this->render('checkin_date/index.html.twig', [
-            'controller_name' => 'CheckinDateController',
-        ]);
+        return $this->render('checkin_date/index.html.twig');
     }
 }

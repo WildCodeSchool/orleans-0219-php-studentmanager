@@ -11,19 +11,18 @@ a {
    -------------------------------------------------- */
 
 html {
-    max-width: 23em;
+    max-width: 70em;
     margin: 0 auto;
     padding: 1.25em;
-    font: 100% "Helvetica Neue", sans-serif;
     text-align: center;
-    color: #222;
+    color: $primary-color;
 }
 a {
-    color: #f76c6c;
+    color: $primary-color;
 }
 a:hover,
 a:focus {
-    color: #f76c6c;
+    color: $primary-color;
 }
 
 /* Intro
@@ -36,7 +35,7 @@ a:focus {
     font-size: 1.2em;
     font-weight: 200;
     text-align: center;
-    color: #f76c6c;
+    color: $primary-color;
 }
 
 /* Today
@@ -47,7 +46,7 @@ a:focus {
     padding: 1.6rem;
     font-size: 1.25em;
     text-align: center;
-    background: white;
+    background: $background-color;
 }
 
 /* Piece positions
@@ -75,27 +74,27 @@ a:focus {
     font-weight: 500;
     letter-spacing: 0.35em;
     text-transform: uppercase;
-    color: white;
-    background: #f76c6c;
+    color: $background-color;
+    background: $primary-color;
 }
 .month {
     padding-top: 1.75rem;
     padding-bottom: 0;
     font-size: 3em;
     font-weight: 200;
-    color: #f76c6c;
+    color: $primary-color;
 }
 .date {
     padding-top: 0;
     padding-bottom: 1.75rem;
     font-size: 3em;
     font-weight: 100;
-    color: #f76c6c;
+    color: $primary-color;
 }
 
-/* heure -----------------------------------*/
+/* hour -----------------------------------*/
 
-#heure {
+.hour {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,6 +102,6 @@ a:focus {
     padding: 20px;
     font-size: 75px;
     font-weight: 500;
-    color: #f76c6c;
-    background-color: #ffffff;
+    color: $primary-color;
+    background-color: $background-color;
 }
