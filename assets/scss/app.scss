@@ -70,6 +70,7 @@ footer {
   padding: 1em;
   box-sizing: inherit;
   height: 100px;
+
 }
 
 .footer {
@@ -93,34 +94,31 @@ footer {
   color: $heart-color;
 }
 
-  a {
+a {
     color: $warm-color;
-  }
+}
+/* Base
+   -------------------------------------------------- */
 
-  /* Base
-     -------------------------------------------------- */
-
-  html {
+html {
     max-width: 70em;
     margin: 0 auto;
     padding: 1.25em;
     text-align: center;
     color: $primary-color;
-  }
-
-  a {
+}
+a {
     color: $primary-color;
-  }
-
-  a:hover,
-  a:focus {
+}
+a:hover,
+a:focus {
     color: $primary-color;
-  }
+}
 
-  /* Intro
-     -------------------------------------------------- */
+/* Intro
+   -------------------------------------------------- */
 
-  .intro {
+.intro {
     margin-bottom: 0.85em;
     border-radius: 0.25rem;
     padding: 1.25rem;
@@ -128,69 +126,65 @@ footer {
     font-weight: 200;
     text-align: center;
     color: $primary-color;
-  }
+}
 
-  /* Today
-     -------------------------------------------------- */
+/* Today
+   -------------------------------------------------- */
 
-  .today-piece {
+.today-piece {
 
     padding: 1.6rem;
     font-size: 1.25em;
     text-align: center;
     background: $background-color;
-  }
+}
 
-  /* Piece positions
-     -------------------------------------------------- */
+/* Piece positions
+   -------------------------------------------------- */
 
-  .top {
+.top {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-  }
-
-  .middle {
+}
+.middle {
     border-radius: 0;
-  }
-
-  .bottom {
+}
+.bottom {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
-  }
+}
 
 
-  /* Piece categories
-     -------------------------------------------------- */
+/* Piece categories
+   -------------------------------------------------- */
 
-  .day,
-  .year {
+.day,
+.year {
     font-size: 2em;
     font-weight: 500;
     letter-spacing: 0.35em;
     text-transform: uppercase;
     color: $background-color;
     background: $primary-color;
-  }
-
-  .month {
+}
+.month {
     padding-top: 1.75rem;
     padding-bottom: 0;
     font-size: 3em;
     font-weight: 200;
     color: $primary-color;
-  }
-
-  .date {
+}
+.date {
     padding-top: 0;
     padding-bottom: 1.75rem;
     font-size: 3em;
     font-weight: 100;
     color: $primary-color;
-  }
+}
 
-  /* hour -----------------------------------*/
+/* hour -----------------------------------*/
 
-  .hour {
+.hour {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -200,5 +194,4 @@ footer {
     font-weight: 500;
     color: $primary-color;
     background-color: $background-color;
-
-  }
+}
