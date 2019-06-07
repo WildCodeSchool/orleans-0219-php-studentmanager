@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +12,7 @@
 </head>
 <body>
 {% block body %}{% endblock %}
-{#<footer>{{ include('footer.html.twig') }}</footer>#}
+<footer>{{ include('footer.html.twig') }}</footer>
 {% block javascripts %}
     {{ encore_entry_script_tags('app') }}
 {% endblock %}
