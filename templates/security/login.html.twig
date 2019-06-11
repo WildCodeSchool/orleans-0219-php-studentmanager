@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+    <div class="form container-fluid">
+        <form class="d-flex justify-content-center" method="post">
+            <div class=" col-sm-offset-1 col-md-offset-3 col-xs-10 col-sm-6 col-md-6">
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+                <h1 class="h1 mb-3 font-weight-bold ">Hello wilder !</h1>
+                <h3>par <a class="a-login" target="_blank" href="https://odyssey.wildcodeschool.com/?locale=fr">wildcodeschool.com</a>
+                </h3>
+                <p>L'avenir appartient au wilder qui pointe tôt <i class="far fa-smile"></i></p>
+                <div class="form-group">
+                    <label for="inputEmail" class="sr-only">Email</label>
+                    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control"
+                           placeholder="Email" required autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" name="password" id="inputPassword" class="form-control"
+                           placeholder="Password"
+                           required>
+                </div>
+                <input type="hidden" name="_csrf_token"
+                       value="{{ csrf_token('authenticate') }}"
+                >
+                <div class="form-group">
+                <button class="btn btn-lg btn-block" type="submit">
+                    Connexion
+                </button>
+                </div>
+                <div class="checkbox mb-3">
+                    <label for="remember_me">
+                        <input type="checkbox" name="_remember_me"> Se souvenir de moi
+                    </label>
+                </div>
+
+                <div class="justify-content-right">
+                    <a class="a-login" href="#">Tu as oublié ton mot de passe ?</a>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
+
