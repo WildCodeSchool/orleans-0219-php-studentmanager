@@ -1,9 +1,7 @@
 @import "vars";
 
-body {
-    background-color: $secondary-color;
-}
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";
 
-a {
-    color: $warm-color;
-}
+@import "./mesInformations";
+
