@@ -1,9 +1,20 @@
 @import "vars";
+@import "~bootstrap/scss/bootstrap";
 
-body {
-    background-color: $secondary-color;
-}
 
-a {
-    color: $warm-color;
+//NAVBAR//
+.navbar{
+    background-color:#f3f3f3;
 }
+.nav-item {
+    font-size: 25px;
+    margin: 8px;
+}
+.navbar-toggler{
+    text-decoration: none;
+    color: black;
+}
+.navbar-nav{
+    margin-left: 60%;
+}
+//NAVBAR//
