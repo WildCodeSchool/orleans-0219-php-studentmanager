@@ -1,4 +1,5 @@
 @import "vars";
+@import '~bootstrap/scss/bootstrap';
 
 // the ~ allows you to reference things in node_modules
 @import "~bootstrap/scss/bootstrap";
@@ -17,7 +18,7 @@ body {
   margin-bottom: 5%;
 }
 
-.btn{
+.btn-US01_create_Profil{
   border-color: white;
   color: black;
   text-decoration: none;
@@ -45,3 +46,172 @@ body {
 }
 
 
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form {
+  height: 800px;
+  margin-top: 15%;
+}
+
+.a-login {
+  color: $link-color;
+}
+
+.h1 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.28rem;
+}
+
+.btn {
+  background-color: $wild-color;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/*footer*/
+
+footer {
+  color: $footer-color;
+  padding: 1em;
+  box-sizing: inherit;
+  height: 100px;
+
+}
+
+.footer {
+  margin-bottom: 0;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+}
+
+.a-footer {
+  color: $footer-color;
+}
+
+.a-footer.hover {
+  color: $footer-color;
+  position: static;
+  text-decoration: underline;
+}
+
+.heart {
+  color: $heart-color;
+}
+
+a {
+    color: $warm-color;
+}
+/* Base
+   -------------------------------------------------- */
+
+html {
+    max-width: 70em;
+    margin: 0 auto;
+    padding: 1.25em;
+    text-align: center;
+    color: $primary-color;
+}
+a {
+    color: $primary-color;
+}
+a:hover,
+a:focus {
+    color: $primary-color;
+}
+
+/* Intro
+   -------------------------------------------------- */
+
+.intro {
+    margin-bottom: 0.85em;
+    border-radius: 0.25rem;
+    padding: 1.25rem;
+    font-size: 1.2em;
+    font-weight: 200;
+    text-align: center;
+    color: $primary-color;
+}
+
+/* Today
+   -------------------------------------------------- */
+
+.today-piece {
+
+    padding: 1.6rem;
+    font-size: 1.25em;
+    text-align: center;
+    background: $background-color;
+}
+
+/* Piece positions
+   -------------------------------------------------- */
+
+.top {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.middle {
+    border-radius: 0;
+}
+.bottom {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+
+/* Piece categories
+   -------------------------------------------------- */
+
+.day,
+.year {
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: $background-color;
+    background: $primary-color;
+}
+.month {
+    padding-bottom: 2rem;
+    font-size: 3em;
+    font-weight: 200;
+    color: $primary-color;
+}
+.date {
+    padding-top: 2rem;
+    font-size: 3em;
+    font-weight: 100;
+    color: $primary-color;
+}
+
+/* hour -----------------------------------*/
+
+.hour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 75px;
+    font-weight: 500;
+    color: $primary-color;
+    background-color: $background-color;
+}
