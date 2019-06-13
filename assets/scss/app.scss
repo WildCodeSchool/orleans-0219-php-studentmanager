@@ -5,42 +5,41 @@
 
 
 body {
-  background-color: white;
   font-family:'Varela Round', sans-serif;
 
 }
 
 
-.h1-US01_create_Profil{
+.h1-mes-informations{
   text-align: center;
   margin-top: 5%;
   margin-bottom: 5%;
 }
 
 .btn{
-  border-color: white;
-  color: black;
+  border-color: $btn-border-mes-informations;
+  color: $btn-color-mes-informations;
   text-decoration: none;
-  background-color: #faa5a5;
+  background-color: $btn-mes-informations;
   padding-left: 50%;
   padding-right: 44%;
 
 }
 
-.th-US01_create_Profil{
-  border: solid 1px white;
+.th-mes-informations{
+  border: solid 1px $th-border-mes-informations;
   border-radius: 5%;
 }
 
-.td-US01_create_Profil{
-  border: solid 1px white;
+.td-mes-informations{
+  border: solid 1px $td-border-mes-informations;
   border-radius: 5%;
 
 }
 
 
-.tr-US01_create_Profil{
-  background-color: #f3f3f3;
+.tr-mes-informations{
+  background-color: $tr-mes-informations;
   border-radius: 50%;
 }
 
