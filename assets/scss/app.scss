@@ -3,5 +3,45 @@
 // the ~ allows you to reference things in node_modules
 @import "~bootstrap/scss/bootstrap";
 
-@import "./mesInformations";
+
+body {
+  background-color: white;
+  font-family:'Varela Round', sans-serif;
+
+}
+
+
+.h1-US01_create_Profil{
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.btn{
+  border-color: white;
+  color: black;
+  text-decoration: none;
+  background-color: #faa5a5;
+  padding-left: 50%;
+  padding-right: 44%;
+
+}
+
+.th-US01_create_Profil{
+  border: solid 1px white;
+  border-radius: 5%;
+}
+
+.td-US01_create_Profil{
+  border: solid 1px white;
+  border-radius: 5%;
+
+}
+
+
+.tr-US01_create_Profil{
+  background-color: #f3f3f3;
+  border-radius: 50%;
+}
+
 

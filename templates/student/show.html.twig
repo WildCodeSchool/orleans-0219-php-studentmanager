@@ -6,50 +6,59 @@
 {% block body %}
 <div class="container">
 
-        <h1>Mes informations</h1>
+        <h1 class="h1-US01_create_Profil">Mes informations</h1>
 
     <table class="table">
         <tbody>
 
-            <tr>
-                <th>Date de Naissance</th>
-                <td>{{ student.birthday ? student.birthday|date('Y-m-d')}}</td>
+            <tr class="tr-US01_create_Profil">
+                <th class="th-US01_create_Profil">Date de Naissance</th>
+                <td class="td-US01_create_Profil">{{ student.birthday ? student.birthday|date('Y-m-d')}}</td>
             </tr>
-            <tr>
-                <th>Civilité</th>
-                <td>{{ student.sex }}</td>
+
+            <tr class="tr-US01_create_Profil">
+                <th class="th-US01_create_Profil">Civilité</th>
+                <td class="td-US01_create_Profil">{{ student.sex }}</td>
             </tr>
-            <tr>
-                <th>Adresse</th>
-                <td>{{ student.postalAdress }}</td>
+
+            <tr class="tr-US01_create_Profil">
+                <th class="th-US01_create_Profil">Adresse</th>
+                <td class="td-US01_create_Profil">{{ student.postalAdress }}</td>
             </tr>
-            <tr>
-                <th>Code Postal</th>
-                <td>{{ student.postalCode }}</td>
+
+            <tr class="tr-US01_create_Profil">
+                <th class="th-US01_create_Profil">Code Postal</th>
+                <td class="td-US01_create_Profil">{{ student.postalCode }}</td>
             </tr>
-            <tr>
-                <th>Ville</th>
-                <td>{{ student.town }}</td>
+
+            <tr class="tr-US01_create_Profil">
+                <th class="th-US01_create_Profil">Ville</th>
+                <td class="td-US01_create_Profil">{{ student.town }}</td>
             </tr>
-            <tr>
-                <th>Numéro de Téléphone</th>
-                <td>{{ student.phoneNumber }}</td>
+
+            <tr class="tr-US01_create_Profil">
+                <th class="th-US01_create_Profil">Numéro de Téléphone</th>
+                <td class="td-US01_create_Profil">{{ student.phoneNumber }}</td>
             </tr>
-            <tr>
-                <th>Financemet</th>
-                <td>{{ student.funding }}</td>
+
+            <tr class="tr-US01_create_Profil">
+                <th class="th-US01_create_Profil">Financemet</th>
+                <td class="td-US01_create_Profil">{{ student.funding }}</td>
             </tr>
-            <tr>
-                <th>Companie d'assurence</th>
-                <td>{{ student.insuranceCompany }}</td>
+
+            <tr class="tr-US01_create_Profil">
+                <th class="th-US01_create_Profil">Companie d'assurence</th>
+                <td class="td-US01_create_Profil">{{ student.insuranceCompany }}</td>
             </tr>
-            <tr>
-                <th>Numéro de sociétaire</th>
-                <td>{{ student.insuranceNumber }}</td>
+
+            <tr class="tr-US01_create_Profil">
+                <th class="th-US01_create_Profil">Numéro de sociétaire</th>
+                <td class="td-US01_create_Profil">{{ student.insuranceNumber }}</td>
             </tr>
-            <tr>
-                <th>Identifiant Pole Emploi</th>
-                <td>{{ student.poleEmploiId }}</td>
+
+            <tr class="tr-US01_create_Profil">
+                <th class="th-US01_create_Profil">Identifiant Pole Emploi</th>
+                <td class="td-US01_create_Profil">{{ student.poleEmploiId }}</td>
             </tr>
         </tbody>
     </table>
