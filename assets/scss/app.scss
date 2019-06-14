@@ -1,91 +1,29 @@
 @import "vars";
 @import '~bootstrap/scss/bootstrap';
 
-//NAVBAR//
-.navbar{
-    background-color:$background-color;
-}
-.nav-item {
-    font-size: 20px;
-    margin: 12px;
-}
-.navbar-toggler{
-    text-decoration: none;
-    color:$black-color;
-}
-.navbar-nav{
-    margin-left: 60%;
-}
-//NAVBAR//
+// the ~ allows you to reference things in node_modules
 
-body {
-  font-family:$font-family;
-}
-
-.form {
-  height: 800px;
-  margin-top: 15%;
-}
-.a-login {
-  color: $link-color;
-}
-.h1 {
-  font-size: 2em;
-}
-
-h3 {
-  font-size: 1.28rem;
-}
-
-.btn {
-  background-color: $wild-color;
-  color:$background-color;
-}
-
-.btn:hover {
-  opacity: 0.8;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/*footer*/
 
 footer {
-  color: $footer-color;
+  color: $wild-text-color;
   padding: 1em;
   box-sizing: inherit;
   height: 100px;
+}
 
-
-
+.footer {
+  bottom: 0;
+  display: inline-block;
+  position: absolute;
+}
 
 .h1-mes-informations{
   text-align: center;
   margin-top: 5%;
   margin-bottom: 5%;
 }
-.heart {
-  color: $heart-color;
-}
-/* fin footer*/
-a {
-    color: $warm-color;
-}
-/* Base
-   -------------------------------------------------- */
-a {
-    color: $primary-color;
-}
-a:hover,a:focus {
-    color: $primary-color;
-.btn{
+
+.btn-info {
   border-color: $btn-border-mes-informations;
   color: $btn-color-mes-informations;
   text-decoration: none;
@@ -95,7 +33,7 @@ a:hover,a:focus {
 
 }
 
-.th-mes-informations{
+.th-mes-informations {
   border: solid 1px $th-border-mes-informations;
   border-radius: 5%;
 }
@@ -103,61 +41,111 @@ a:hover,a:focus {
 .td-mes-informations{
   border: solid 1px $td-border-mes-informations;
   border-radius: 5%;
-
 }
 
 
-.tr-mes-informations{
+.intro {
+  margin-bottom: 0.85em;
+  border-radius: 0.25rem;
+  padding: 1.25rem;
+  font-size: 1.2em;
+  font-weight: 200;
+  text-align: center;
+  color: $primary-color;
+}
+
+.tr-mes-informations {
   background-color: $tr-mes-informations;
   border-radius: 50%;
+  padding: 1.6rem;
+  font-size: 1.25em;
+  text-align: center;
+  background: $background-color;
 }
+
+/* Piece positions
+   -------------------------------------------------- */
+
 .top {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
+
 .middle {
-    border-radius: 0;
+  border-radius: 0;
 }
+
 .bottom {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 
 
 /* Piece categories
    -------------------------------------------------- */
 
-.day, .year {
-    font-size: 2em;
-    font-weight: 500;
-    letter-spacing: 0.35em;
-    text-transform: uppercase;
-    color: $background-color;
-    background: $primary-color;
+.day,
+.year {
+  font-size: 2em;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: $background-color;
+  background: $primary-color;
 }
+
 .month {
     padding-bottom: 2rem;
     font-size: 3em;
     font-weight: 200;
     color: $primary-color;
 }
+
 .date {
-    padding-top: 2rem;
-    font-size: 3em;
-    font-weight: 100;
-    color: $primary-color;
+  padding-top: 0;
+  padding-bottom: 1.75rem;
+  font-size: 3em;
+  font-weight: 100;
+  color: $primary-color;
 }
 
 /* hour -----------------------------------*/
 
 .hour {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    font-size: 75px;
-    font-weight: 500;
-    color: $primary-color;
-    background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 75px;
+  font-weight: 500;
+  color: $primary-color;
+  background-color: $background-color;
 }
+
+/*login*/
+.btn-login{
+  background-color: $wild-color;
+  color: $background-color;
+}
+
+/*signup*/
+
+
+.h1-signup {
+  color: $wild-color;
+  text-align: center;
+}
+
+.btn-signup{
+  background-color: $wild-color;
+  color: $background-color;
+}
+
+
+
+/*fin du signup*/
+
+
+
+
