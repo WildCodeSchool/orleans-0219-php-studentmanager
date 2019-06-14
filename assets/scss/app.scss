@@ -4,35 +4,42 @@
 // the ~ allows you to reference things in node_modules
 
 
-
 footer {
-  color: $footer-color;
+  color: $wild-text-color;
   padding: 1em;
   box-sizing: inherit;
   height: 100px;
+}
 
 .footer {
-  margin-bottom: 0;
+  bottom: 0;
   display: inline-block;
   position: absolute;
 }
 
 .a-footer {
-  color: $footer-color;
+  color: $wild-text-color;
 }
 
 .a-footer.hover {
-  color: $footer-color;
+  color: $wild-text-color;
   position: static;
   text-decoration: underline;
+}
 
-.h1-mes-informations{
+.heart{
+  color: $heart-color;
+}
+
+/*fin du footer*/
+
+.h1-mes-informations {
   text-align: center;
   margin-top: 5%;
   margin-bottom: 5%;
 }
 
-.btn{
+.btn-info {
   border-color: $btn-border-mes-informations;
   color: $btn-color-mes-informations;
   text-decoration: none;
@@ -42,7 +49,7 @@ footer {
 
 }
 
-.th-mes-informations{
+.th-mes-informations {
   border: solid 1px $th-border-mes-informations;
   border-radius: 5%;
 }
@@ -55,7 +62,7 @@ a {
 /* Base
    -------------------------------------------------- */
 
-html {
+.body-checking {
   max-width: 70em;
   margin: 0 auto;
   padding: 1.25em;
@@ -70,8 +77,9 @@ a {
 a:hover,
 a:focus {
   color: $primary-color;
+}
 
-.td-mes-informations{
+.td-mes-informations {
   border: solid 1px $td-border-mes-informations;
   border-radius: 5%;
 }
@@ -85,12 +93,11 @@ a:focus {
   font-weight: 200;
   text-align: center;
   color: $primary-color;
-
-.tr-mes-informations{
-  background-color: $tr-mes-informations;
-  border-radius: 50%;
 }
 
+.tr-mes-informations {
+  background-color: $tr-mes-informations;
+  border-radius: 50%;
   padding: 1.6rem;
   font-size: 1.25em;
   text-align: center;
@@ -158,8 +165,29 @@ a:focus {
   background-color: $background-color;
 }
 
-.h1-signup{
+/*login*/
+.btn-login{
+  background-color: $wild-color;
+  color: $background-color;
+}
+
+/*signup*/
+
+
+.h1-signup {
   color: $wild-color;
   text-align: center;
 }
+
+.btn-signup{
+  background-color: $wild-color;
+  color: $background-color;
+}
+
+
+
+/*fin du signup*/
+
+
+
 
