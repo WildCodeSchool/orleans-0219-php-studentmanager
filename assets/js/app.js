@@ -25,7 +25,3 @@ $(document).ready(function() {
 });
 import './checkindate';
 // returns the final, public path to this file
-// path is relative to this file - e.g. assets/images/logo.png
-const logoPath = require('../images/logo_pink.png');
-
-var html = `<img src="${logoPath}">`;
