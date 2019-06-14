@@ -1,77 +1,15 @@
 @import "vars";
 @import '~bootstrap/scss/bootstrap';
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+// the ~ allows you to reference things in node_modules
 
-.form {
-  height: 800px;
-  margin-top: 15%;
-}
 
-.a-login {
-  color: $link-color;
-}
-
-.h1 {
-  font-size: 2em;
-}
-
-h3 {
-  font-size: 1.28rem;
-}
-
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-.btn {
-  background-color: $wild-color;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  line-height: 0.6em;
-}
-
-.btn:hover {
-  opacity: 0.8;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
-}
-
-/*footer*/
 
 footer {
   color: $footer-color;
   padding: 1em;
   box-sizing: inherit;
   height: 100px;
-
-}
 
 .footer {
   margin-bottom: 0;
@@ -87,11 +25,28 @@ footer {
   color: $footer-color;
   position: static;
   text-decoration: underline;
+
+.h1-mes-informations{
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
-.heart {
-  color: $heart-color;
+.btn{
+  border-color: $btn-border-mes-informations;
+  color: $btn-color-mes-informations;
+  text-decoration: none;
+  background-color: $btn-mes-informations;
+  padding-left: 50%;
+  padding-right: 44%;
+
 }
+
+.th-mes-informations{
+  border: solid 1px $th-border-mes-informations;
+  border-radius: 5%;
+}
+
 
 a {
   color: $warm-color;
@@ -115,10 +70,12 @@ a {
 a:hover,
 a:focus {
   color: $primary-color;
+
+.td-mes-informations{
+  border: solid 1px $td-border-mes-informations;
+  border-radius: 5%;
 }
 
-/* Intro
-   -------------------------------------------------- */
 
 .intro {
   margin-bottom: 0.85em;
@@ -128,12 +85,11 @@ a:focus {
   font-weight: 200;
   text-align: center;
   color: $primary-color;
+
+.tr-mes-informations{
+  background-color: $tr-mes-informations;
+  border-radius: 50%;
 }
-
-/* Today
-   -------------------------------------------------- */
-
-.today-piece {
 
   padding: 1.6rem;
   font-size: 1.25em;
@@ -206,3 +162,4 @@ a:focus {
   color: $wild-color;
   text-align: center;
 }
+

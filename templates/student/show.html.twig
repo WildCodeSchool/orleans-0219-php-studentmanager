@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Student{% endblock %}
+
+{% block body %}
+<div class="container">
+
+        <h1 class="h1-mes-informations">Mes informations</h1>
+
+    <table class="table">
+        <tbody>
+
+            <tr class="tr-mes-informations">
+                <th class="th-mes-informations">Date de Naissance</th>
+                <td class="td-mes-informations">{{ student.birthday ? student.birthday|date('Y-m-d')}}</td>
+            </tr>
+
+            <tr class="tr-mes-informations">
+                <th class="th-mes-informations">Civilité</th>
+                <td class="td-mes-informations">{{ student.sex }}</td>
+            </tr>
+
+            <tr class="tr-mes-informations">
+                <th class="th-mes-informations">Adresse</th>
+                <td class="td-mes-informations">{{ student.postalAdress }}</td>
+            </tr>
+
+            <tr class="tr-mes-informations">
+                <th class="th-mes-informations">Code Postal</th>
+                <td class="td-mes-informations">{{ student.postalCode }}</td>
+            </tr>
+
+            <tr class="tr-mes-informations">
+                <th class="th-mes-informations">Ville</th>
+                <td class="td-mes-informations">{{ student.town }}</td>
+            </tr>
+
+            <tr class="tr-mes-informations">
+                <th class="th-mes-informations">Numéro de Téléphone</th>
+                <td class="td-mes-informations">{{ student.phoneNumber }}</td>
+            </tr>
+
+            <tr class="tr-mes-informations">
+                <th class="th-mes-informations">Financement</th>
+                <td class="td-mes-informations">{{ student.funding }}</td>
+            </tr>
+
+            <tr class="tr-mes-informations">
+                <th class="th-mes-informations">Companie d'assurance</th>
+                <td class="td-mes-informations">{{ student.insuranceCompany }}</td>
+            </tr>
+
+            <tr class="tr-mes-informations">
+                <th class="th-mes-informations">Numéro de sociétaire</th>
+                <td class="td-mes-informations">{{ student.insuranceNumber }}</td>
+            </tr>
+
+            <tr class="tr-mes-informations">
+                <th class="th-mes-informations">Identifiant Pole Emploi</th>
+                <td class="td-mes-informations">{{ student.poleEmploiId }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('student_edit', {'id': student.id}) }}"><button type="button" class="btn">Modifier</button></a>
+
+
+</div>
+
+{% endblock %}
