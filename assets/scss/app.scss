@@ -1,7 +1,6 @@
 @import "vars";
 @import '~bootstrap/scss/bootstrap';
 
-
 //NAVBAR//
 .navbar{
     background-color:$background-color;
@@ -64,25 +63,14 @@ footer {
   box-sizing: inherit;
   height: 100px;
 
-}
 
-.footer {
-  margin-bottom: 0;
-  display: inline-block;
-  position: absolute;
-  left: 0;
-}
 
-.a-footer {
-  color: $footer-color;
-}
 
-.a-footer.hover {
-  color: $footer-color;
-  position: static;
-  text-decoration: underline;
+.h1-mes-informations{
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
-
 .heart {
   color: $heart-color;
 }
@@ -95,38 +83,34 @@ a {
 a {
     color: $primary-color;
 }
-a:hover,
-a:focus {
+a:hover,a:focus {
     color: $primary-color;
+.btn{
+  border-color: $btn-border-mes-informations;
+  color: $btn-color-mes-informations;
+  text-decoration: none;
+  background-color: $btn-mes-informations;
+  padding-left: 50%;
+  padding-right: 44%;
+
 }
 
-/* Intro
-   -------------------------------------------------- */
-
-.intro {
-    margin-bottom: 0.85em;
-    border-radius: 0.25rem;
-    padding: 1.25rem;
-    font-size: 1.2em;
-    font-weight: 200;
-    text-align: center;
-    color: $primary-color;
+.th-mes-informations{
+  border: solid 1px $th-border-mes-informations;
+  border-radius: 5%;
 }
 
-/* Today
-   -------------------------------------------------- */
+.td-mes-informations{
+  border: solid 1px $td-border-mes-informations;
+  border-radius: 5%;
 
-.today-piece {
-
-    padding: 1.6rem;
-    font-size: 1.25em;
-    text-align: center;
-    background: $background-color;
 }
 
-/* Piece positions
-   -------------------------------------------------- */
 
+.tr-mes-informations{
+  background-color: $tr-mes-informations;
+  border-radius: 50%;
+}
 .top {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
