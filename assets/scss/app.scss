@@ -4,15 +4,15 @@
 
 //NAVBAR//
 .navbar{
-    background-color:#f3f3f3;
+    background-color:$background-color;
 }
 .nav-item {
-    font-size: 25px;
-    margin: 8px;
+    font-size: 20px;
+    margin: 12px;
 }
 .navbar-toggler{
     text-decoration: none;
-    color: black;
+    color:$black-color;
 }
 .navbar-nav{
     margin-left: 60%;
@@ -27,11 +27,9 @@ body {
   height: 800px;
   margin-top: 15%;
 }
-
 .a-login {
   color: $link-color;
 }
-
 .h1 {
   font-size: 2em;
 }
@@ -42,7 +40,7 @@ h3 {
 
 .btn {
   background-color: $wild-color;
-  color: white;
+  color:$background-color;
 }
 
 .btn:hover {
@@ -88,20 +86,12 @@ footer {
 .heart {
   color: $heart-color;
 }
-
+/* fin footer*/
 a {
     color: $warm-color;
 }
 /* Base
    -------------------------------------------------- */
-
-html {
-    max-width: 70em;
-    margin: 0 auto;
-    padding: 1.25em;
-    text-align: center;
-    color: $primary-color;
-}
 a {
     color: $primary-color;
 }
@@ -153,8 +143,7 @@ a:focus {
 /* Piece categories
    -------------------------------------------------- */
 
-.day,
-.year {
+.day, .year {
     font-size: 2em;
     font-weight: 500;
     letter-spacing: 0.35em;
