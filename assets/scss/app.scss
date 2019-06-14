@@ -4,15 +4,42 @@
 // the ~ allows you to reference things in node_modules
 
 
+footer {
+  color: $wild-text-color;
+  padding: 1em;
+  box-sizing: inherit;
+  height: 100px;
+}
 
+.footer {
+  bottom: 0;
+  display: inline-block;
+  position: absolute;
+}
 
-.h1-mes-informations{
+.a-footer {
+  color: $wild-text-color;
+}
+
+.a-footer.hover {
+  color: $wild-text-color;
+  position: static;
+  text-decoration: underline;
+}
+
+.heart{
+  color: $heart-color;
+}
+
+/*fin du footer*/
+
+.h1-mes-informations {
   text-align: center;
   margin-top: 5%;
   margin-bottom: 5%;
 }
 
-.btn{
+.btn-info {
   border-color: $btn-border-mes-informations;
   color: $btn-color-mes-informations;
   text-decoration: none;
@@ -22,22 +49,146 @@
 
 }
 
-.th-mes-informations{
+.th-mes-informations {
   border: solid 1px $th-border-mes-informations;
   border-radius: 5%;
 }
 
-.td-mes-informations{
+
+a {
+  color: $warm-color;
+}
+
+/* Base
+   -------------------------------------------------- */
+
+.body-checking {
+  max-width: 70em;
+  margin: 0 auto;
+  padding: 1.25em;
+  text-align: center;
+  color: $primary-color;
+}
+
+a {
+  color: $primary-color;
+}
+
+a:hover,
+a:focus {
+  color: $primary-color;
+}
+
+.td-mes-informations {
   border: solid 1px $td-border-mes-informations;
   border-radius: 5%;
-
 }
 
 
-.tr-mes-informations{
+.intro {
+  margin-bottom: 0.85em;
+  border-radius: 0.25rem;
+  padding: 1.25rem;
+  font-size: 1.2em;
+  font-weight: 200;
+  text-align: center;
+  color: $primary-color;
+}
+
+.tr-mes-informations {
   background-color: $tr-mes-informations;
   border-radius: 50%;
+  padding: 1.6rem;
+  font-size: 1.25em;
+  text-align: center;
+  background: $background-color;
 }
+
+/* Piece positions
+   -------------------------------------------------- */
+
+.top {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.middle {
+  border-radius: 0;
+}
+
+.bottom {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+
+/* Piece categories
+   -------------------------------------------------- */
+
+.day,
+.year {
+  font-size: 2em;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: $background-color;
+  background: $primary-color;
+}
+
+.month {
+  padding-top: 1.75rem;
+  padding-bottom: 0;
+  font-size: 3em;
+  font-weight: 200;
+  color: $primary-color;
+}
+
+.date {
+  padding-top: 0;
+  padding-bottom: 1.75rem;
+  font-size: 3em;
+  font-weight: 100;
+  color: $primary-color;
+}
+
+/* hour -----------------------------------*/
+
+.hour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 75px;
+  font-weight: 500;
+  color: $primary-color;
+  background-color: $background-color;
+}
+
+/*login*/
+.btn-login{
+  background-color: $wild-color;
+  color: $background-color;
+}
+
+/*signup*/
+
+
+.h1-signup {
+  color: $wild-color;
+  text-align: center;
+}
+
+.btn-signup{
+  background-color: $wild-color;
+  color: $background-color;
+}
+
+
+
+/*fin du signup*/
+
+
 
 
 
