@@ -1,8 +1,23 @@
 @import "vars";
 @import '~bootstrap/scss/bootstrap';
-
 // the ~ allows you to reference things in node_modules
 
+//NAVBAR//
+.navbar{
+  background-color:#f3f3f3;
+}
+.nav-item {
+  font-size: 25px;
+  margin: 8px;
+}
+.navbar-toggler{
+  text-decoration: none;
+  color: black;
+}
+.navbar-nav{
+  margin-left: 60%;
+}
+//NAVBAR//
 
 footer {
   color: $wild-text-color;
@@ -10,40 +25,32 @@ footer {
   box-sizing: inherit;
   height: 100px;
 }
-
 .footer {
   bottom: 0;
   display: inline-block;
   position: absolute;
 }
-
 .h1-mes-informations{
   text-align: center;
   margin-top: 5%;
   margin-bottom: 5%;
 }
-
 .btn-info {
   border-color: $btn-border-mes-informations;
-  color: $btn-color-mes-informations;
+  color: $btn-border-mes-informations;
   text-decoration: none;
   background-color: $btn-mes-informations;
   padding-left: 50%;
   padding-right: 44%;
-
 }
-
 .th-mes-informations {
   border: solid 1px $th-border-mes-informations;
   border-radius: 5%;
 }
-
 .td-mes-informations{
   border: solid 1px $td-border-mes-informations;
   border-radius: 5%;
 }
-
-
 .intro {
   margin-bottom: 0.85em;
   border-radius: 0.25rem;
@@ -131,7 +138,6 @@ footer {
 
 /*signup*/
 
-
 .h1-signup {
   color: $wild-color;
   text-align: center;
@@ -141,8 +147,6 @@ footer {
   background-color: $wild-color;
   color: $background-color;
 }
-
-
 
 /*fin du signup*/
 
