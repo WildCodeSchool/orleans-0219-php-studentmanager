@@ -166,16 +166,25 @@ a:focus {
 }
 
 /*login*/
+
+.form-login{
+  margin-top: 100px;
+}
+
 .btn-login{
   background-color: $wild-color;
   color: $background-color;
 }
 
+/*fin du login*/
+
 /*signup*/
 
+.form-signup{
+  margin-top: 100px;
+}
 
 .h1-signup {
-  color: $wild-color;
   text-align: center;
 }
 
@@ -183,8 +192,6 @@ a:focus {
   background-color: $wild-color;
   color: $background-color;
 }
-
-
 
 /*fin du signup*/
 
