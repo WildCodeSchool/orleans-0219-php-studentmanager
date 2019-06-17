@@ -1,9 +1,25 @@
 @import "vars";
 @import '~bootstrap/scss/bootstrap';
-
 // the ~ allows you to reference things in node_modules
 
+/*-------NAVBAR-------*/
+.navbar {
+  background-color: $background-color;
+}
+.nav-item {
+  font-size: 20px;
+  margin: 8px;
+}
+.navbar-toggler {
+  text-decoration: none;
+  color: $title-color;
+}
+.navbar-nav {
+  margin-left: 60%;
+}
+/*------- end NAVBAR-------*/
 
+/*-------footer-------*/
 footer {
   color: $wild-text-color;
   padding: 1em;
@@ -31,37 +47,51 @@ footer {
   color: $heart-color;
 }
 
-/*fin du footer*/
+/*-------fin du footer-------*/
 
+/*-------Profile form-------*/
 .h1-mes-informations {
   text-align: center;
   margin-top: 5%;
   margin-bottom: 5%;
 }
 
+.td-mes-informations {
+  border: solid 1px $background-color;
+  border-radius: 5%;
+}
 .btn-info {
-  border-color: $btn-border-mes-informations;
-  color: $btn-color-mes-informations;
+  border-color: $background-color;
   text-decoration: none;
-  background-color: $btn-mes-informations;
+  background-color: $background-color;
   padding-left: 50%;
   padding-right: 44%;
-
 }
 
+.tr-mes-informations {
+  background-color: $background-color;
+  border-radius: 50%;
+  padding: 1.6rem;
+  font-size: 1.25em;
+  text-align: center;
+  background: $background-color;
+}
 .th-mes-informations {
-  border: solid 1px $th-border-mes-informations;
+  border: solid 1px $background-color;
   border-radius: 5%;
 }
 
+/*------- end profile form -------*/
 
-a {
+/*-------edit-------*/
+
+.a-edit{
   color: $warm-color;
 }
 
-/* Base
-   -------------------------------------------------- */
+/*------- end edit-------*/
 
+/* -------Base-------*/
 .body-checking {
   max-width: 70em;
   margin: 0 auto;
@@ -73,14 +103,12 @@ a {
 a {
   color: $primary-color;
 }
-
-a:hover,
-a:focus {
+a:hover,a:focus {
   color: $primary-color;
 }
 
 .td-mes-informations {
-  border: solid 1px $td-border-mes-informations;
+  border: solid 1px $background-color;
   border-radius: 5%;
 }
 
@@ -94,19 +122,9 @@ a:focus {
   text-align: center;
   color: $primary-color;
 }
+/*------- end base -------*/
 
-.tr-mes-informations {
-  background-color: $tr-mes-informations;
-  border-radius: 50%;
-  padding: 1.6rem;
-  font-size: 1.25em;
-  text-align: center;
-  background: $background-color;
-}
-
-/* Piece positions
-   -------------------------------------------------- */
-
+/* -------Piece positions-------*/
 .top {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
@@ -120,13 +138,10 @@ a:focus {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
+/*-------end Piece positions-------*/
 
-
-/* Piece categories
-   -------------------------------------------------- */
-
-.day,
-.year {
+/* -------Piece categories ------- */
+.day,.year {
   font-size: 2em;
   font-weight: 500;
   letter-spacing: 0.35em;
@@ -150,9 +165,9 @@ a:focus {
   font-weight: 100;
   color: $primary-color;
 }
+/*------- end piece categories -------*/
 
-/* hour -----------------------------------*/
-
+/*-------hour-------*/
 .hour {
   display: flex;
   justify-content: center;
@@ -164,37 +179,23 @@ a:focus {
   color: $primary-color;
   background-color: $background-color;
 }
+/*------- end hour -------*/
 
-/*login*/
-
-.form-login{
-  margin-top: 100px;
-}
-
-.btn-login{
+/*-------login-------*/
+.btn-login {
   background-color: $wild-color;
   color: $background-color;
 }
+/*------- end login -------*/
 
-/*fin du login*/
-
-/*signup*/
-
-.form-signup{
-  margin-top: 100px;
-}
-
+/*-------signup-------*/
 .h1-signup {
+
   text-align: center;
 }
-
-.btn-signup{
+.btn-signup {
   background-color: $wild-color;
   color: $background-color;
 }
-
-/*fin du signup*/
-
-
-
+/*-------fin du signup-------*/
 
