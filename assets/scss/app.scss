@@ -26,22 +26,27 @@ footer {
   box-sizing: inherit;
   height: 100px;
 }
+
 .footer {
   bottom: 0;
   display: inline-block;
   position: absolute;
 }
+
 .a-footer {
   color: $wild-text-color;
 }
+
 .a-footer.hover {
   color: $wild-text-color;
   position: static;
   text-decoration: underline;
 }
-.heart {
+
+.heart{
   color: $heart-color;
 }
+
 /*-------fin du footer-------*/
 
 /*-------Profile form-------*/
@@ -50,6 +55,7 @@ footer {
   margin-top: 5%;
   margin-bottom: 5%;
 }
+
 .td-mes-informations {
   border: solid 1px $background-color;
   border-radius: 5%;
@@ -61,6 +67,7 @@ footer {
   padding-left: 50%;
   padding-right: 44%;
 }
+
 .tr-mes-informations {
   background-color: $background-color;
   border-radius: 50%;
@@ -73,12 +80,15 @@ footer {
   border: solid 1px $background-color;
   border-radius: 5%;
 }
+
 /*------- end profile form -------*/
 
 /*-------edit-------*/
+
 .a-edit{
   color: $warm-color;
 }
+
 /*------- end edit-------*/
 
 /* -------Base-------*/
@@ -89,12 +99,20 @@ footer {
   text-align: center;
   color: $primary-color;
 }
+
 a {
   color: $primary-color;
 }
 a:hover,a:focus {
   color: $primary-color;
 }
+
+.td-mes-informations {
+  border: solid 1px $background-color;
+  border-radius: 5%;
+}
+
+
 .intro {
   margin-bottom: 0.85em;
   border-radius: 0.25rem;
@@ -111,9 +129,11 @@ a:hover,a:focus {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
+
 .middle {
   border-radius: 0;
 }
+
 .bottom {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
@@ -129,6 +149,7 @@ a:hover,a:focus {
   color: $background-color;
   background: $primary-color;
 }
+
 .month {
   padding-top: 1.75rem;
   padding-bottom: 0;
@@ -136,6 +157,7 @@ a:hover,a:focus {
   font-weight: 200;
   color: $primary-color;
 }
+
 .date {
   padding-top: 0;
   padding-bottom: 1.75rem;
@@ -168,7 +190,7 @@ a:hover,a:focus {
 
 /*-------signup-------*/
 .h1-signup {
-  color: $wild-color;
+
   text-align: center;
 }
 .btn-signup {
