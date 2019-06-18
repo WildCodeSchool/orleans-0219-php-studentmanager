@@ -20,7 +20,7 @@ class AttendanceController extends AbstractController
      */
     public function index(AttendanceRepository $attendanceRepository): Response
     {
-        return $this->render('attendance/index.html.twig', [
+        return $this->render('checkin_date/index.html.twig', [
             'attendances' => $attendanceRepository->findAll(),
         ]);
     }
@@ -31,21 +31,14 @@ class AttendanceController extends AbstractController
     public function new(Request $request): Response
     {
         $attendance = new Attendance();
-        $form = $this->createForm(AttendanceType::class, $attendance);
-        $form->handleRequest($request);
+        $attendance->setDate(new \DateTime());
 
-        if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($attendance);
             $entityManager->flush();
 
-            return $this->redirectToRoute('attendance_index');
-        }
+            return $this->redirectToRoute('checkin_date');
 
-        return $this->render('attendance/new.html.twig', [
-            'attendance' => $attendance,
-            'form' => $form->createView(),
-        ]);
     }
 
     /**
@@ -93,4 +86,5 @@ class AttendanceController extends AbstractController
 
         return $this->redirectToRoute('attendance_index');
     }
+
 }

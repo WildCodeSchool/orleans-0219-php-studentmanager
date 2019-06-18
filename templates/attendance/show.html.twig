@@ -1,38 +1,24 @@
-{% extends 'base.html.twig' %}
+{#{% extends 'base.html.twig' %}#}
 
-{% block title %}Attendance{% endblock %}
+{#{% block title %}Attendance{% endblock %}#}
 
-{% block body %}
-    <h1>Attendance</h1>
+{#{% block body %}#}
+{#    <h1>Attendance</h1>#}
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ attendance.id }}</td>
-            </tr>
-            <tr>
-                <th>Date</th>
-                <td>{{ attendance.date ? attendance.date|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>MorningHour</th>
-                <td>{{ attendance.morningHour ? attendance.morningHour|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>AfternoonHour</th>
-                <td>{{ attendance.afternoonHour ? attendance.afternoonHour|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Delay</th>
-                <td>{{ attendance.delay }}</td>
-            </tr>
-        </tbody>
-    </table>
+{#    <table class="table">#}
+{#        <tbody>#}
 
-    <a href="{{ path('attendance_index') }}">back to list</a>
+{#            <tr>#}
+{#                <th>Date</th>#}
+{#                <td>{{ attendance.date ? attendance.date|date('Y-m-d H:i:s') : '' }}</td>#}
+{#            </tr>#}
 
-    <a href="{{ path('attendance_edit', {'id': attendance.id}) }}">edit</a>
+{#        </tbody>#}
+{#    </table>#}
 
-    {{ include('attendance/_delete_form.html.twig') }}
-{% endblock %}
+{#    <a href="{{ path('attendance_index') }}">back to list</a>#}
+
+{#    <a href="{{ path('attendance_edit', {'id': attendance.id}) }}">edit</a>#}
+
+{#    {{ include('attendance/_delete_form.html.twig') }}#}
+{#{% endblock %}#}

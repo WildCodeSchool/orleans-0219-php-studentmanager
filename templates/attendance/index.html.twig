@@ -1,33 +1,24 @@
-{% extends 'base.html.twig' %}
+{% extends 'layoutUser.html.twig' %}
 
 {% block title %}Attendance index{% endblock %}
 
-{% block body %}
-    <h1>Attendance index</h1>
+{% block content %}
+    <h1>Présence</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Date</th>
-                <th>MorningHour</th>
-                <th>AfternoonHour</th>
-                <th>Delay</th>
-                <th>actions</th>
+                <th>Date(s) et heure(s)</th>
             </tr>
         </thead>
         <tbody>
         {% for attendance in attendances %}
             <tr>
-                <td>{{ attendance.id }}</td>
                 <td>{{ attendance.date ? attendance.date|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ attendance.morningHour ? attendance.morningHour|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ attendance.afternoonHour ? attendance.afternoonHour|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ attendance.delay }}</td>
-                <td>
-                    <a href="{{ path('attendance_show', {'id': attendance.id}) }}">show</a>
-                    <a href="{{ path('attendance_edit', {'id': attendance.id}) }}">edit</a>
-                </td>
+{#                <td>#}
+{#                    <a href="{{ path('attendance_show', {'id': attendance.id}) }}">show</a>#}
+{#                    <a href="{{ path('attendance_edit', {'id': attendance.id}) }}">edit</a>#}
+{#                </td>#}
             </tr>
         {% else %}
             <tr>
@@ -37,5 +28,6 @@
         </tbody>
     </table>
 
-    <a href="{{ path('attendance_new') }}">Create new</a>
+    <a href="{{ path('attendance_new') }}"><button class="morningButton">Matin</button></a>
+    <a href="{{ path('attendance_new') }}"><button class="AfternoonButton">Aprés-midi</button></a>
 {% endblock %}

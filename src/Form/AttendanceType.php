@@ -9,14 +9,13 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class AttendanceType extends AbstractType
 {
+    /**
+     * @param FormBuilderInterface $builder
+     * @param array $options
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder
-            ->add('date')
-            ->add('morningHour')
-            ->add('afternoonHour')
-            ->add('delay')
-        ;
+
     }
 
     public function configureOptions(OptionsResolver $resolver)
