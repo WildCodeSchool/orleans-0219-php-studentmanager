@@ -39,5 +39,4 @@ class Attendance
 
         return $this;
     }
-
 }
