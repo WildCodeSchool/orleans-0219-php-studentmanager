@@ -10,7 +10,6 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-
 class StudentType extends AbstractType
 {
     /**
@@ -20,20 +19,21 @@ class StudentType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('firstname',TextType::class,['label' => 'Prénom'])
-            ->add('lastname',TextType::class,['label' => 'Nom'])
-            ->add('birthday',BirthdayType::class,['label' => 'Date de Naissance'])
-            ->add('sex', ChoiceType::class,['label' => 'Civilité','choices'  => ['H' => true,'F' => false,]])
-            ->add('postalAdress',TextType::class,['label' => 'Adresse'])
-            ->add('postalCode',TextType::class,['label' => 'Code Postal'])
-            ->add('socialSecurityNumber',TextType::class,['label' => 'Numéro Sécurité Sociale'])
-            ->add('town',TextType::class,['label' => 'Ville'])
-            ->add('phoneNumber',TextType::class,['label' => 'Téléphone'])
-            ->add('funding', ChoiceType::class,['label' => 'Financement','choices'  => ['Region' => true,'Pole Emploi' => false,'OPCA' => true,'Autofinancement' => false,'CPF' => true,'CPF + Autofinancement' => false,'Autre' => true]])
-            ->add('insuranceCompany',TextType::class,['label' => 'Companie d\'assurance'])
-            ->add('insuranceNumber',TextType::class,['label' => 'Numéro de sociétaire'])
-            ->add('poleEmploiId',TextType::class,['label' => 'Identifiant Pole Emploi'])
-        ;
+            ->add('firstname', TextType::class, ['label' => 'Prénom'])
+            ->add('lastname', TextType::class, ['label' => 'Nom'])
+            ->add('birthday', BirthdayType::class, ['label' => 'Date de Naissance'])
+            ->add('sex', ChoiceType::class, ['label' => 'Civilité', 'choices' => ['H' => true, 'F' => false,]])
+            ->add('postalAdress', TextType::class, ['label' => 'Adresse'])
+            ->add('postalCode', TextType::class, ['label' => 'Code Postal'])
+            ->add('socialSecurityNumber', TextType::class, ['label' => 'Numéro Sécurité Sociale'])
+            ->add('town', TextType::class, ['label' => 'Ville'])
+            ->add('phoneNumber', TextType::class, ['label' => 'Téléphone'])
+            ->add('funding', ChoiceType::class, ['label' => 'Financement', 'choices' =>
+                ['Region' => true, 'Pole Emploi' => false, 'OPCA' => true, 'Autofinancement'
+                => false, 'CPF' => true, 'CPF + Autofinancement' => false, 'Autre' => true]])
+            ->add('insuranceCompany', TextType::class, ['label' => 'Companie d\'assurance'])
+            ->add('insuranceNumber', TextType::class, ['label' => 'Numéro de sociétaire'])
+            ->add('poleEmploiId', TextType::class, ['label' => 'Identifiant Pole Emploi']);
     }
 
     public function configureOptions(OptionsResolver $resolver)
@@ -43,4 +43,3 @@ class StudentType extends AbstractType
         ]);
     }
 }
-
