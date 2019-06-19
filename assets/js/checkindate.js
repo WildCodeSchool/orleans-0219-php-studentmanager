@@ -104,8 +104,3 @@ $(function(){
     };
     setInterval(horloge, 1000);
 });
-
-
-
-
-
