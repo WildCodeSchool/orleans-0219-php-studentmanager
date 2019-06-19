@@ -55,14 +55,11 @@ footer {
   border-radius: 5%;
 }
 .btn-info {
-  border-color: $background-color;
-  text-decoration: none;
-  background-color: $background-color;
-  padding-left: 50%;
-  padding-right: 44%;
+  background-color: $wild-color;
+  color: $background-color;
 }
 .tr-mes-informations {
-  background-color: $background-color;
+  background-color: $wild-text-color;
   border-radius: 50%;
   padding: 1.6rem;
   font-size: 1.25em;
@@ -74,6 +71,17 @@ footer {
   border-radius: 5%;
 }
 /*------- end profile form -------*/
+
+
+/*-------modification -------*/
+
+.h1-modification{
+  padding-bottom: 5%;
+}
+
+/*------- end modification -------*/
+
+
 
 /*-------edit-------*/
 .a-edit{
