@@ -15,12 +15,12 @@
   font-family: $font-family;
 }
 
-.nav-link {
-  color: $nav-font-color !important;
+.navbar-nav .nav-item .nav-link{
+  color: $nav-font-color;
 }
 
-.nav-link:hover {
-  color: $wild-color !important;
+.navbar-nav .nav-item .nav-link:hover {
+  color: $wild-color;
 }
 
 .navbar-toggler {

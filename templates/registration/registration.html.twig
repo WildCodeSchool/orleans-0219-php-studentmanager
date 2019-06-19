@@ -6,13 +6,13 @@
             <h1 class="h1-signup font-weight-bold">Inscris-toi ici</h1>
             {{ form_start(form) }}
             <div class="form-group">
-                {{ form_widget(form.email, {'attr': {'placeholder': 'Entre ton adresse email'}}) }}
+                {{ form_widget(form.email, {'attr': {'placeholder': 'Email'}}) }}
             </div>
             <div class="form-group">
-                {{ form_widget(form.username, {'attr': {'placeholder': 'Entre ton nom d\'utilisateur'}}) }}
+                {{ form_widget(form.username, {'attr': {'placeholder': 'Nom d\'utilisateur'}}) }}
             </div>
             <div class="form-group">
-                {{ form_widget(form.plainPassword.first, {'attr': {'placeholder': 'Créer ton mot de passe'}}) }}
+                {{ form_widget(form.plainPassword.first, {'attr': {'placeholder': 'Crée ton mot de passe'}}) }}
             </div>
             <div class="form-group">
                 {{ form_widget(form.plainPassword.second, {'attr': {'placeholder': 'Confirme ton mot de passe'}}) }}
