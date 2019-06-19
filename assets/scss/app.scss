@@ -46,7 +46,6 @@ footer {
 
 /*-------Profile form-------*/
 .h1-mes-informations {
-  text-align: center;
   margin-top: 5%;
   margin-bottom: 5%;
 }
@@ -62,12 +61,11 @@ footer {
   padding-right: 44%;
 }
 .tr-mes-informations {
-  background-color: $background-color;
   border-radius: 50%;
   padding: 1.6rem;
   font-size: 1.25em;
   text-align: center;
-  background: $background-color;
+  background: $cellule-background-color;
 }
 .th-mes-informations {
   border: solid 1px $background-color;
