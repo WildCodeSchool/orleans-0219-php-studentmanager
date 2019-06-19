@@ -30,7 +30,6 @@
 .navbar-nav {
   margin-left: 60%;
 }
-
 /*------- end NAVBAR-------*/
 
 /*-------footer-------*/
@@ -57,10 +56,9 @@ footer {
   text-decoration: underline;
 }
 
-.heart {
+.heart{
   color: $heart-color;
 }
-
 /*-------fin du footer-------*/
 
 /*-------Profile form-------*/
@@ -96,14 +94,12 @@ footer {
   border: solid 1px $background-color;
   border-radius: 5%;
 }
-
 /*------- end profile form -------*/
 
 /*-------edit-------*/
-.a-edit {
+.a-edit{
   color: $warm-color;
 }
-
 /*------- end edit-------*/
 
 /* -------Base-------*/
@@ -123,6 +119,11 @@ a:hover, a:focus {
   color: $primary-color;
 }
 
+.td-mes-informations {
+  border: solid 1px $background-color;
+  border-radius: 5%;
+}
+
 .intro {
   margin-bottom: 0.85em;
   border-radius: 0.25rem;
@@ -132,7 +133,6 @@ a:hover, a:focus {
   text-align: center;
   color: $primary-color;
 }
-
 /*------- end base -------*/
 
 /* -------Piece positions-------*/
@@ -149,7 +149,6 @@ a:hover, a:focus {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
-
 /*-------end Piece positions-------*/
 
 /* -------Piece categories ------- */
@@ -177,7 +176,6 @@ a:hover, a:focus {
   font-weight: 100;
   color: $primary-color;
 }
-
 /*------- end piece categories -------*/
 
 /*-------hour-------*/
@@ -192,7 +190,6 @@ a:hover, a:focus {
   color: $primary-color;
   background-color: $background-color;
 }
-
 /*------- end hour -------*/
 
 /*-------login-------*/
@@ -200,7 +197,6 @@ a:hover, a:focus {
   background-color: $wild-color;
   color: $background-color;
 }
-
 /*------- end login -------*/
 
 /*-------signup-------*/
@@ -214,6 +210,5 @@ a:hover, a:focus {
   background-color: $wild-color;
   color: $background-color;
 }
-
 /*-------fin du signup-------*/
 
