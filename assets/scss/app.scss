@@ -199,6 +199,21 @@ a:hover, a:focus {
 }
 /*------- end login -------*/
 
+/*----------checkin button---------------*/
+.btn{
+    background-color: $primary-color;
+    margin-top: 5em;
+    font-size: 2rem;
+    margin-left: 15em;
+    color: $secondary-color;
+}
+
+.btn-primary{
+    border-color: $primary-color;
+    background-color: $primary-color;
+}
+/*----------end checkin button---------------*/
+
 /*-------signup-------*/
 .h1-signup {
   color: $title-color;
@@ -211,4 +226,5 @@ a:hover, a:focus {
   color: $background-color;
 }
 /*-------fin du signup-------*/
+
 
