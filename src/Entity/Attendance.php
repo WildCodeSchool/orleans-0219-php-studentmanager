@@ -21,8 +21,6 @@ class Attendance
      */
     private $date;
 
-
-
     public function getId(): ?int
     {
         return $this->id;
