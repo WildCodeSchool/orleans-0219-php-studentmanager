@@ -2,6 +2,8 @@
 // src/Entity/User.php
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -53,9 +55,15 @@ class User implements UserInterface
      */
     private $roles;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Attendance", mappedBy="user", orphanRemoval=true)
+     */
+    private $attendance;
+
     public function __construct()
     {
         $this->roles = array('ROLE_USER');
+        $this->attendance = new ArrayCollection();
     }
 
     // other properties and methods
@@ -114,5 +122,36 @@ class User implements UserInterface
 
     public function eraseCredentials()
     {
+    }
+
+    /**
+     * @return Collection|Attendance[]
+     */
+    public function getAttendance(): Collection
+    {
+        return $this->attendance;
+    }
+
+    public function addAttendance(Attendance $attendance): self
+    {
+        if (!$this->attendance->contains($attendance)) {
+            $this->attendance[] = $attendance;
+            $attendance->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAttendance(Attendance $attendance): self
+    {
+        if ($this->attendance->contains($attendance)) {
+            $this->attendance->removeElement($attendance);
+            // set the owning side to null (unless already changed)
+            if ($attendance->getUser() === $this) {
+                $attendance->setUser(null);
+            }
+        }
+
+        return $this;
     }
 }
