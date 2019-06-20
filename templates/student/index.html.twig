@@ -10,7 +10,6 @@
             <tr>
                 <th>Id</th>
                 <th>Birthday</th>
-                <th>Sex</th>
                 <th>PostalAdress</th>
                 <th>PostalCode</th>
                 <th>Town</th>
@@ -26,8 +25,7 @@
         {% for student in students %}
             <tr>
                 <td>{{ student.id }}</td>
-                <td>{{ student.birthday ? student.birthday|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ student.sex }}</td>
+                <td>{{ student.birthday ? student.birthday|date('Y-m-d') : '' }}</td>
                 <td>{{ student.postalAdress }}</td>
                 <td>{{ student.postalCode }}</td>
                 <td>{{ student.town }}</td>

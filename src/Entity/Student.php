@@ -19,84 +19,85 @@ class Student
     private $id;
 
     /**
-     * @ORM\Column(type="datetime", nullable=true)
+     * @ORM\Column(type="date")
      * @Assert\NotBlank
      */
     private $birthday;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\NotBlank
-     */
-    private $sex;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
+     * @Assert\Length(max=255)
      */
     private $postalAdress;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Length(min=5)
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", length=15)
+     * @Assert\Length(min=5,max=15)
+     * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
      */
     private $postalCode;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", length=100)
+     * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
+     * @Assert\Length(max=100)
      */
     private $town;
 
     /**
-     * @ORM\Column(type="string",length=255, nullable=true)
-     * @Assert\NotBlank
-     * @Assert\Length(min=10)
-     * @Assert\Length(max=10)
+     * @ORM\Column(type="string",length=20)
+     * @Assert\Length(max=20)
+     * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
      */
     private $phoneNumber;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     *
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
+     * @Assert\Length(max=255)
      */
     private $funding;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
+     * @Assert\Length(max=255)
      */
     private $insuranceCompany;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
+     * @Assert\Length(max=255)
      */
     private $insuranceNumber;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Length(min=7)
-     * @Assert\Length(max=7)
+     * @ORM\Column(type="string", length=7, nullable=true)
+     * @Assert\Length(min=7,max=7)
      */
-
     private $poleEmploiId;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", length=255 )
+     * @Assert\NotBlank(message="Ce champ ne doit pas être vide")
+     * @Assert\Length(max=255)
      */
     private $firstname;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
+     * @Assert\NotBlank(message="Ce champ ne doit pas être vide")
+     * @Assert\Length(max=255)
      */
     private $lastname;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank
-     * @Assert\Length(min=13)
-     * @Assert\Length(max=13)
+     * @ORM\Column(type="string", length=13)
+     * @Assert\NotBlank(message="Ce champ doit contenir minimum {value} caractères et maximum {value} caractères  ")
+     * @Assert\Length(min=13,max=13)
      */
     private $socialSecurityNumber;
 

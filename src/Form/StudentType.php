@@ -22,7 +22,6 @@ class StudentType extends AbstractType
             ->add('firstname', TextType::class, ['label' => 'Prénom'])
             ->add('lastname', TextType::class, ['label' => 'Nom'])
             ->add('birthday', BirthdayType::class, ['label' => 'Date de Naissance'])
-            ->add('sex', ChoiceType::class, ['label' => 'Civilité', 'choices' => ['H' => true, 'F' => false,]])
             ->add('postalAdress', TextType::class, ['label' => 'Adresse'])
             ->add('postalCode', TextType::class, ['label' => 'Code Postal'])
             ->add('socialSecurityNumber', TextType::class, ['label' => 'Numéro Sécurité Sociale'])
