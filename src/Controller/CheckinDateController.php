@@ -23,6 +23,8 @@ class CheckinDateController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $attendance->setDate(new \DateTime());
+            $attendance->setUser($this->getUser());
+
 
             $entityManager->persist($attendance);
             $entityManager->flush();
