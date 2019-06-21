@@ -86,8 +86,7 @@ class Student
      * @ORM\Column(type="string", length=7, nullable=true)
      * columnDefinition="CHAR(7)"
      * @Assert\Length(min=7,max=7)
-     * minMessage = "Ce champs doit contenir minimum {value} caractères.",
-     * maxMessage = "Ce champs doit contenir maximum {value} caractères."
+     * exactMessage = "Ce champs doit contenir {{limit}} caractères.",
      */
     private $poleEmploiId;
 
