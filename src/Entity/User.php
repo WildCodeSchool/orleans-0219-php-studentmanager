@@ -58,17 +58,11 @@ class User implements UserInterface
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Attendance", mappedBy="user", orphanRemoval=true)
      */
-    private $attendance;
-
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Attendance", mappedBy="user", orphanRemoval=true)
-     */
     private $attendances;
 
     public function __construct()
     {
         $this->roles = array('ROLE_USER');
-        $this->attendance = new ArrayCollection();
         $this->attendances = new ArrayCollection();
     }
 
