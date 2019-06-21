@@ -1,43 +1,228 @@
 @import "vars";
 @import '~bootstrap/scss/bootstrap';
-
 // the ~ allows you to reference things in node_modules
-@import "~bootstrap/scss/bootstrap";
 
+/*-------NAVBAR-------*/
+.navbar {
+  background-color: $background-color;
+  margin-bottom: 100px;
+  border: solid 0.1px $boder-color;
+}
 
+.nav-item {
+  font-size: 16px;
+  margin: 8px;
+  font-family: $font-family;
+}
 
+.navbar-nav .nav-item .nav-link{
+  color: $nav-font-color;
+}
 
-.h1-mes-informations{
-  text-align: center;
+.navbar-nav .nav-item .nav-link:hover {
+  color: $wild-color;
+}
+
+.navbar-toggler {
+  text-decoration: none;
+}
+
+.navbar-nav {
+  margin-left: 60%;
+}
+/*------- end NAVBAR-------*/
+
+/*-------footer-------*/
+footer {
+  color: $wild-text-color;
+  padding: 1em;
+  box-sizing: inherit;
+  height: 100px;
+}
+
+.footer {
+  bottom: 0;
+  display: inline-block;
+  position: absolute;
+}
+
+.a-footer {
+  color: $wild-text-color;
+}
+
+.a-footer.hover {
+  color: $wild-text-color;
+  position: static;
+  text-decoration: underline;
+}
+
+.heart{
+  color: $heart-color;
+}
+/*-------fin du footer-------*/
+
+/*-------Profile form-------*/
+.h1-mes-informations {
   margin-top: 5%;
   margin-bottom: 5%;
 }
 
-.btn{
-  border-color: $btn-border-mes-informations;
-  color: $btn-color-mes-informations;
+.td-mes-informations {
+  border: solid 1px $background-color;
+  border-radius: 5%;
+}
+
+.btn-info {
+  border-color: $background-color;
   text-decoration: none;
-  background-color: $btn-mes-informations;
+  background-color: $background-color;
   padding-left: 50%;
   padding-right: 44%;
-
 }
 
-.th-mes-informations{
-  border: solid 1px $th-border-mes-informations;
-  border-radius: 5%;
-}
-
-.td-mes-informations{
-  border: solid 1px $td-border-mes-informations;
-  border-radius: 5%;
-
-}
-
-
-.tr-mes-informations{
-  background-color: $tr-mes-informations;
+.tr-mes-informations {
   border-radius: 50%;
+  padding: 1.6rem;
+  font-size: 1.25em;
+  text-align: center;
+  background: $cellule-background-color;
 }
+
+.th-mes-informations {
+  border: solid 1px $background-color;
+  border-radius: 5%;
+}
+/*------- end profile form -------*/
+
+/*-------edit-------*/
+.a-edit{
+  color: $warm-color;
+}
+/*------- end edit-------*/
+
+/* -------Base-------*/
+.body-checking {
+  max-width: 70em;
+  margin: 0 auto;
+  padding: 1.25em;
+  text-align: center;
+  color: $primary-color;
+}
+
+.a-checkin {
+  color: $primary-color;
+}
+
+a:hover, a:focus {
+  color: $primary-color;
+}
+
+.td-mes-informations {
+  border: solid 1px $background-color;
+  border-radius: 5%;
+}
+
+.intro {
+  margin-bottom: 0.85em;
+  border-radius: 0.25rem;
+  padding: 1.25rem;
+  font-size: 1.2em;
+  font-weight: 200;
+  text-align: center;
+  color: $primary-color;
+}
+/*------- end base -------*/
+
+/* -------Piece positions-------*/
+.top {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.middle {
+  border-radius: 0;
+}
+
+.bottom {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+/*-------end Piece positions-------*/
+
+/* -------Piece categories ------- */
+.day, .year {
+  font-size: 2em;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: $background-color;
+  background: $primary-color;
+}
+
+.month {
+  padding-top: 1.75rem;
+  padding-bottom: 0;
+  font-size: 3em;
+  font-weight: 200;
+  color: $primary-color;
+}
+
+.date {
+  padding-top: 0;
+  padding-bottom: 1.75rem;
+  font-size: 3em;
+  font-weight: 100;
+  color: $primary-color;
+}
+/*------- end piece categories -------*/
+
+/*-------hour-------*/
+.hour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 75px;
+  font-weight: 500;
+  color: $primary-color;
+  background-color: $background-color;
+}
+/*------- end hour -------*/
+
+/*-------login-------*/
+.btn-login {
+  background-color: $wild-color;
+  color: $background-color;
+}
+/*------- end login -------*/
+
+/*----------checkin button---------------*/
+.btn{
+    background-color: $primary-color;
+    margin-top: 5em;
+    font-size: 2rem;
+    margin-left: 15em;
+    color: $secondary-color;
+}
+
+.btn-primary{
+    border-color: $primary-color;
+    background-color: $primary-color;
+}
+/*----------end checkin button---------------*/
+
+/*-------signup-------*/
+.h1-signup {
+  color: $title-color;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.btn-signup {
+  background-color: $wild-color;
+  color: $background-color;
+}
+/*-------fin du signup-------*/
 
 
