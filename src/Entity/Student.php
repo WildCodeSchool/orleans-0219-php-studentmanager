@@ -86,7 +86,7 @@ class Student
      * @ORM\Column(type="string", length=7, nullable=true)
      * columnDefinition="CHAR(7)"
      * @Assert\Length(min=7,max=7)
-     * exactMessage = "Ce champs doit contenir {{limit}} caractères.",
+     * exactMessage = "Ce champs doit contenir {{limit}} caractères."
      */
     private $poleEmploiId;
 
@@ -110,9 +110,8 @@ class Student
      * @ORM\Column(type="string", length=13)
      * @Assert\NotBlank(message="Ce champ doit contenir minimum {value} caractères et maximum {value} caractères  ")
      * @Assert\Length(min=13,max=13)
-     * columnDefinition="CHAR(7)"
-     * minMessage = "Ce champs doit contenir minimum {value} caractères.",
-     * maxMessage = "Ce champs doit contenir maximum {value} caractères."
+     * columnDefinition="CHAR(13)"
+     * exactMessage = "Ce champs doit contenir {{limit}} caractères.",
      */
     private $socialSecurityNumber;
 
