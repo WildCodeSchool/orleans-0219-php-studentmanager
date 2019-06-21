@@ -17,16 +17,16 @@ class CheckinDateController extends AbstractController
      */
     public function index(Request $request, EntityManagerInterface $entityManager) : Response
     {
-        $attendance = new Attendance();
-        $form = $this->createForm(AttendanceType::class, $attendance);
+        $attendances = new Attendance();
+        $form = $this->createForm(AttendanceType::class, $attendances);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $attendance->setDate(new \DateTime());
-            $attendance->setUser($this->getUser());
+            $attendances->setDate(new \DateTime());
+            $attendances->setUser($this->getUser());
 
 
-            $entityManager->persist($attendance);
+            $entityManager->persist($attendances);
             $entityManager->flush();
 
             return $this->redirectToRoute('checkin_date');
