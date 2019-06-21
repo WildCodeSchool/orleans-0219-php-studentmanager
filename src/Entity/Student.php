@@ -29,6 +29,7 @@ class Student
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
      * @Assert\Length(max=255)
+     * maxMessage = "Ce champs doit contenir maximum {value} caractères."
      */
     private $postalAdress;
 
@@ -36,6 +37,8 @@ class Student
      * @ORM\Column(type="string", length=15)
      * @Assert\Length(min=5,max=15)
      * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
+     * minMessage = "Ce champs doit contenir minimum {value} caractères."
+     * maxMessage = "Ce champs doit contenir maximum {value} caractères."
      */
     private $postalCode;
 
@@ -43,6 +46,7 @@ class Student
      * @ORM\Column(type="string", length=100)
      * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
      * @Assert\Length(max=100)
+     * maxMessage = "Ce champs doit contenir maximum {value} caractères."
      */
     private $town;
 
@@ -50,6 +54,7 @@ class Student
      * @ORM\Column(type="string",length=20)
      * @Assert\Length(max=20)
      * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
+     * maxMessage = "Ce champs doit contenir maximum {value} caractères."
      */
     private $phoneNumber;
 
@@ -57,6 +62,7 @@ class Student
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
      * @Assert\Length(max=255)
+     * maxMessage = "Ce champs doit contenir maximum {value} caractères."
      */
     private $funding;
 
@@ -64,6 +70,7 @@ class Student
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
      * @Assert\Length(max=255)
+     * maxMessage = "Ce champs doit contenir maximum {value} caractères."
      */
     private $insuranceCompany;
 
@@ -71,12 +78,16 @@ class Student
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
      * @Assert\Length(max=255)
+     * maxMessage = "Ce champs doit contenir maximum {value} caractères."
      */
     private $insuranceNumber;
 
     /**
      * @ORM\Column(type="string", length=7, nullable=true)
      * @Assert\Length(min=7,max=7)
+     * columnDefinition="CHAR(7)"
+     * minMessage = "Ce champs doit contenir minimum {value} caractères.",
+     * maxMessage = "Ce champs doit contenir maximum {value} caractères."
      */
     private $poleEmploiId;
 
@@ -84,6 +95,7 @@ class Student
      * @ORM\Column(type="string", length=255 )
      * @Assert\NotBlank(message="Ce champ ne doit pas être vide")
      * @Assert\Length(max=255)
+     * maxMessage = "Ce champs doit contenir maximum {value} caractères."
      */
     private $firstname;
 
@@ -91,6 +103,7 @@ class Student
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="Ce champ ne doit pas être vide")
      * @Assert\Length(max=255)
+     * maxMessage = "Ce champs doit contenir maximum {value} caractères."
      */
     private $lastname;
 
@@ -98,6 +111,9 @@ class Student
      * @ORM\Column(type="string", length=13)
      * @Assert\NotBlank(message="Ce champ doit contenir minimum {value} caractères et maximum {value} caractères  ")
      * @Assert\Length(min=13,max=13)
+     * columnDefinition="CHAR(7)"
+     * minMessage = "Ce champs doit contenir minimum {value} caractères.",
+     * maxMessage = "Ce champs doit contenir maximum {value} caractères."
      */
     private $socialSecurityNumber;
 
@@ -114,18 +130,6 @@ class Student
     public function setBirthday(?\DateTimeInterface $birthday): self
     {
         $this->birthday = $birthday;
-
-        return $this;
-    }
-
-    public function getSex(): ?string
-    {
-        return $this->sex;
-    }
-
-    public function setSex(?string $sex): self
-    {
-        $this->sex = $sex;
 
         return $this;
     }
