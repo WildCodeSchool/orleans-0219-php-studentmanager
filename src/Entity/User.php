@@ -60,10 +60,16 @@ class User implements UserInterface
      */
     private $attendance;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Attendance", mappedBy="user", orphanRemoval=true)
+     */
+    private $attendances;
+
     public function __construct()
     {
         $this->roles = array('ROLE_USER');
         $this->attendance = new ArrayCollection();
+        $this->attendances = new ArrayCollection();
     }
 
     // other properties and methods
@@ -127,28 +133,28 @@ class User implements UserInterface
     /**
      * @return Collection|Attendance[]
      */
-    public function getAttendance(): Collection
+    public function getAttendances(): Collection
     {
-        return $this->attendance;
+        return $this->attendances;
     }
 
-    public function addAttendance(Attendance $attendance): self
+    public function addAttendances(Attendance $attendances): self
     {
-        if (!$this->attendance->contains($attendance)) {
-            $this->attendance[] = $attendance;
-            $attendance->setUser($this);
+        if (!$this->attendances->contains($attendances)) {
+            $this->attendances[] = $attendances;
+            $attendances->setUser($this);
         }
 
         return $this;
     }
 
-    public function removeAttendance(Attendance $attendance): self
+    public function removeAttendances(Attendance $attendances): self
     {
-        if ($this->attendance->contains($attendance)) {
-            $this->attendance->removeElement($attendance);
+        if ($this->attendances->contains($attendances)) {
+            $this->attendances->removeElement($attendances);
             // set the owning side to null (unless already changed)
-            if ($attendance->getUser() === $this) {
-                $attendance->setUser(null);
+            if ($attendances->getUser() === $this) {
+                $attendances->setUser(null);
             }
         }
 

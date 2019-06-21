@@ -22,27 +22,10 @@ class Attendance
     private $date;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="attendance")
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="attendances")
      * @ORM\JoinColumn(nullable=false)
      */
     private $user;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
-
-    public function getDate(): ?\DateTimeInterface
-    {
-        return $this->date;
-    }
-
-    public function setDate(\DateTimeInterface $date): self
-    {
-        $this->date = $date;
-
-        return $this;
-    }
 
     public function getUser(): ?User
     {
@@ -55,4 +38,5 @@ class Attendance
 
         return $this;
     }
+
 }
