@@ -3,7 +3,7 @@
 // the ~ allows you to reference things in node_modules
 
 /*-------ALL SITE-------*/
-P,a,input,label{
+P,a,input,label,h1{
   font-family: $font-family;
 }
 
@@ -45,15 +45,11 @@ footer {
   color: $wild-text-color;
   padding: 1em;
   box-sizing: inherit;
-  height: 100px;
-}
-
-.footer {
+  margin-top: 20%;
   width: 100%;
   height: 100%;
   position: relative;
   bottom: 0;
-  z-index: -1;
 }
 
 .a-footer {
@@ -81,6 +77,13 @@ footer {
 .td-mes-informations {
   border: solid 1px $background-color;
   border-radius: 5%;
+}
+
+.btn-student{
+  background-color: $wild-color;
+  color: $background-color;
+  font-family: $font-family;
+
 }
 
 .btn-info {
