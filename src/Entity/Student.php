@@ -20,7 +20,8 @@ class Student
 
     /**
      * @ORM\Column(type="date")
-     * @Assert\NotBlank
+     * @Assert\Date
+     * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
      */
     private $birthday;
 
@@ -94,7 +95,7 @@ class Student
      * @ORM\Column(type="string", length=255 )
      * @Assert\NotBlank(message="Ce champ ne doit pas être vide")
      * @Assert\Length(max=255)
-     * maxMessage = "Ce champs doit contenir maximum {value} caractères."
+     * maxMessage = "Ce champs doit contenir maximum {{limit}} caractères."
      */
     private $firstname;
 
@@ -102,16 +103,16 @@ class Student
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="Ce champ ne doit pas être vide")
      * @Assert\Length(max=255)
-     * maxMessage = "Ce champs doit contenir maximum {value} caractères."
+     * maxMessage = "Ce champs doit contenir maximum {{limit}} caractères."
      */
     private $lastname;
 
     /**
      * @ORM\Column(type="string", length=13)
-     * @Assert\NotBlank(message="Ce champ doit contenir minimum {value} caractères et maximum {value} caractères  ")
-     * @Assert\Length(min=13,max=13)
      * columnDefinition="CHAR(13)"
-     * exactMessage = "Ce champs doit contenir {{limit}} caractères.",
+     * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
+     * @Assert\Length(min=13,max=13)
+     * exactMessage = "Ce champs doit contenir {{limit}} caractères."
      */
     private $socialSecurityNumber;
 
