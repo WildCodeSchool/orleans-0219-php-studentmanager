@@ -55,17 +55,6 @@ class User implements UserInterface
      */
     private $roles;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Attendance", mappedBy="user", orphanRemoval=true)
-     */
-    private $attendances;
-
-    public function __construct()
-    {
-        $this->roles = array('ROLE_USER');
-        $this->attendances = new ArrayCollection();
-    }
-
     // other properties and methods
 
     public function getEmail()
@@ -124,34 +113,4 @@ class User implements UserInterface
     {
     }
 
-    /**
-     * @return Collection|Attendance[]
-     */
-    public function getAttendances(): Collection
-    {
-        return $this->attendances;
-    }
-
-    public function addAttendances(Attendance $attendances): self
-    {
-        if (!$this->attendances->contains($attendances)) {
-            $this->attendances[] = $attendances;
-            $attendances->setUser($this);
-        }
-
-        return $this;
-    }
-
-    public function removeAttendances(Attendance $attendances): self
-    {
-        if ($this->attendances->contains($attendances)) {
-            $this->attendances->removeElement($attendances);
-            // set the owning side to null (unless already changed)
-            if ($attendances->getUser() === $this) {
-                $attendances->setUser(null);
-            }
-        }
-
-        return $this;
-    }
 }
