@@ -30,7 +30,7 @@ class Student
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
      * @Assert\Length(max=255,
-     * maxMessage = "Ce champs doit contenir maximum {value} caractères.")
+     * maxMessage = "Ce champs doit contenir maximum {{ limit }} caractères.")
      */
     private $postalAdress;
 
@@ -38,8 +38,8 @@ class Student
      * @ORM\Column(type="string", length=15)
      * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
      * @Assert\Length(min=5,max=15,
-     * minMessage = "Ce champs doit contenir minimum {value} caractères.",
-     * maxMessage = "Ce champs doit contenir maximum {value} caractères.")
+     * minMessage = "Ce champs doit contenir minimum {{ limit }} caractères.",
+     * maxMessage = "Ce champs doit contenir maximum {{ limit }} caractères.")
      */
     private $postalCode;
 
@@ -47,7 +47,7 @@ class Student
      * @ORM\Column(type="string", length=100)
      * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
      * @Assert\Length(max=100,
-     * maxMessage = "Ce champs doit contenir maximum {value} caractères.")
+     * maxMessage = "Ce champs doit contenir maximum {{ limit }} caractères.")
      */
     private $town;
 
@@ -55,7 +55,7 @@ class Student
      * @ORM\Column(type="string",length=20)
      * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
      * @Assert\Length(max=20,
-     * maxMessage = "Ce champs doit contenir maximum {value} caractères.")
+     * maxMessage = "Ce champs doit contenir maximum {{ limit }} caractères.")
      */
     private $phoneNumber;
 
@@ -63,7 +63,7 @@ class Student
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
      * @Assert\Length(max=255,
-     * maxMessage = "Ce champs doit contenir maximum {value} caractères.")
+     * maxMessage = "Ce champs doit contenir maximum {{ limit }} caractères.")
      */
     private $funding;
 
@@ -71,7 +71,7 @@ class Student
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
      * @Assert\Length(max=255,
-     * maxMessage = "Ce champs doit contenir maximum {value} caractères.")
+     * maxMessage = "Ce champs doit contenir maximum {{ limit }} caractères.")
      */
     private $insuranceCompany;
 
@@ -79,14 +79,14 @@ class Student
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
      * @Assert\Length(max=255,
-     * maxMessage = "Ce champs doit contenir maximum {value} caractères.")
+     * maxMessage = "Ce champs doit contenir maximum {{ limit }} caractères.")
      */
     private $insuranceNumber;
 
     /**
      * @ORM\Column(type="string", length=7,options={"fixed" = true}, nullable=true)
      * @Assert\Length(min=7,max=7,
-     * exactMessage = "Ce champs doit contenir {{limit}} caractères.")
+     * exactMessage = "Ce champs doit contenir {{ limit }} caractères.")
      */
     private $poleEmploiId;
 
@@ -94,7 +94,7 @@ class Student
      * @ORM\Column(type="string", length=255 )
      * @Assert\NotBlank(message="Ce champ ne doit pas être vide")
      * @Assert\Length(max=255,
-     * maxMessage = "Ce champs doit contenir maximum {{limit}} caractères.")
+     * maxMessage = "Ce champs doit contenir maximum {{ limit }} caractères.")
      */
     private $firstname;
 
@@ -102,7 +102,7 @@ class Student
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="Ce champ ne doit pas être vide")
      * @Assert\Length(max=255,
-     * maxMessage = "Ce champs doit contenir maximum {{limit}} caractères.")
+     * maxMessage = "Ce champs doit contenir maximum {{ limit }} caractères.")
      */
     private $lastname;
 
@@ -110,7 +110,7 @@ class Student
      * @ORM\Column(type="string", length=13, options={"fixed" = true})
      * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
      * @Assert\Length(min=13,max=13,
-     * exactMessage = "Ce champs doit contenir {{limit}} caractères.")
+     * exactMessage = "Ce champs doit contenir {{ limit }} caractères.")
      */
     private $socialSecurityNumber;
 
