@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Presence;
+use App\Form\PresenceType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,6 +17,7 @@ class CheckinDateController extends AbstractController
      */
     public function index(Request $request, EntityManagerInterface $entityManager): Response
     {
+
         $presences = new presence();
         $form = $this->createForm(PresenceType::class, $presences);
         $form->handleRequest($request);

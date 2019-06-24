@@ -55,6 +55,21 @@ class User implements UserInterface
      */
     private $roles;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $presences;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Presence", mappedBy="user", orphanRemoval=true)
+     */
+    private $Presences;
+
+    public function __construct()
+    {
+        $this->Presences = new ArrayCollection();
+    }
+
     // other properties and methods
 
     public function getEmail()
@@ -113,4 +128,38 @@ class User implements UserInterface
     {
     }
 
+    public function getPresences(): ?\DateTimeInterface
+    {
+        return $this->presences;
+    }
+
+    public function setPresences(\DateTimeInterface $presences): self
+    {
+        $this->presences = $presences;
+
+        return $this;
+    }
+
+    public function addPresence(Presence $presence): self
+    {
+        if (!$this->Presences->contains($presence)) {
+            $this->Presences[] = $presence;
+            $presence->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removePresence(Presence $presence): self
+    {
+        if ($this->Presences->contains($presence)) {
+            $this->Presences->removeElement($presence);
+            // set the owning side to null (unless already changed)
+            if ($presence->getUser() === $this) {
+                $presence->setUser(null);
+            }
+        }
+
+        return $this;
+    }
 }
