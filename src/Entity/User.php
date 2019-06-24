@@ -64,6 +64,7 @@ class User implements UserInterface
     public function __construct()
     {
         $this->presences = new ArrayCollection();
+        $this->roles = array('ROLE_USER');
     }
 
     // other properties and methods
