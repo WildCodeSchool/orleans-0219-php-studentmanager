@@ -84,8 +84,7 @@ class Student
     private $insuranceNumber;
 
     /**
-     * @ORM\Column(type="string", length=7, nullable=true)
-     * columnDefinition="CHAR(7)"
+     * @ORM\Column(type="string", length=7,options={"fixed" = true}, nullable=true)
      * @Assert\Length(min=7,max=7)
      * exactMessage = "Ce champs doit contenir {{limit}} caractères."
      */
@@ -108,8 +107,7 @@ class Student
     private $lastname;
 
     /**
-     * @ORM\Column(type="string", length=13)
-     * columnDefinition="CHAR(13)"
+     * @ORM\Column(type="string", length=13, options={"fixed" = true})
      * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
      * @Assert\Length(min=13,max=13)
      * exactMessage = "Ce champs doit contenir {{limit}} caractères."
