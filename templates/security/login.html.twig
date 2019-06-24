@@ -5,13 +5,13 @@
 {% block body %}
     <div class="form-login container-fluid">
         <form class="d-flex justify-content-center" method="post">
-            <div class="col-sm-offset-1 col-md-offset-3 col-xs-8 col-sm-8 col-md-4">
+            <div class="col-sm-offset-2 col-md-offset-3 col-xs-6 col-sm-8 col-md-4">
                 {% if error %}
                     <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                 {% endif %}
-                <h1 class="h1-login h1 mb-3 font-weight-bold">Hello wilder !</h1>
-                <h3>par <a class="a-login" target="_blank" href="https://odyssey.wildcodeschool.com/?locale=fr">wildcodeschool.com</a>
-                </h3>
+                <h1 class="h1-login h1 font-weight-bold">Hello wilder !</h1>
+                <h4 class="h4-login">par <a class="a-login" target="_blank" href="https://odyssey.wildcodeschool.com/?locale=fr">wildcodeschool.com</a>
+                </h4>
                 <p>L'avenir appartient au wilder qui pointe tôt <i class="far fa-smile"></i></p>
                 <div class="form-group">
                     <label for="inputUsername" class="sr-only">Username</label>
