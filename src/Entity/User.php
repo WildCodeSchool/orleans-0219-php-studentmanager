@@ -2,6 +2,8 @@
 // src/Entity/User.php
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -53,9 +55,21 @@ class User implements UserInterface
      */
     private $roles;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Presence", mappedBy="user", orphanRemoval=true)
+     */
+    private $Presences;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Presence", mappedBy="user", orphanRemoval=true)
+     */
+    private $presences;
+
     public function __construct()
     {
         $this->roles = array('ROLE_USER');
+        $this->Presences = new ArrayCollection();
+        $this->presences = new ArrayCollection();
     }
 
     // other properties and methods
@@ -114,5 +128,36 @@ class User implements UserInterface
 
     public function eraseCredentials()
     {
+    }
+
+    /**
+     * @return Collection|Presence[]
+     */
+    public function getPresences(): Collection
+    {
+        return $this->Presences;
+    }
+
+    public function addPresence(Presence $presence): self
+    {
+        if (!$this->Presences->contains($presence)) {
+            $this->Presences[] = $presence;
+            $presence->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removePresence(Presence $presence): self
+    {
+        if ($this->Presences->contains($presence)) {
+            $this->Presences->removeElement($presence);
+            // set the owning side to null (unless already changed)
+            if ($presence->getUser() === $this) {
+                $presence->setUser(null);
+            }
+        }
+
+        return $this;
     }
 }

@@ -5,9 +5,9 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\AttendanceRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\PresenceRepository")
  */
-class Attendance
+class Presence
 {
     /**
      * @ORM\Id()
@@ -20,6 +20,12 @@ class Attendance
      * @ORM\Column(type="datetime")
      */
     private $date;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="presences")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $user;
 
     public function getId(): ?int
     {
@@ -37,4 +43,17 @@ class Attendance
 
         return $this;
     }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
 }
