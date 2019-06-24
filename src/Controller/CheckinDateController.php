@@ -18,13 +18,13 @@ class CheckinDateController extends AbstractController
     public function index(Request $request, EntityManagerInterface $entityManager): Response
     {
 
-        $presences = new presence();
-        $form = $this->createForm(PresenceType::class, $presences);
+        $presence = new Presence();
+        $form = $this->createForm(PresenceType::class, $presence);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $presences->setDate(new \DateTime());
-            $presences->setUser($this->getUser());
-            $entityManager->persist($presences);
+            $presence->setDate(new \DateTime());
+            $presence->setUser($this->getUser());
+            $entityManager->persist($presence);
             $entityManager->flush();
             return $this->redirectToRoute('checkin_date');
         }

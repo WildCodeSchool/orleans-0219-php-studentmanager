@@ -56,18 +56,14 @@ class User implements UserInterface
     private $roles;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\OneToMany(targetEntity="App\Entity\Presence", mappedBy="user", orphanRemoval=true)
      */
     private $presences;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Presence", mappedBy="user", orphanRemoval=true)
-     */
-    private $Presences;
 
     public function __construct()
     {
-        $this->Presences = new ArrayCollection();
+        $this->presences = new ArrayCollection();
     }
 
     // other properties and methods
@@ -142,8 +138,8 @@ class User implements UserInterface
 
     public function addPresence(Presence $presence): self
     {
-        if (!$this->Presences->contains($presence)) {
-            $this->Presences[] = $presence;
+        if (!$this->presences->contains($presence)) {
+            $this->presences[] = $presence;
             $presence->setUser($this);
         }
 
@@ -152,8 +148,8 @@ class User implements UserInterface
 
     public function removePresence(Presence $presence): self
     {
-        if ($this->Presences->contains($presence)) {
-            $this->Presences->removeElement($presence);
+        if ($this->presences->contains($presence)) {
+            $this->presences->removeElement($presence);
             // set the owning side to null (unless already changed)
             if ($presence->getUser() === $this) {
                 $presence->setUser(null);

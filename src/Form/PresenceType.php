@@ -11,9 +11,6 @@ class PresenceType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder
-            ->add('date')
-        ;
     }
 
     public function configureOptions(OptionsResolver $resolver)

@@ -89,11 +89,12 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
             return new RedirectResponse($targetPath);
         }
 
-        return new RedirectResponse($this->urlGenerator->generate('checkin_date'));
+        // redirect to some "app_homepage" route - of wherever you want
+        return new RedirectResponse($this->getLoginUrl());
     }
 
     protected function getLoginUrl()
     {
-        return $this->urlGenerator->generate('app_homepage');
+        return $this->urlGenerator->generate('checkin_date');
     }
 }

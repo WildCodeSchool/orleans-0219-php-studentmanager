@@ -22,7 +22,7 @@ class Presence
     private $date;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="Presences")
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="presences")
      * @ORM\JoinColumn(nullable=false)
      */
     private $user;
