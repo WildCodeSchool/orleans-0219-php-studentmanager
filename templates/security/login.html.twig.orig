@@ -33,8 +33,16 @@
                     </button>
                 </div>
                 <div class="checkbox mb-3">
+<<<<<<< HEAD
+                    <label for="_remember_me">
+                        <input type="checkbox" name="_remember_me"> Se souvenir de moi
+||||||| merged common ancestors
+                    <label for="remember_me">
+                        <input type="checkbox" name="_remember_me"> Se souvenir de moi
+=======
                     <label for="remember_me">
                         <input type="checkbox" id="remember_me" name="_remember_me"> Se souvenir de moi
+>>>>>>> 507c02f810fc96f0198fc92fe8f2b481b712ef4f
                     </label>
                 </div>
 
