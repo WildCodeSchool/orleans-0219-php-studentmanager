@@ -2,17 +2,13 @@
 
 namespace App\Form;
 
-use App\Entity\Attendance;
+use App\Entity\Presence;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class AttendanceType extends AbstractType
+class PresenceType extends AbstractType
 {
-    /**
-     * @param FormBuilderInterface $builder
-     * @param array $options
-     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
     }
@@ -20,7 +16,7 @@ class AttendanceType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Attendance::class,
+            'data_class' => Presence::class,
         ]);
     }
 }

@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
-use App\Entity\Attendance;
-use App\Form\AttendanceType;
+use App\Entity\Presence;
+use App\Form\PresenceType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,23 +15,21 @@ class CheckinDateController extends AbstractController
     /**
      * @Route("/checkin/date", name="checkin_date")
      */
-    public function index(Request $request, EntityManagerInterface $entityManager) : Response
+    public function index(Request $request, EntityManagerInterface $entityManager): Response
     {
-        $attendance = new Attendance();
-        $form = $this->createForm(AttendanceType::class, $attendance);
+
+        $presence = new Presence();
+        $form = $this->createForm(PresenceType::class, $presence);
         $form->handleRequest($request);
-
         if ($form->isSubmitted() && $form->isValid()) {
-            $attendance->setDate(new \DateTime());
-
-            $entityManager->persist($attendance);
+            $presence->setDate(new \DateTime());
+            $presence->setUser($this->getUser());
+            $entityManager->persist($presence);
             $entityManager->flush();
-
             return $this->redirectToRoute('checkin_date');
         }
-
         return $this->render('checkin_date/index.html.twig', [
-            'form'=>$form->createView()
+            'form' => $form->createView()
         ]);
     }
 }
