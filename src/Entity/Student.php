@@ -3,9 +3,11 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\StudentRepository")
+ *
  */
 class Student
 {
@@ -17,55 +19,100 @@ class Student
     private $id;
 
     /**
-     * @ORM\Column(type="datetime", nullable=true)
+     * @ORM\Column(type="date")
+     * @Assert\Date
+     * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
      */
     private $birthday;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $sex;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
+     * @Assert\Length(max=255,
+     * maxMessage = "Ce champs doit contenir maximum {{ limit }} caractères.")
      */
     private $postalAdress;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=15)
+     * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
+     * @Assert\Length(min=5,max=15,
+     * minMessage = "Ce champs doit contenir minimum {{ limit }} caractères.",
+     * maxMessage = "Ce champs doit contenir maximum {{ limit }} caractères.")
      */
     private $postalCode;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=100)
+     * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
+     * @Assert\Length(max=100,
+     * maxMessage = "Ce champs doit contenir maximum {{ limit }} caractères.")
      */
     private $town;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="string",length=20)
+     * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
+     * @Assert\Length(max=20,
+     * maxMessage = "Ce champs doit contenir maximum {{ limit }} caractères.")
      */
     private $phoneNumber;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
+     * @Assert\Length(max=255,
+     * maxMessage = "Ce champs doit contenir maximum {{ limit }} caractères.")
      */
     private $funding;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
+     * @Assert\Length(max=255,
+     * maxMessage = "Ce champs doit contenir maximum {{ limit }} caractères.")
      */
     private $insuranceCompany;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
+     * @Assert\Length(max=255,
+     * maxMessage = "Ce champs doit contenir maximum {{ limit }} caractères.")
      */
     private $insuranceNumber;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=7,options={"fixed" = true}, nullable=true)
+     * @Assert\Length(min=7,max=7,
+     * exactMessage = "Ce champs doit contenir {{ limit }} caractères.")
      */
-    
     private $poleEmploiId;
+
+    /**
+     * @ORM\Column(type="string", length=255 )
+     * @Assert\NotBlank(message="Ce champ ne doit pas être vide")
+     * @Assert\Length(max=255,
+     * maxMessage = "Ce champs doit contenir maximum {{ limit }} caractères.")
+     */
+    private $firstname;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Ce champ ne doit pas être vide")
+     * @Assert\Length(max=255,
+     * maxMessage = "Ce champs doit contenir maximum {{ limit }} caractères.")
+     */
+    private $lastname;
+
+    /**
+     * @ORM\Column(type="string", length=13, options={"fixed" = true})
+     * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
+     * @Assert\Length(min=13,max=13,
+     * exactMessage = "Ce champs doit contenir {{ limit }} caractères.")
+     */
+    private $socialSecurityNumber;
 
     public function getId(): ?int
     {
@@ -80,18 +127,6 @@ class Student
     public function setBirthday(?\DateTimeInterface $birthday): self
     {
         $this->birthday = $birthday;
-
-        return $this;
-    }
-
-    public function getSex(): ?string
-    {
-        return $this->sex;
-    }
-
-    public function setSex(?string $sex): self
-    {
-        $this->sex = $sex;
 
         return $this;
     }
@@ -188,6 +223,42 @@ class Student
     public function setPoleEmploiId(?string $poleEmploiId): self
     {
         $this->poleEmploiId = $poleEmploiId;
+
+        return $this;
+    }
+
+    public function getFirstname(): ?string
+    {
+        return $this->firstname;
+    }
+
+    public function setFirstname(string $firstname): self
+    {
+        $this->firstname = $firstname;
+
+        return $this;
+    }
+
+    public function getLastname(): ?string
+    {
+        return $this->lastname;
+    }
+
+    public function setLastname(string $lastname): self
+    {
+        $this->lastname = $lastname;
+
+        return $this;
+    }
+
+    public function getSocialSecurityNumber(): ?string
+    {
+        return $this->socialSecurityNumber;
+    }
+
+    public function setSocialSecurityNumber(string $socialSecurityNumber): self
+    {
+        $this->socialSecurityNumber = $socialSecurityNumber;
 
         return $this;
     }
