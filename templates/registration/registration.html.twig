@@ -1,25 +1,28 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="container">
-        <h1 class="h1-signup">Inscription</h1>
+    <div class="container d-flex justify-content-center">
+        <div class="col-sm-offset-1 col-md-offset-3 col-xs-8 col-sm-8 col-md-6">
+            <h1 class="h1-signup font-weight-bold">Inscris-toi ici</h1>
+            {{ form_start(form) }}
+            <div class="form-group">
+                {{ form_widget(form.email, {'attr': {'placeholder': 'Email'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_widget(form.username, {'attr': {'placeholder': 'Nom d\'utilisateur'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_widget(form.plainPassword.first, {'attr': {'placeholder': 'Crée ton mot de passe'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_widget(form.plainPassword.second, {'attr': {'placeholder': 'Confirme ton mot de passe'}}) }}
+            </div>
+            <div class="form-group">
+            <button type="submit" class="btn btn-signup btn-lg btn-block ">Enregistrer mes informations</button>
+            </div>
+            {{ form_end(form) }}
+            <p>Vos données personnelles (email et nom d'utilisateur) ne sont utilisées qu'à des fin d'authentification et ne
+                sont pas partagées avec des tiers.</p>
+        </div>
     </div>
-    <div class="form container">
-        {{ form_start(form) }}
-        <div class="form-group">
-            {{ form_row(form.email) }}
-        </div>
-        <div class="form-group">
-            {{ form_row(form.username) }}
-        </div>
-        <div class="form-group">
-            {{ form_row(form.plainPassword.first) }}
-        </div>
-        <div class="form-group">
-            {{ form_row(form.plainPassword.second) }}
-        </div>
-        <button type="submit" class="btn btn-signup btn-lg btn-block ">Enregistrer mes informations</button>
-        {{ form_end(form) }}
-    </div>
-
 {% endblock %}
