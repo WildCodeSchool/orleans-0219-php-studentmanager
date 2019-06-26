@@ -95,6 +95,11 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
 
     protected function getLoginUrl()
     {
-        return $this->urlGenerator->generate('checkin_date');
+        return $this->urlGenerator->generate('/user/checkin_date');
+    }
+
+    public function supportsRememberMe()
+    {
+        return true;
     }
 }
