@@ -18,7 +18,7 @@
         <div class="form-row text-center">
             <div class="col-12">
                 {{ form_start(form) }}
-                <button type="submit" class="btn btn-checkin btn-lg center-block">Cliquez!</button>
+                <input type="submit" class="btn btn-checkin btn-lg center-block name="cliquez!" value="cliquez!"><?php if(isset($_POST['OK'])) echo 'disabled="disabled"'; ?>
                 {{ form_end(form) }}
             </div>
         </div>

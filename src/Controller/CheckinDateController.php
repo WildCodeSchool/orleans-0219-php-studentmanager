@@ -18,12 +18,31 @@ class CheckinDateController extends AbstractController
     public function index(Request $request, EntityManagerInterface $entityManager): Response
     {
 
+
         $presence = new Presence();
+
         $form = $this->createForm(PresenceType::class, $presence);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $presence->setDate(new \DateTime());
             $presence->setUser($this->getUser());
+
+            $presenceMorning = $this->getDoctrine()
+                ->getRepository(Presence::class)
+                ->recordingDoneMorning($presence->getDate(), $presence->getUser());
+
+            if ($presenceMorning) {
+                $this->addFlash('notice', 'Vous avez déjà signalé votre présence ce matin, au boulot!');
+            }
+            $presenceAfternoon = $this->getDoctrine()
+                ->getRepository(Presence::class)
+                ->recordingDoneAfternoon($presence->getDate(), $presence->getUser());
+            //peut etre en relation avec le inner join presenceRepository
+
+            if ($presenceAfternoon) {
+                $this->addFlash('notice','Vous avez déjà signalé votre présence cet après-midi, bonne sieste!');
+            }
+
             $entityManager->persist($presence);
             $entityManager->flush();
             return $this->redirectToRoute('checkin_date');
