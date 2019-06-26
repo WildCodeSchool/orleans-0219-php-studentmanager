@@ -3,13 +3,28 @@
 {% block title %}Edit Student{% endblock %}
 
 {% block body %}
+
+
+
     <div class="container">
-    <h1>Edit Student</h1>
+        <h1 class="h1-modification">Apporter vos modifications</h1>
+        {{ form_start(form) }}
+        <a class="a-edit" href="{{ path('student_show',{'id': student.id}) }}"></a>
+        {{ form_widget(form) }}
 
-    {{ include('student/_form.html.twig', {'button_label': 'Update'}) }}
+        <div class="form-group">
+            <a href="{{ path('student_show', {'id': student.id}) }}">
+                <button type="button" class="btn btn-signup btn-lg btn-block">Sauvegarder
+                </button>
+            </a>
+        </div>
 
-    <a  class="a-edit" href="{{ path('student_index') }}">back to list</a>
-
-    {{ include('student/_delete_form.html.twig') }}
+        <div class="form-group">
+            <a href="{{ path('student_show', {'id': student.id}) }}">
+                <button type="button" class="btn btn-signup btn-lg btn-block">Profil</button>
+            </a>
+        </div>
+        {{ form_end(form) }}
     </div>
+
 {% endblock %}

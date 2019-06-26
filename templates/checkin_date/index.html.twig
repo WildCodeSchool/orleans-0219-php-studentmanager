@@ -4,18 +4,26 @@
 
 {% block body %}
     <div class="container">
-        <div class="body-checking"></div>
-        <div class="today">
-            <div class="today-piece top day"></div>
-            <div class="today-piece middle date"></div>
-            <div class="today-piece middle month"></div>
-            <div class="today-piece bottom year"></div>
+        <div class="form-group">
+            <div class="body-checkin">
+                <div class="today">
+                    <div class="today-piece top day"></div>
+                    <div class="today-piece middle date"></div>
+                    <div><span id="heure" class="hour"></span></div>
+                    <div class="today-piece middle month"></div>
+                    <div class="today-piece bottom year"></div>
+                </div>
+            </div>
+        </div>
+        <div class="form-row text-center">
+            <div class="col-12">
+                {{ form_start(form) }}
+                <button type="submit" class="btn btn-checkin btn-lg center-block">Cliquez!</button>
+                {{ form_end(form) }}
+            </div>
         </div>
     </div>
-    <div class="container">
-        <div><span id="heure" class="hour"></span></div>
-    </div>
-   {{ form_start(form) }}
-       <button class="btn btn-lg">Cliquez!</button>
-   {{ form_end(form) }}
+
+
+
 {% endblock %}

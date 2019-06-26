@@ -4,25 +4,35 @@ namespace App\Form;
 
 use App\Entity\Student;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class StudentType extends AbstractType
 {
+    /**
+     * @param FormBuilderInterface $builder
+     * @param array $options
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('birthday')
-            ->add('sex')
-            ->add('postalAdress')
-            ->add('postalCode')
-            ->add('town')
-            ->add('phoneNumber')
-            ->add('funding')
-            ->add('insuranceCompany')
-            ->add('insuranceNumber')
-            ->add('poleEmploiId')
-        ;
+            ->add('firstname', TextType::class, ['label' => 'Prénom'])
+            ->add('lastname', TextType::class, ['label' => 'Nom'])
+            ->add('birthday', BirthdayType::class, ['label' => 'Date de Naissance'])
+            ->add('postalAdress', TextType::class, ['label' => 'Adresse'])
+            ->add('postalCode', TextType::class, ['label' => 'Code Postal'])
+            ->add('socialSecurityNumber', TextType::class, ['label' => 'Numéro Sécurité Sociale'])
+            ->add('town', TextType::class, ['label' => 'Ville'])
+            ->add('phoneNumber', TextType::class, ['label' => 'Téléphone'])
+            ->add('funding', ChoiceType::class, ['label' => 'Financement', 'choices' =>
+                ['Region' => true, 'Pole Emploi' => false, 'OPCA' => true, 'Autofinancement'
+                => false, 'CPF' => true, 'CPF + Autofinancement' => false, 'Autre' => true]])
+            ->add('insuranceCompany', TextType::class, ['label' => 'Companie d\'assurance'])
+            ->add('insuranceNumber', TextType::class, ['label' => 'Numéro de sociétaire'])
+            ->add('poleEmploiId', TextType::class, ['label' => 'Identifiant Pole Emploi']);
     }
 
     public function configureOptions(OptionsResolver $resolver)
