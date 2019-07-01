@@ -55,7 +55,7 @@ class User implements UserInterface, \Serializable
     private $password;
 
     /**
-     * @ORM\Column(type="json")
+     * @ORM\Column(type="json_array")
      */
     private $roles = [];
 
@@ -124,7 +124,7 @@ class User implements UserInterface, \Serializable
     {
         $roles = $this->roles;
         // guarantee every user at least has ROLE_USER
-        $roles[] = '';
+        $roles[] = 'ROLE_USER';
 
         return array_unique($roles);
     }
