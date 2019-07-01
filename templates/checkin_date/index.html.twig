@@ -19,12 +19,17 @@
 
             <div class="col-12">
                 {{ form_start(form) }}
-                <input type="submit" class="btn btn-checkin btn-lg center-block name="cliquez!" value="cliquez!"><?php if(isset($_POST['OK'])) echo 'disabled="disabled"'; ?>
+                <input type="submit" class="btn btn-checkin btn-lg center-block" name="submit" value="Signalez votre présence !">
+                <div class="inner-right">
+                    <p></p>
+                </div>
                 {{ form_end(form) }}
-            </div>
-
-            <div class="alert alert-primary" role="alert">
-                A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                <div class=" message alert alert-success" role="alert">
+                    <h4 class="alert-heading">Bonjour</h4>
+                    <p>les horaires pour signaler votre présence sont : 7h-12h le matin et 12h-14h pour l'après-midi</p>
+                    <hr>
+                    <p class="mb-0">Au delà de 09h05 et 14h05 vous serez considéré comme en retard</p>
+                </div>
             </div>
 
         </div>

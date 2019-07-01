@@ -44,7 +44,7 @@ class PresenceRepository extends ServiceEntityRepository
                 ]
             )
             ->getQuery();
-        return $qb->execute();
+        return $qb->getResult();
     }
 
     /**
@@ -66,6 +66,6 @@ class PresenceRepository extends ServiceEntityRepository
                 ]
             )
             ->getQuery();
-        return $qb->execute();
+        return $qb->getResult();
     }
 }
