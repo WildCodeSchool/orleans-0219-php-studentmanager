@@ -12,7 +12,16 @@
 </head>
 <body>
 {% include ('navbar.html.twig')%}
-{#mettre un block pour les messages flash (conditions + boucles)#}
+
+{# read and display all flash messages #}
+{% for label, messages in app.flashes %}
+    {% for message in messages %}
+        <div class="flash-{{ label }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endfor %}
+
 {% block body %}{% endblock %}
 {% block javascripts %}
     {{ encore_entry_script_tags('app') }}

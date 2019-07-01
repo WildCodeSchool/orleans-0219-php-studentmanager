@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Presence;
 use App\Entity\User;
+use App\Service\DateService;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
@@ -15,16 +16,21 @@ use Symfony\Bridge\Doctrine\RegistryInterface;
  */
 class PresenceRepository extends ServiceEntityRepository
 {
-    public function __construct(RegistryInterface $registry)
+
+    private $dateService;
+
+    public function __construct(RegistryInterface $registry, DateService $dateService)
     {
         parent::__construct($registry, Presence::class);
+        $this->dateService = $dateService;
     }
 
-/**
-* @param $date
-* @return Presence
-*/
-    public function recordingDoneMorning(\DateTime $date, User $user): array
+    /**
+     * @param \DateTime $date
+     * @param User $user
+     * @return Presence
+     */
+    public function findByRecordingDoneMorning(\DateTime $date, User $user)
     {
         $qb = $this->createQueryBuilder('p')
             ->innerJoin('p.user', 'u')
@@ -32,8 +38,8 @@ class PresenceRepository extends ServiceEntityRepository
             ->andWhere('u.id = :user')
             ->setParameters(
                 [
-                    'dateMinMorning' => $date->format('Y-m-d 07:00:00'),
-                    'dateMaxMorning' => $date->format('Y-m-d 12:00:00'),
+                    'dateMinMorning' => $this->dateService->getMorningMinDate($date),
+                    'dateMaxMorning' => $this->dateService->getMorningMaxDate($date),
                     'user' => $user->getId(),
                 ]
             )
@@ -42,10 +48,11 @@ class PresenceRepository extends ServiceEntityRepository
     }
 
     /**
-     * @param $date
+     * @param \DateTime $date
+     * @param User $user
      * @return Presence
      */
-    public function recordingDoneAfternoon(\DateTime $date, User $user): array
+    public function findByRecordingDoneAfternoon(\DateTime $date, User $user)
     {
         $qb = $this->createQueryBuilder('p')
             ->innerJoin('p.user', 'u')
@@ -53,8 +60,8 @@ class PresenceRepository extends ServiceEntityRepository
             ->andWhere('u.id = :user')
             ->setParameters(
                 [
-                    'dateMinAfternoon' => $date->format('Y-m-d 12:00:00'),
-                    'dateMaxAfternoon' => $date->format('Y-m-d 14:00:00'),
+                    'dateMinAfternoon' => $this->dateService->getAfternoonMinDate($date),
+                    'dateMaxAfternoon' => $this->dateService->getAfternoonMaxDate($date),
                     'user' => $user->getId(),
                 ]
             )

@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Presence;
 use App\Form\PresenceType;
+use App\Service\DateService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,7 +16,7 @@ class CheckinDateController extends AbstractController
     /**
      * @Route("/checkin/date", name="checkin_date")
      */
-    public function index(Request $request, EntityManagerInterface $entityManager): Response
+    public function index(Request $request, EntityManagerInterface $entityManager, DateService $dateService): Response
     {
 
 
@@ -27,24 +28,40 @@ class CheckinDateController extends AbstractController
             $presence->setDate(new \DateTime());
             $presence->setUser($this->getUser());
 
-            $presenceMorning = $this->getDoctrine()
-                ->getRepository(Presence::class)
-                ->recordingDoneMorning($presence->getDate(), $presence->getUser());
+            $isValid = true;
 
-            if ($presenceMorning) {
-                $this->addFlash('notice', 'Vous avez déjà signalé votre présence ce matin, au boulot!');
+            if (!$dateService->isCheckinAllowed($presence->getDate())) {
+                $isValid = false;
+            } else {
+
+                if ($dateService->isMorningCheckin($presence->getDate())) {
+                    $presenceMorning = $this->getDoctrine()
+                        ->getRepository(Presence::class)
+                        ->findByRecordingDoneMorning($presence->getDate(), $presence->getUser());
+
+                    if ($presenceMorning) {
+                        $isValid = false;
+                        $this->addFlash('erreur', 'Vous avez déjà signalé votre présence ce matin, au boulot!');
+                    }
+                } else {
+                    $presenceAfternoon = $this->getDoctrine()
+                        ->getRepository(Presence::class)
+                        ->findByRecordingDoneAfternoon($presence->getDate(), $presence->getUser());
+
+                    if ($presenceAfternoon) {
+                        $isValid = false;
+                        $this->addFlash('erreur', 'Vous avez déjà signalé votre présence cet après-midi, bonne sieste!');
+                    }
+                }
+
             }
-            $presenceAfternoon = $this->getDoctrine()
-                ->getRepository(Presence::class)
-                ->recordingDoneAfternoon($presence->getDate(), $presence->getUser());
-            //peut etre en relation avec le inner join presenceRepository
 
-            if ($presenceAfternoon) {
-                $this->addFlash('notice','Vous avez déjà signalé votre présence cet après-midi, bonne sieste!');
+
+            if ($isValid) {
+                $entityManager->persist($presence);
+                $entityManager->flush();
             }
 
-            $entityManager->persist($presence);
-            $entityManager->flush();
             return $this->redirectToRoute('checkin_date');
         }
         return $this->render('checkin_date/index.html.twig', [

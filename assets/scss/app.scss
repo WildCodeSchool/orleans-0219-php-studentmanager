@@ -241,6 +241,11 @@ a:hover, a:focus {
   font-family: $font-family;
 }
 
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .btn-primary {
   border-color: $primary-color;
   background-color: $primary-color;
