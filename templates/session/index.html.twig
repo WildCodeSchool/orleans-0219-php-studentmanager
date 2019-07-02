@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sessions{% endblock %}
+
+{% block body %}
+    <h1>Sessions</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date de début</th>
+                <th>Date de fin</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for session in sessions %}
+            <tr>
+                <td>{{ session.name }}</td>
+                <td>{{ session.dateStart ? session.dateStart|date('Y-m-d') : '' }}</td>
+                <td>{{ session.dateEnd ? session.dateEnd|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('session_edit', {'id': session.id}) }}">éditer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">Aucune session enregistrée</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('session_new') }}">Créer une nouvelle session</a>
+{% endblock %}

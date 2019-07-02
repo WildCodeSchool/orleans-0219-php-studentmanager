@@ -69,7 +69,7 @@ class StudentController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('student_index', [
+            return $this->redirectToRoute('student_show', [
                 'id' => $student->getId(),
             ]);
         }

@@ -32,6 +32,7 @@ P,a,input,label,h1,td,tr{
 
 .navbar-toggler {
   text-decoration: none;
+  color: $title-color;
 }
 
 .navbar-nav {
@@ -48,8 +49,10 @@ footer {
   margin-top: 20%;
   width: 100%;
   height: 100%;
-  position: relative;
   bottom: 0;
+  left: 0;
+  position: relative;
+
 }
 
 .a-footer {
@@ -70,6 +73,7 @@ footer {
 
 /*-------Profile form-------*/
 .h1-mes-informations {
+  text-align: center;
   margin-top: 5%;
   margin-bottom: 5%;
 }
@@ -95,6 +99,7 @@ footer {
 }
 
 .tr-mes-informations {
+  background-color: $wild-text-color;
   border-radius: 50%;
   padding: 1.6rem;
   font-size: 1.25em;
@@ -107,7 +112,16 @@ footer {
   border-radius: 5%;
 }
 
-/*------- end profile form -------*/
+
+/*-------modification -------*/
+
+.h1-modification{
+  padding-bottom: 5%;
+}
+
+/*------- end modification -------*/
+
+
 
 /*-------edit-------*/
 .a-edit {
