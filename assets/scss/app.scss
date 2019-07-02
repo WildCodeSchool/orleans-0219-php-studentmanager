@@ -12,8 +12,8 @@ P,a,input,label,h1,td,tr{
 /*-------NAVBAR-------*/
 .navbar {
   background-color: $background-color;
-  margin-bottom: 100px;
-  border: solid 0.1px $boder-color;
+  margin-bottom: 2em;
+  border: solid 0.1px $border-color;
 }
 
 .nav-item {
@@ -133,7 +133,7 @@ footer {
 /* -------Base-------*/
 .body-checkin {
   max-width: 70em;
-  margin: 0 auto;
+  margin: 2em;
   padding: 1.25em;
   text-align: center;
   color: $primary-color;
@@ -221,8 +221,7 @@ a:hover, a:focus {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
-  font-size: 75px;
+  font-size: 5em;
   font-weight: 500;
   color: $title-color;
   background-color: $background-color;
@@ -255,10 +254,22 @@ a:hover, a:focus {
   font-family: $font-family;
 }
 
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .btn-primary {
   border-color: $primary-color;
   background-color: $primary-color;
   font-family: $font-family;
+}
+
+.message{
+
+  background-color: $border-color;
+  color: $title-color;
+  margin-top: 5%;
 }
 
 /*----------end checkin button---------------*/
