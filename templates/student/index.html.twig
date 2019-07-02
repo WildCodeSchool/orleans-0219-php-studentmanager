@@ -11,7 +11,6 @@
                 <tr>
                     <th>Id</th>
                     <th>Anniversaire</th>
-                    <th>Sex</th>
                     <th>Adresse</th>
                     <th>Code postal</th>
                     <th>Ville</th>
@@ -28,7 +27,6 @@
                     <tr>
                         <td>{{ student.id }}</td>
                         <td>{{ student.birthday ? student.birthday|date('Y-m-d H:i:s') : '' }}</td>
-                        <td>{{ student.sex }}</td>
                         <td>{{ student.postalAdress }}</td>
                         <td>{{ student.postalCode }}</td>
                         <td>{{ student.town }}</td>
