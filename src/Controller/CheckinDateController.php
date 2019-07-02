@@ -22,8 +22,7 @@ class CheckinDateController extends AbstractController
         EntityManagerInterface $entityManager,
         DateService $dateService,
         PresenceRepository $presenceRepository
-    ): Response
-    {
+    ): Response {
         $presence = new Presence();
 
         $form = $this->createForm(PresenceType::class, $presence);
