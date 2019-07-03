@@ -46,10 +46,9 @@ P,a,input,label,h1,td,tr{
 /*-------footer-------*/
 footer {
   color: $wild-text-color;
-  padding: 1em;
+  padding-top: 1em;
   box-sizing: inherit;
   width: 100%;
-  height: 100%;
   bottom: 0;
   left: 0;
   position: relative;
@@ -133,6 +132,10 @@ footer {
 
 /* -------Base-------*/
 
+.button{
+  margin-top: 2em;
+}
+
 .containercheckindate{
 
   background-image: url('../images/wild-code-school-la-loupe-116.jpg');
@@ -143,12 +146,18 @@ footer {
 }
 
 .body-checkin {
-  max-width: 70em;
-  padding-top: 5em;
-  margin-left: 20em;
-  margin-bottom: 5em;
+  max-width: 60em;
+  margin-top: 2em;
+  margin-left: 25em;
+  margin-bottom: 2em;
   text-align: center;
   color: $primary-color;
+  background-color: rgba($background-color,0.5);
+  padding-left: 4em;
+  padding-right: 4em;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  border-radius: 8px;
 }
 
 .a-checkin {
@@ -195,12 +204,11 @@ a:hover, a:focus {
 
 /* -------Piece categories ------- */
 .day, .year {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 500;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: $background-color;
-  background: $wild-color;
+  color: $title-color;
   text-align: center;
   font-family: $font-family;
 }
@@ -208,19 +216,23 @@ a:hover, a:focus {
 .month {
   padding-top: 1em;
   padding-bottom: 0;
-  font-size: 3em;
-  font-weight: 200;
-  color: $wild-color;
+  letter-spacing: 0.35em;
+  font-size: 2em;
+  font-weight: 500;
+  color: $title-color;
   text-align: center;
   font-family: $font-family;
+  text-transform: uppercase;
 }
 
 .date {
-  padding-top: 0;
   padding-bottom: 1em;
-  font-size: 3em;
-  font-weight: 100;
-  color: $wild-color;
+  letter-spacing: 0.35em;
+  padding-top: 0;
+  font-size: 2em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $title-color;
   text-align: center;
   font-family: $font-family;
 }
@@ -228,6 +240,7 @@ a:hover, a:focus {
 /*------- end piece categories -------*/
 
 /*-------hour-------*/
+
 .hour {
   display: flex;
   justify-content: center;
@@ -235,9 +248,10 @@ a:hover, a:focus {
   text-align: center;
   font-size: 5em;
   font-weight: 500;
-  color: $title-color;
-  background-color: rgba($background-color,0.3);
+  color: $secondary-color;
   font-family: $font-family;
+  background-color: $wild-color;
+  border-radius: 4px;
 }
 
 /*------- end hour -------*/
@@ -265,7 +279,11 @@ a:hover, a:focus {
   color: $background-color;
   font-family: $font-family;
   font-size: 1.5em;
-  padding: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  margin-top: 2em;
 }
 
 .disabled {
@@ -281,11 +299,12 @@ a:hover, a:focus {
 
 .message{
 
-  background-color: rgba($border-color,0.3);
+  background-color: rgba($border-color,0);
   color: $title-color;
   margin-top: 5%;
-  margin-bottom: 5em;
   border: none;
+  font-size: 1.1em;
+  margin-bottom: 0em;
 }
 
 /*----------end checkin button---------------*/
