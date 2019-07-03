@@ -3,7 +3,7 @@
 {% block title %}Students Manager{% endblock %}
 
 {% block body %}
-    <div class="container">
+    <div class="containercheckindate container-fluid">
         <div class="form-group">
             <div class="body-checkin">
                 <div class="today">
@@ -16,11 +16,18 @@
             </div>
         </div>
         <div class="form-row text-center">
+
             <div class="col-12">
                 {{ form_start(form) }}
-                <button type="submit" class="btn btn-checkin btn-lg center-block">Cliquez!</button>
+                <input type="submit" class="btn btn-checkin btn-lg center-block" name="submit" value="Signalez votre présence !">
                 {{ form_end(form) }}
+                <div class=" message alert alert-success" role="alert">
+                    <h4 class="alert-heading">Bonjour</h4>
+                    <p>les horaires pour signaler votre présence sont : 7h-12h le matin et 12h-14h pour l'après-midi</p>
+                    <p class="mb-0">Au delà de 09h05 et 14h05 vous serez considéré comme en retard</p>
+                </div>
             </div>
+
         </div>
     </div>
 

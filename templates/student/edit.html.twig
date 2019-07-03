@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Student{% endblock %}
+{% block title %}Apporter vos modifications{% endblock %}
 
 {% block body %}
 
@@ -13,15 +13,14 @@
         {{ form_widget(form) }}
 
         <div class="form-group">
-            <a href="{{ path('student_show', {'id': student.id}) }}">
-                <button type="submit" class="btn btn-info btn-lg btn-block">Sauvegarder
-                </button>
-            </a>
+            {{ include('student/_form.html.twig', {'button_label': 'Sauvegarder'}) }}
         </div>
+
+
 
         <div class="form-group">
             <a href="{{ path('student_show', {'id': student.id}) }}">
-                <button type="button" class="btn btn-info btn-lg btn-block">Profil</button>
+                <button type="button" class="btn btn-signup btn-lg btn-block">Profil</button>
             </a>
         </div>
         {{ form_end(form) }}

@@ -12,10 +12,12 @@ P,a,input,label,h1,td,tr{
 /*-------NAVBAR-------*/
 .navbar {
   background-color: $background-color;
-  margin-bottom: 100px;
-  border: solid 0.1px $boder-color;
+  border: solid 0.1px $border-color;
 }
 
+.navbutton{
+  font-size: 1.2em;
+}
 .nav-item {
   font-size: 16px;
   margin: 8px;
@@ -44,9 +46,14 @@ P,a,input,label,h1,td,tr{
 /*-------footer-------*/
 footer {
   color: $wild-text-color;
-  padding: 1.5%;
-  box-sizing: unset;
-  margin-top: 15%;
+
+  padding: 1em;
+  box-sizing: inherit;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+
   position: relative;
 }
 
@@ -124,10 +131,21 @@ footer {
 /*------- end edit-------*/
 
 /* -------Base-------*/
+
+.containercheckindate{
+
+  background-image: url('../images/wild-code-school-la-loupe-116.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: contrast(50%);
+}
+
 .body-checkin {
   max-width: 70em;
-  margin: 0 auto;
-  padding: 1.25em;
+  padding-top: 5em;
+  margin-left: 20em;
+  margin-bottom: 5em;
   text-align: center;
   color: $wild-color;
 }
@@ -191,7 +209,7 @@ a:hover, a:focus {
 }
 
 .month {
-  padding-top: 1.75rem;
+  padding-top: 1em;
   padding-bottom: 0;
   font-size: 3em;
   font-weight: 200;
@@ -202,7 +220,7 @@ a:hover, a:focus {
 
 .date {
   padding-top: 0;
-  padding-bottom: 1.75rem;
+  padding-bottom: 1em;
   font-size: 3em;
   font-weight: 100;
   color: $wild-color;
@@ -218,11 +236,10 @@ a:hover, a:focus {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
-  font-size: 75px;
+  font-size: 5em;
   font-weight: 500;
   color: $title-color;
-  background-color: $background-color;
+  background-color: rgba($background-color,0.3);
   font-family: $font-family;
 }
 
@@ -250,12 +267,28 @@ a:hover, a:focus {
   background-color: $wild-color;
   color: $background-color;
   font-family: $font-family;
+  font-size: 1.5em;
+  padding: 2em;
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .btn-primary {
   border-color: $primary-color;
   background-color: $primary-color;
   font-family: $font-family;
+}
+
+.message{
+
+  background-color: rgba($border-color,0.3);
+  color: $title-color;
+  margin-top: 5%;
+  margin-bottom: 5em;
+  border: none;
 }
 
 /*----------end checkin button---------------*/
