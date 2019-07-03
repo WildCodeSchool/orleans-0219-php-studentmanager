@@ -38,7 +38,7 @@ class CheckinDateController extends AbstractController
             ) {
                 $this->addFlash(
                     'danger',
-                    'Vous avez déjà signalé votre présence ce matin, au boulot !'
+                    'Tu as déjà signalé ta présence ce matin, tu peux commencer à coder !'
                 );
             } elseif ($dateService->isAfternoonCheckin($presence->getDate())
                 &&
@@ -47,7 +47,7 @@ class CheckinDateController extends AbstractController
             ) {
                 $this->addFlash(
                     'danger',
-                    'Vous avez déjà signalé votre présence cet après-midi, bonne sieste !'
+                    'Tu as déjà signalé ta présence cet après-midi, Ce n\'est pas encore fini !'
                 );
 
             } elseif ($dateService->isCheckinAllowed($presence->getDate())) {
