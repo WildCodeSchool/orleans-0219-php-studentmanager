@@ -4,13 +4,9 @@ namespace App\Form;
 
 use App\Entity\Presence;
 use phpDocumentor\Reflection\Types\Integer;
-//use function Sodium\add;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-
-
-
 
 class PresenceType extends AbstractType
 {
@@ -22,8 +18,8 @@ class PresenceType extends AbstractType
     {
         $builder
             ->add('Date', \DateTime::class, ['label' => 'Date'])
-            ->add('Absences',Integer::class, ['label' => 'Absences']);
-//            ->add('Retards', Integer::class, ['label' => 'Retards']);
+            ->add('Absences', Integer::class, ['label' => 'Absences'])
+            ->add('Retards', Integer::class, ['label' => 'Retards']);
     }
 
     public function configureOptions(OptionsResolver $resolver)
