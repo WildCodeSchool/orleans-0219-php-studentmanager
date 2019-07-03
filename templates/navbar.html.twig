@@ -3,23 +3,31 @@
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a href="https://odyssey.wildcodeschool.com/?locale=fr"><img class="navbar-item" src="{{ asset('build/logo_pink.png') }}"></a>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <a href="https://odyssey.wildcodeschool.com/?locale=fr"><img class="navbar-item ml-auto"
+                                                                 src="{{ asset('build/logo_pink.png') }}"
+                                                                 alt="logo-wild"></a>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="navbutton nav-link" href="{{ path ('user_registration') }}">Créer son compte</a>
-            </li>
-            <li class="nav-item">
-                <a class="navbutton nav-link" href="{{ path ('student_new') }}">Profil</a>
-            </li>
-            <li class="nav-item">
-                <a class="navbutton nav-link" href="{{ path ('student_index') }}">Tableau de bord</a>
-            </li>
-            <li class="nav-item">
-
-                <a class="navbutton nav-link" href="{{ path ('app_login') }}">Déconnexion</a>
-
-            </li>
+            {% if app.user == false %}
+                    <li class="nav-item ml-auto">
+                        <a class="navbutton nav-link" href="{{ path ('user_registration') }}">Créer son compte</a>
+                    </li>
+            {% endif %}
+            {% if is_granted('ROLE_USER') %}
+                <li class="nav-item ml-auto">
+                    <a class="navbutton nav-link" href="{{ path ('student_new') }}">Profil</a>
+                </li>
+            {% endif %}
+            {% if is_granted('ROLE_ADMIN') %}
+                <li class="nav-item ml-auto">
+                    <a class="navbutton nav-link" href="{{ path ('student_index') }}">Tableau de bord</a>
+                </li>
+            {% endif %}
+            {% if app.user %}
+                <li class="nav-item ml-auto">
+                    <a class="navbutton nav-link " href="{{ path ('app_login') }}">Déconnexion</a>
+                </li>
+            {% endif %}
         </ul>
     </div>
 </nav>
