@@ -64,7 +64,6 @@ class User implements UserInterface
     {
         $this->presences = new ArrayCollection();
         $this->roles = array('ROLE_USER');
-        $this->Attendance = new ArrayCollection();
     }
 
     // other properties and methods
@@ -189,21 +188,5 @@ class User implements UserInterface
         }
 
         return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id): void
-    {
-        $this->id = $id;
     }
 }
