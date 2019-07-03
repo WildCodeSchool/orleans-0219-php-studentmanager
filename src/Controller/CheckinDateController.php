@@ -50,6 +50,8 @@ class CheckinDateController extends AbstractController
                 );
             } elseif ($dateService->isCheckinAllowed($presence->getDate())
             ) {
+            } elseif ($dateService->isCheckinAllowed($presence->getDate())
+            ) {
                 $entityManager->persist($presence);
                 $entityManager->flush();
                 $this->addFlash(
