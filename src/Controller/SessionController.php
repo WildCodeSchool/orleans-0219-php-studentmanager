@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class SessionController extends AbstractController
 {
     /**
-     * @Route("/admin/", name="session_index", methods={"GET"})
+     * @Route("/", name="session_index", methods={"GET"})
      */
     public function index(SessionRepository $sessionRepository): Response
     {
@@ -26,7 +26,7 @@ class SessionController extends AbstractController
     }
 
     /**
-     * @Route("/admin/new", name="session_new", methods={"GET","POST"})
+     * @Route("/new", name="session_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -49,7 +49,7 @@ class SessionController extends AbstractController
     }
 
     /**
-     * @Route("/admin/{id}", name="session_show", methods={"GET"})
+     * @Route("/{id}", name="session_show", methods={"GET"})
      */
     public function show(Session $session): Response
     {
@@ -59,7 +59,7 @@ class SessionController extends AbstractController
     }
 
     /**
-     * @Route("/admin/{id}/edit", name="session_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="session_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Session $session): Response
     {
@@ -81,7 +81,7 @@ class SessionController extends AbstractController
     }
 
     /**
-     * @Route("/admin/{id}", name="session_delete", methods={"DELETE"})
+     * @Route("/{id}", name="session_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Session $session): Response
     {

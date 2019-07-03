@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class StudentController extends AbstractController
 {
     /**
-     * @Route("/user/", name="student_index", methods={"GET"})
+     * @Route("/", name="student_index", methods={"GET"})
      */
     public function index(StudentRepository $studentRepository): Response
     {
@@ -26,7 +26,7 @@ class StudentController extends AbstractController
     }
 
     /**
-     * @Route("/user/new", name="student_new", methods={"GET","POST"})
+     * @Route("/new", name="student_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -49,7 +49,7 @@ class StudentController extends AbstractController
     }
 
     /**
-     * @Route("/user/{id}", name="student_show", methods={"GET"})
+     * @Route("/{id}", name="student_show", methods={"GET"})
      */
     public function show(Student $student): Response
     {
@@ -59,7 +59,7 @@ class StudentController extends AbstractController
     }
 
     /**
-     * @Route("/user/{id}/edit", name="student_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="student_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Student $student): Response
     {
@@ -81,7 +81,7 @@ class StudentController extends AbstractController
     }
 
     /**
-     * @Route("/admin/{id}", name="student_delete", methods={"DELETE"})
+     * @Route("/{id}", name="student_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Student $student): Response
     {
