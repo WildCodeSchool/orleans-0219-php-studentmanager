@@ -51,17 +51,18 @@ class User implements UserInterface
     private $password;
 
     /**
-     * @ORM\Column(type="array")
+     * @ORM\Column(type="json")
      */
     private $roles;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Attendance", mappedBy="user")
+     * @ORM\OneToMany(targetEntity="App\Entity\Presence", mappedBy="user", orphanRemoval=true)
      */
-    private $Attendance;
+    private $presences;
 
     public function __construct()
     {
+        $this->presences = new ArrayCollection();
         $this->roles = array('ROLE_USER');
         $this->Attendance = new ArrayCollection();
     }
@@ -115,43 +116,94 @@ class User implements UserInterface
         return null;
     }
 
-    public function getRoles()
+//    public function getRoles()
+//    {
+//        return $this;
+//    }
+    public function getRoles(): array
     {
-        return $this->roles;
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
+    }
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id): void
+    {
+        $this->id = $id;
     }
 
     public function eraseCredentials()
     {
     }
 
-    /**
-     * @return Collection|Attendance[]
-     */
-    public function getAttendance(): Collection
+
+    public function getPresences(): ?\DateTimeInterface
     {
-        return $this->Attendance;
+        return $this->presences;
     }
 
-    public function addAttendance(Attendance $attendance): self
+    public function setPresences(\DateTimeInterface $presences): self
     {
-        if (!$this->Attendance->contains($attendance)) {
-            $this->Attendance[] = $attendance;
-            $attendance->setUser($this);
+        $this->presences = $presences;
+
+        return $this;
+    }
+
+    public function addPresence(Presence $presence): self
+    {
+        if (!$this->presences->contains($presence)) {
+            $this->presences[] = $presence;
+            $presence->setUser($this);
         }
 
         return $this;
     }
 
-    public function removeAttendance(Attendance $attendance): self
+    public function removePresence(Presence $presence): self
     {
-        if ($this->Attendance->contains($attendance)) {
-            $this->Attendance->removeElement($attendance);
+        if ($this->presences->contains($presence)) {
+            $this->presences->removeElement($presence);
             // set the owning side to null (unless already changed)
-            if ($attendance->getUser() === $this) {
-                $attendance->setUser(null);
+            if ($presence->getUser() === $this) {
+                $presence->setUser(null);
             }
         }
 
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id): void
+    {
+        $this->id = $id;
     }
 }

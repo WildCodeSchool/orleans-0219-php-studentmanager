@@ -3,11 +3,12 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\AttendanceRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\PresenceRepository")
  */
-class Attendance
+class Presence
 {
     /**
      * @ORM\Id()
@@ -18,11 +19,12 @@ class Attendance
 
     /**
      * @ORM\Column(type="datetime")
+     * @Assert\DateTime()
      */
     private $date;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="Attendance")
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="presences")
      * @ORM\JoinColumn(nullable=false)
      */
     private $user;
@@ -32,12 +34,12 @@ class Attendance
         return $this->id;
     }
 
-    public function getDate(): ?\DateTimeInterface
+    public function getDate(): ?\DateTime
     {
         return $this->date;
     }
 
-    public function setDate(\DateTimeInterface $date): self
+    public function setDate(\DateTime $date): self
     {
         $this->date = $date;
 

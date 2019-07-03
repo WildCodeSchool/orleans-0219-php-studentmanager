@@ -4,21 +4,26 @@
 {% block title %}Student{% endblock %}
 
 {% block body %}
-<div class="container">
+    <div class="container">
 
         <h1 class="h1-mes-informations">Mes informations</h1>
 
-    <table class="table">
-        <tbody>
+        <table class="table">
+            <tbody>
 
             <tr class="tr-mes-informations">
-                <th class="th-mes-informations">Date de Naissance</th>
-                <td class="td-mes-informations">{{ student.birthday ? student.birthday|date('Y-m-d')}}</td>
+                <th class="th-mes-informations">Prénom</th>
+                <td class="td-mes-informations">{{ student.firstname }}</td>
             </tr>
 
             <tr class="tr-mes-informations">
-                <th class="th-mes-informations">Civilité</th>
-                <td class="td-mes-informations">{{ student.sex }}</td>
+                <th class="th-mes-informations">Nom</th>
+                <td class="td-mes-informations">{{ student.lastname }}</td>
+            </tr>
+
+            <tr class="tr-mes-informations">
+                <th class="th-mes-informations">Date de Naissance</th>
+                <td class="td-mes-informations">{{ student.birthday ? student.birthday|date('Y-m-d') }}</td>
             </tr>
 
             <tr class="tr-mes-informations">
@@ -60,12 +65,20 @@
                 <th class="th-mes-informations">Identifiant Pole Emploi</th>
                 <td class="td-mes-informations">{{ student.poleEmploiId }}</td>
             </tr>
-        </tbody>
-    </table>
 
-    <a href="{{ path('student_edit', {'id': student.id}) }}"><button type="button" class="btn btn-info">Modifier</button></a>
+            <tr class="tr-mes-informations">
+                <th class="th-mes-informations">Numéro de sécurité sociale</th>
+                <td class="td-mes-informations">{{ student.socialSecurityNumber }}</td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        <a href="{{ path('student_edit', {'id': student.id}) }}">
+            <button type="button" class="btn btn-signup btn-lg btn-block">Modifier</button>
+        </a>
 
 
-</div>
+    </div>
 
 {% endblock %}

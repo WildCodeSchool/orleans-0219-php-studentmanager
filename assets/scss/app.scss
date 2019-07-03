@@ -2,11 +2,18 @@
 @import '~bootstrap/scss/bootstrap';
 // the ~ allows you to reference things in node_modules
 
+/*-------ALL SITE-------*/
+P,a,input,label,h1,td,tr{
+  font-family: $font-family;
+}
+
+/*-------end ALL SITE-------*/
+
 /*-------NAVBAR-------*/
 .navbar {
   background-color: $background-color;
-  margin-bottom: 100px;
-  border: solid 0.1px $boder-color;
+  margin-bottom: 2em;
+  border: solid 0.1px $border-color;
 }
 
 .nav-item {
@@ -15,7 +22,7 @@
   font-family: $font-family;
 }
 
-.navbar-nav .nav-item .nav-link{
+.navbar-nav .nav-item .nav-link {
   color: $nav-font-color;
 }
 
@@ -25,11 +32,13 @@
 
 .navbar-toggler {
   text-decoration: none;
+  color: $title-color;
 }
 
 .navbar-nav {
   margin-left: 60%;
 }
+
 /*------- end NAVBAR-------*/
 
 /*-------footer-------*/
@@ -37,13 +46,13 @@ footer {
   color: $wild-text-color;
   padding: 1em;
   box-sizing: inherit;
-  height: 100px;
-}
-
-.footer {
+  margin-top: 20%;
+  width: 100%;
+  height: 100%;
   bottom: 0;
-  display: inline-block;
-  position: absolute;
+  left: 0;
+  position: relative;
+
 }
 
 .a-footer {
@@ -56,9 +65,10 @@ footer {
   text-decoration: underline;
 }
 
-.heart{
+.heart {
   color: $heart-color;
 }
+
 /*-------fin du footer-------*/
 
 /*-------Profile form-------*/
@@ -73,6 +83,13 @@ footer {
   border-radius: 5%;
 }
 
+.btn-student{
+  background-color: $wild-color;
+  color: $background-color;
+  font-family: $font-family;
+
+}
+
 .btn-info {
   border-color: $background-color;
   text-decoration: none;
@@ -82,30 +99,41 @@ footer {
 }
 
 .tr-mes-informations {
-  background-color: $background-color;
+  background-color: $wild-text-color;
   border-radius: 50%;
   padding: 1.6rem;
   font-size: 1.25em;
   text-align: center;
-  background: $background-color;
+  background: $cellule-background-color;
 }
 
 .th-mes-informations {
   border: solid 1px $background-color;
   border-radius: 5%;
 }
-/*------- end profile form -------*/
+
+
+/*-------modification -------*/
+
+.h1-modification{
+  padding-bottom: 5%;
+}
+
+/*------- end modification -------*/
+
+
 
 /*-------edit-------*/
-.a-edit{
+.a-edit {
   color: $warm-color;
 }
+
 /*------- end edit-------*/
 
 /* -------Base-------*/
-.body-checking {
+.body-checkin {
   max-width: 70em;
-  margin: 0 auto;
+  margin: 2em;
   padding: 1.25em;
   text-align: center;
   color: $primary-color;
@@ -133,6 +161,7 @@ a:hover, a:focus {
   text-align: center;
   color: $primary-color;
 }
+
 /*------- end base -------*/
 
 /* -------Piece positions-------*/
@@ -149,16 +178,19 @@ a:hover, a:focus {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
+
 /*-------end Piece positions-------*/
 
 /* -------Piece categories ------- */
 .day, .year {
-  font-size: 2em;
+  font-size: 3em;
   font-weight: 500;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: $background-color;
-  background: $primary-color;
+  background: $wild-color;
+  text-align: center;
+  font-family: $font-family;
 }
 
 .month {
@@ -166,7 +198,9 @@ a:hover, a:focus {
   padding-bottom: 0;
   font-size: 3em;
   font-weight: 200;
-  color: $primary-color;
+  color: $wild-color;
+  text-align: center;
+  font-family: $font-family;
 }
 
 .date {
@@ -174,8 +208,11 @@ a:hover, a:focus {
   padding-bottom: 1.75rem;
   font-size: 3em;
   font-weight: 100;
-  color: $primary-color;
+  color: $wild-color;
+  text-align: center;
+  font-family: $font-family;
 }
+
 /*------- end piece categories -------*/
 
 /*-------hour-------*/
@@ -184,34 +221,57 @@ a:hover, a:focus {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
-  font-size: 75px;
+  font-size: 5em;
   font-weight: 500;
-  color: $primary-color;
+  color: $title-color;
   background-color: $background-color;
+  font-family: $font-family;
 }
+
 /*------- end hour -------*/
 
 /*-------login-------*/
 .btn-login {
   background-color: $wild-color;
   color: $background-color;
+  font-family: $font-family;
 }
+
+.h1-login{
+  font-family: $font-family;
+}
+
+.h4-login{
+  font-family: $font-family;
+}
+
 /*------- end login -------*/
 
 /*----------checkin button---------------*/
-.btn{
-    background-color: $primary-color;
-    margin-top: 5em;
-    font-size: 2rem;
-    margin-left: 15em;
-    color: $secondary-color;
+.btn-checkin {
+  background-color: $wild-color;
+  color: $background-color;
+  font-family: $font-family;
 }
 
-.btn-primary{
-    border-color: $primary-color;
-    background-color: $primary-color;
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
+
+.btn-primary {
+  border-color: $primary-color;
+  background-color: $primary-color;
+  font-family: $font-family;
+}
+
+.message{
+
+  background-color: $border-color;
+  color: $title-color;
+  margin-top: 5%;
+}
+
 /*----------end checkin button---------------*/
 
 /*-------signup-------*/
@@ -219,12 +279,15 @@ a:hover, a:focus {
   color: $title-color;
   text-align: center;
   margin-bottom: 50px;
+  font-family: $font-family;
 }
 
 .btn-signup {
   background-color: $wild-color;
   color: $background-color;
+  font-family: $font-family;
 }
+
 /*-------fin du signup-------*/
 
 
