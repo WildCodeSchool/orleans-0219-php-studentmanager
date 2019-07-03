@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\Presence;
-use App\Form\Presence1Type;
 use App\Repository\PresenceRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;

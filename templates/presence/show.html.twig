@@ -8,12 +8,16 @@
     <table class="table">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ presence.id }}</td>
-            </tr>
-            <tr>
                 <th>Date</th>
                 <td>{{ presence.date ? presence.date|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Retards</th>
+                <td>{{ retards.id }}</td>
+            </tr>
+            <tr>
+                <th>Absences</th>
+                <td>{{ absences.id }}</td>
             </tr>
         </tbody>
     </table>
