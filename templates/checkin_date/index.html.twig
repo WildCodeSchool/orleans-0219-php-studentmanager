@@ -4,32 +4,33 @@
 
 {% block body %}
     <div class="card">
-    <div class="containercheckindate container-fluid">
-        <div class="form-group">
-            <div class="body-checkin">
-                <div class="today">
-                    <div class="today-piece top day"></div>
-                    <div class="today-piece middle date"></div>
-                    <div><span id="heure" class="hour"></span></div>
-                    <div class="today-piece middle month"></div>
-                    <div class="today-piece bottom year"></div>
+        <div class="containercheckindate container-fluid">
+            <div class="form-group">
+                <div class="body-checkin">
+                    <div class="today">
+                        <div class="today-piece top day"></div>
+                        <div class="today-piece middle date"></div>
+                        <div><span id="heure" class="hour"></span></div>
+                        <div class="today-piece middle month"></div>
+                        <div class="today-piece bottom year"></div>
+                    </div>
+                    <div>
+                        <div class="form-row text-center">
+                            <div class="col-12">
+                                {{ form_start(form) }}
+                                <input type="submit" class="btn btn-checkin btn-lg center-block" name="submit"
+                                       value="Signale ta présence !">
+                                {{ form_end(form) }}
+                                <div class=" message alert alert-success" role="alert">
+                                    <p>les horaires pour signaler ta présence sont :</p>
+                                    <p><strong>7h-12h</strong> le matin et <strong>12h-14h</strong> pour l'après-midi</p>
+                                    <p class="mb-0">Au delà de <strong>09h05 et 14h05</strong> tu seras considéré comme en retard</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="form-row text-center">
-            <div class="col-12">
-                {{ form_start(form) }}
-                <input type="submit" class="btn btn-checkin btn-lg center-block" name="submit"
-                       value="Signal ta présence !">
-                {{ form_end(form) }}
-                <div class=" message alert alert-success" role="alert">
-                    <h4 class="alert-heading">Bonjour</h4>
-                    <p>les horaires pour signaler ta présence sont : 7h-12h le matin et 12h-14h pour l'après-midi</p>
-                    <p class="mb-0">Au delà de 09h05 et 14h05 tu seras considéré comme en retard</p>
-                </div>
-            </div>
-
         </div>
     </div>
-</div>
 {% endblock %}
