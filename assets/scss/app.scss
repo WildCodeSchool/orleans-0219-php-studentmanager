@@ -143,12 +143,16 @@ footer {
 }
 
 .body-checkin {
-  max-width: 70em;
+  max-width: 60em;
   padding-top: 5em;
-  margin-left: 20em;
-  margin-bottom: 5em;
+  margin-top: 2em;
+  margin-left: 25em;
+  margin-bottom: 2em;
   text-align: center;
   color: $primary-color;
+  background-color: rgba($background-color,0.3);
+  padding: 4em;
+  border-radius: 1%;
 }
 
 .a-checkin {
@@ -228,6 +232,7 @@ a:hover, a:focus {
 /*------- end piece categories -------*/
 
 /*-------hour-------*/
+
 .hour {
   display: flex;
   justify-content: center;
@@ -236,7 +241,7 @@ a:hover, a:focus {
   font-size: 5em;
   font-weight: 500;
   color: $title-color;
-  background-color: rgba($background-color,0.3);
+  //background-color: rgba($background-color,0.3);
   font-family: $font-family;
 }
 
