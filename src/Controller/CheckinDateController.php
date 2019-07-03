@@ -48,8 +48,7 @@ class CheckinDateController extends AbstractController
                     'danger',
                     'Vous avez déjà signalé votre présence cet après-midi, bonne sieste !'
                 );
-            } elseif ($dateService->isCheckinAllowed($presence->getDate())
-            ) {
+            } elseif ($dateService->isCheckinAllowed($presence->getDate())) {
                 $entityManager->persist($presence);
                 $entityManager->flush();
                 $this->addFlash(
