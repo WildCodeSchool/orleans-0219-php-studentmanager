@@ -154,7 +154,6 @@ class User implements UserInterface
     {
     }
 
-
     public function getPresences(): ?\DateTimeInterface
     {
         return $this->presences;
