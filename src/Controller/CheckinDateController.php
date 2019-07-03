@@ -22,8 +22,7 @@ class CheckinDateController extends AbstractController
         EntityManagerInterface $entityManager,
         DateService $dateService,
         PresenceRepository $presenceRepository
-    ): Response
-    {
+    ): Response {
         $presence = new Presence();
 
         $form = $this->createForm(PresenceType::class, $presence);
@@ -49,8 +48,8 @@ class CheckinDateController extends AbstractController
                     'danger',
                     'Tu as déjà signalé ta présence cet après-midi, Ce n\'est pas encore fini !'
                 );
-
-            } elseif ($dateService->isCheckinAllowed($presence->getDate())) {
+            } elseif ($dateService->isCheckinAllowed($presence->getDate())
+            ) {
                 $entityManager->persist($presence);
                 $entityManager->flush();
                 $this->addFlash(
