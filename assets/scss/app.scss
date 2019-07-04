@@ -3,7 +3,7 @@
 // the ~ allows you to reference things in node_modules
 
 /*-------ALL SITE-------*/
-P,a,input,label,h1,td,tr{
+P, a, input, label, h1, td, tr {
   font-family: $font-family;
 }
 
@@ -12,7 +12,6 @@ P,a,input,label,h1,td,tr{
 /*-------NAVBAR-------*/
 .navbar {
   background-color: $background-color;
-  margin-bottom: 100px;
   border: solid 0.1px $boder-color;
 }
 
@@ -83,7 +82,7 @@ footer {
   border-radius: 5%;
 }
 
-.btn-student{
+.btn-student {
   background-color: $wild-color;
   color: $background-color;
   font-family: $font-family;
@@ -115,12 +114,11 @@ footer {
 
 /*-------modification -------*/
 
-.h1-modification{
+.h1-modification {
   padding-bottom: 5%;
 }
 
 /*------- end modification -------*/
-
 
 
 /*-------edit-------*/
@@ -236,14 +234,43 @@ a:hover, a:focus {
   background-color: $wild-color;
   color: $background-color;
   font-family: $font-family;
+  opacity: 1;
 }
 
-.h1-login{
+
+.h1-login {
   font-family: $font-family;
+  color: $title-color;
 }
 
-.h4-login{
+.p-login {
   font-family: $font-family;
+  color: $title-color;
+}
+
+.h4-login {
+  font-family: $font-family;
+  color: $title-color;
+}
+
+.form-login {
+  background-image: url('../images/wild-code-school-la-loupe-49.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 1%;
+}
+
+.container-p {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  background-color: $background-color;
+  opacity: 0.8;
+  border-radius: 1%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 /*------- end login -------*/

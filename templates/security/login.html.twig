@@ -9,38 +9,43 @@
                 {% if error %}
                     <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                 {% endif %}
-                <h1 class="h1-login h1 font-weight-bold">Hello wilder !</h1>
-                <h4 class="h4-login">par <a class="a-login" target="_blank" href="https://odyssey.wildcodeschool.com/?locale=fr">wildcodeschool.com</a>
-                </h4>
-                <p>L'avenir appartient au wilder qui pointe tôt <i class="far fa-smile"></i></p>
-                <div class="form-group">
-                    <label for="inputUsername" class="sr-only">Username</label>
-                    <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control"
-                           placeholder="Username" required autofocus>
-                </div>
-                <div class="form-group">
-                    <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" name="password" id="inputPassword" class="form-control"
-                           placeholder="Password"
-                           required>
-                </div>
-                <input type="hidden" name="_csrf_token"
-                       value="{{ csrf_token('authenticate') }}"
-                >
-                <div class="form-group">
-                    <button class="btn btn-login btn-lg btn-block" type="submit">
-                        Connexion
-                    </button>
-                </div>
-                <div class="checkbox mb-3">
-                    <label for="remember_me">
-                        <input type="checkbox" id="remember_me" name="_remember_me"> Se souvenir de moi
-                    </label>
+                <div class="container-p">
+                    <h1 class="h1-login h1 font-weight-bold">Hello wilder !</h1>
+                    <h4 class="h4-login">par <a class="a-login" target="_blank"
+                                                href="https://odyssey.wildcodeschool.com/?locale=fr">wildcodeschool.com</a>
+                    </h4>
+                    <p class="p-login">L'avenir appartient au wilder qui pointe tôt <i class="far fa-smile"></i></p>
+                    <div class="form-group">
+                        <label for="inputUsername" class="sr-only">Username</label>
+                        <input type="text" value="{{ last_username }}" name="username" id="inputUsername"
+                               class="form-control"
+                               placeholder="Username" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input type="password" name="password" id="inputPassword" class="form-control"
+                               placeholder="Password"
+                               required>
+                    </div>
+                    <input type="hidden" name="_csrf_token"
+                           value="{{ csrf_token('authenticate') }}"
+                    >
+                    <div class="form-group">
+                        <button class="btn btn-login btn-lg btn-block" type="submit">
+                            Connexion
+                        </button>
+                    </div>
+                    <div class="checkbox mb-3">
+                        <label for="remember_me">
+                            <input type="checkbox" id="remember_me" name="_remember_me"> Se souvenir de moi
+                        </label>
+                    </div>
+
+                    <div class="justify-content-right">
+                        <a class="a-login" href="#">Tu as oublié ton mot de passe ?</a>
+                    </div>
                 </div>
 
-                <div class="justify-content-right">
-                    <a class="a-login" href="#">Tu as oublié ton mot de passe ?</a>
-                </div>
             </div>
         </form>
     </div>
