@@ -46,13 +46,16 @@ P,a,input,label,h1,td,tr{
 /*-------footer-------*/
 footer {
   color: $wild-text-color;
+
+
+  padding: 1em;
   padding-top: 1em;
   box-sizing: inherit;
   width: 100%;
   bottom: 0;
   left: 0;
-  position: relative;
 
+  position: relative;
 }
 
 .a-footer {
@@ -121,8 +124,6 @@ footer {
 
 /*------- end modification -------*/
 
-
-
 /*-------edit-------*/
 .a-edit {
   color: $warm-color;
@@ -151,7 +152,7 @@ footer {
   margin-left: 25em;
   margin-bottom: 2em;
   text-align: center;
-  color: $primary-color;
+  color: $wild-color;
   background-color: rgba($background-color,0.5);
   padding-left: 4em;
   padding-right: 4em;
@@ -161,11 +162,15 @@ footer {
 }
 
 .a-checkin {
-  color: $primary-color;
+  color: $wild-color;
 }
 
 a:hover, a:focus {
-  color: $primary-color;
+  color: $wild-color;
+}
+
+.today-piece {
+
 }
 
 .td-mes-informations {

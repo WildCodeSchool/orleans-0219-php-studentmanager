@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class CheckinDateController extends AbstractController
 {
     /**
-     * @Route("/checkin/date", name="checkin_date")
+     * @Route("/user/checkin/date", name="checkin_date")
      */
     public function index(
         Request $request,
