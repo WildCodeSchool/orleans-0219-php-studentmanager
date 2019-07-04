@@ -65,14 +65,14 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
     {
         $token = new CsrfToken('authenticate', $credentials['csrf_token']);
         if (!$this->csrfTokenManager->isTokenValid($token)) {
-            throw new InvalidCsrfTokenException();
+            throw new InvalidCsrfTokenException('Vous n\'êtes pas connecté');
         }
 
         $user = $this->entityManager->getRepository(User::class)->findOneBy(['username' => $credentials['username']]);
 
         if (!$user) {
             // fail authentication with a custom error
-            throw new CustomUserMessageAuthenticationException('Utilisateur inconnu !');
+            throw new CustomUserMessageAuthenticationException('Utilisateur inconnu');
         }
 
         return $user;
@@ -93,8 +93,14 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
         return new RedirectResponse($this->getLoginUrl());
     }
 
+
     protected function getLoginUrl()
     {
         return $this->urlGenerator->generate('checkin_date');
+    }
+
+    public function supportsRememberMe()
+    {
+        return true;
     }
 }
