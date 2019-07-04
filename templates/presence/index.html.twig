@@ -1,0 +1,42 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block title %}Presence index{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="col-sm-offset-1 col-md-offset-3 col-xs-8 col-sm-10 col-md-10">
+            <h1>Présences</h1>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                    {#                    <th>Heures</th>#}
+                    {#                    <th>Justificatifs?</th>#}
+
+                </tr>
+                </thead>
+                <tbody>
+                {% for presence in presences %}
+                    <tr>
+
+                        <td>{{ presence.user.username }}</td>
+                        <td>{{ presence.date ? presence.date|date('d/m/Y') : '' }}</td>
+                        {#                    <td>{{ presence.Heures }}</td>#}
+                        {#                    <td>{{ presence.Justificatifs }}</td>#}
+                        <td>
+                            <a href="{{ path('presence_show', {'id': presence.id}) }}">voir</a>
+                            <a href="{{ path('presence_edit', {'id': presence.id}) }}">modifier</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="3">Aucun enregistrement trouvé</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
