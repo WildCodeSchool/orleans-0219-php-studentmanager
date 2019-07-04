@@ -36,21 +36,23 @@ class User implements UserInterface, \Serializable
 
     /**
      * @ORM\Column(type="string", length=64, unique=true)
-     * @Assert\NotBlank
+     * @Assert\NotBlank()
      */
     private $username;
 
     /**
      * @Assert\NotBlank()
-     * @Assert\Length(min=6)
+     * @Assert\Length(min=6, minMessage="Votre mot de passe doit faire au moins {{ limit }} caractères")
+     * @assert\EqualTo(propertyPath="password")
      */
     private $plainPassword;
 
     /**
      * The below length depends on the "algorithm" you use for encoding
      * the password, but this works well with argon2i.
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(type="string", length=255)
+     * @assert\EqualTo(propertyPath="plainPassword")
      */
     private $password;
 
