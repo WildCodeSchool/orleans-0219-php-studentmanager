@@ -11,6 +11,7 @@ P, a, input, label, h1, td, tr {
 
 /*-------NAVBAR-------*/
 .navbar {
+  display: flex;
   background-color: $background-color;
   border: solid 0.1px $border-color;
 }
@@ -40,6 +41,30 @@ P, a, input, label, h1, td, tr {
 .navbar-nav {
   margin-left: 60%;
 }
+
+  /*navbar_animation*/
+
+  .nav-item {
+    position: relative;
+  }
+
+  .nav-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: $link-color;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+  }
+
+  .nav-item:hover::before {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
 
 /*------- end NAVBAR-------*/
 
