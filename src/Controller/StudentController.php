@@ -36,7 +36,6 @@ class StudentController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
-            $student->setUser($this->getUser());
             $entityManager->persist($student);
             $entityManager->flush();
 
