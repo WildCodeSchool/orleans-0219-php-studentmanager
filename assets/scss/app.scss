@@ -104,6 +104,18 @@ footer {
 
 /*-------Profile form-------*/
 
+/*------- fix - register -------*/
+.register-container{
+  background-image: url('../images/wild-code-school-la-loupe-115.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 1%;
+  margin-top: 6%;
+  margin-bottom: 6%;
+}
+/*-------end -fix - register -------*/
+
 /*-------edit-form -------*/
 
 .edit-form {
@@ -384,10 +396,7 @@ a:hover, a:focus {
   background-color: $background-color;
   opacity: 0.8;
   border-radius: 1%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding:10%;
 }
 
 /*------- end login -------*/
