@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Repository;
-
 
 use App\Entity\Presence;
 use App\Entity\User;
@@ -18,9 +16,7 @@ class MonthlyRepository extends ServiceEntityRepository
 
     private $delayService;
 
-    public function __construct(RegistryInterface $registry,
-                                AbsenceService $AbsenceService,
-                                DelayService $DelayService)
+    public function __construct(RegistryInterface $registry, AbsenceService $AbsenceService, DelayService $DelayService)
     {
         parent::__construct($registry, Presence::class);
         $this->absenceService = $AbsenceService;

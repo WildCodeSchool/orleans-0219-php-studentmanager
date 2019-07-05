@@ -3,7 +3,6 @@
 
 namespace App\Controller;
 
-
 use App\Repository\PresenceRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
