@@ -20,7 +20,7 @@ class PresenceType extends AbstractType
         $builder
             ->add('date', DateType::class, ['label' => 'Date'])
             ->add('user', EntityType::class, [
-                'class' => PresenceType::class,
+                'class' => Presence::class,
                 'choice_label' => 'username',
                 'label' => 'User']);
     }

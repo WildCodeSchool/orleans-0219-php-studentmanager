@@ -355,5 +355,47 @@ a:hover, a:focus {
 /*--------monthly counter----------*/
 
 .monthlyCounter{
+  background-image: url('../images/you-x-ventures-1437336-unsplash.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: contrast(50%);
+  padding-bottom: 2em;
+}
 
+.monthlyCounterForm{
+  background-color: rgba($background-color,0.5);
+  font-family: $font-family;
+  margin-left: 8%;
+  padding-top: 2em;
+  padding-left: 4em;
+  padding-right: 4em;
+  padding-bottom: 2em;
+  border-radius: 8px;
+}
+
+.monthlyCounterTitle{
+  padding-top: 0.6em;
+  margin-bottom: 0.6em;
+  color: $title-color;
+  text-align: center;
+  font-size: 5em;
+  font-weight: 500;
+}
+
+.monthlyCounterFormThead{
+  background-color: $wild-color;
+  font-family: $font-family;
+  margin-left: 8%;
+  padding-top: 2em;
+  padding-left: 4em;
+  padding-right: 4em;
+  padding-bottom: 2em;
+  border-radius: 8px;
+  font-size: 2em;
+}
+
+.monthlyCounterFormTr{
+  color: $title-color;
+  font-size: 1.5em;
 }

@@ -1,20 +1,20 @@
 {% extends 'layoutAdmin.html.twig' %}
 {% block title %}Presence index{% endblock %}
 {% block body %}
-    <div class="container">
-        <div class="monthlyCounter col-sm-offset-1 col-md-offset-3 col-xs-8 col-sm-10 col-md-10">
-            <h1>Présences</h1>
-            <table class="table">
-                <thead>
+    <div class="monthlyCounter container-fluid">
+        <div class=" col-sm-offset-1 col-md-offset-3 col-xs-8 col-sm-10 col-md-10">
+            <h1 class="monthlyCounterTitle">Présences</h1>
+            <table class="monthlyCounterForm table">
+                <thead class="monthlyCounterFormThead">
                 <tr>
-                    <th>User</th>
+                    <th>Utilisateurs</th>
                     <th>Date</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
                 {% for presence in presences %}
-                    <tr>
+                    <tr class="monthlyCounterFormTr">
                         <td>{{ presence.user.username }}</td>
                         <td>{{ presence.date ? presence.date|date('d/m/Y') : '' }}</td>
                         <td>
