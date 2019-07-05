@@ -16,9 +16,10 @@ P, a, input, label, h1, td, tr {
   border: solid 0.1px $border-color;
 }
 
-.navbutton{
+.navbutton {
   font-size: 1.2em;
 }
+
 .nav-item {
   font-size: 16px;
   margin: 8px;
@@ -78,6 +79,11 @@ footer {
   left: 0;
   position: relative;
 
+  .container-fluid{
+    p {
+      margin-left: 1em;
+    }
+  }
 }
 
 .a-footer {
@@ -97,6 +103,77 @@ footer {
 /*-------fin du footer-------*/
 
 /*-------Profile form-------*/
+
+/*------- fix - register -------*/
+.register-container{
+  background-image: url('../images/wild-code-school-la-loupe-115.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 1%;
+  margin-top: 6%;
+  margin-bottom: 6%;
+}
+/*-------end -fix - register -------*/
+
+/*-------edit-form -------*/
+
+.edit-form {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 1%;
+}
+
+.b-container {
+  background-image: url('../images/you-x-ventures-1437336-unsplash.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 1%;
+  font-size: 20px;
+  padding-bottom: 5%;
+}
+
+.form-control {
+  border: 1px solid $heart-color;
+  box-shadow: $heart-color;
+}
+
+.form-inline .form-control {
+  margin-right: 0.5%;
+}
+
+.container-modification {
+  background-image: url('../images/testLum72.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 1%;
+}
+
+.container-opacity {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: $background-color;
+  opacity: 0.9;
+  border-radius: 1%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.h1-edit {
+  text-align: center;
+  padding-bottom: 5%;
+  padding-top: 1%;
+  font-size: 45px;
+}
+
+/*-------end edit-form -------*/
+
+
 .h1-mes-informations {
   text-align: center;
   margin-top: 5%;
@@ -156,11 +233,11 @@ footer {
 
 /* -------Base-------*/
 
-.button{
+.button {
   margin-top: 2em;
 }
 
-.containercheckindate{
+.containercheckindate {
 
   background-image: url('../images/wild-code-school-la-loupe-116.jpg');
   background-attachment: fixed;
@@ -176,7 +253,7 @@ footer {
   margin-bottom: 2em;
   text-align: center;
   color: $primary-color;
-  background-color: rgba($background-color,0.5);
+  background-color: rgba($background-color, 0.5);
   padding-left: 4em;
   padding-right: 4em;
   padding-bottom: 2em;
@@ -309,6 +386,8 @@ a:hover, a:focus {
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 1%;
+  margin-top: 6%;
+  margin-bottom: 6%;
 }
 
 .container-p {
@@ -317,10 +396,7 @@ a:hover, a:focus {
   background-color: $background-color;
   opacity: 0.8;
   border-radius: 1%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding:10%;
 }
 
 /*------- end login -------*/
@@ -349,9 +425,9 @@ a:hover, a:focus {
   font-family: $font-family;
 }
 
-.message{
+.message {
 
-  background-color: rgba($border-color,0);
+  background-color: rgba($border-color, 0);
   color: $title-color;
   margin-top: 5%;
   border: none;
