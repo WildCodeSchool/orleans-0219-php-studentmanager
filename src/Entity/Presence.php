@@ -67,28 +67,4 @@ class Presence
 
         return $this;
     }
-
-    public function getAbsence(): ?\DateTime
-    {
-        return $this->absence;
-    }
-
-    public function setAbsence(\DateTime $absence): self
-    {
-        $this->absence = $absence;
-
-        return $this;
-    }
-
-    public function getDelay(): ?\DateTime
-    {
-        return $this->delay;
-    }
-
-    public function setDelay(\DateTime $delay): self
-    {
-        $this->delay = $delay;
-
-        return $this;
-    }
 }
