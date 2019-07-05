@@ -17,12 +17,6 @@ class PresenceType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder
-            ->add('date', DateType::class, ['label' => 'Date'])
-            ->add('user', EntityType::class, [
-                'class' => Presence::class,
-                'choice_label' => 'username',
-                'label' => 'User']);
     }
 
     public function configureOptions(OptionsResolver $resolver)

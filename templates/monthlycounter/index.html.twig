@@ -1,0 +1,34 @@
+{% extends 'layoutAdmin.html.twig' %}
+{% block title %}Absences and Dealys Counter{% endblock %}
+{% block body %}
+    <div class="monthlyCounter container-fluid">
+        <div class=" col-sm-offset-1 col-md-offset-3 col-xs-8 col-sm-10 col-md-10">
+            <h1 class="monthlyCounterTitle">Absences et Retards</h1>
+            <table class="monthlyCounterForm table">
+                <thead class="monthlyCounterFormThead">
+                <tr>
+                    <th>Utilisateurs</th>
+                    <th>Date</th>
+                    <th>Heures</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for presence in presences %}
+                    <tr class="monthlyCounterFormTr">
+                        <td>{{ presence.user.username }}</td>
+                        <td>{{ presence.date ? presence.date|date('d/m/Y') : '' }}</td>
+                        <td>
+                            <a href="{{ path('presence_show', {'id': presence.id}) }}">voir</a>
+                            <a href="{{ path('presence_edit', {'id': presence.id}) }}">modifier</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="3">Aucun enregistrement trouvé</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

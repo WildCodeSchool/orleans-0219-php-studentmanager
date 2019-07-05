@@ -29,6 +29,16 @@ class Presence
      */
     private $user;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $absence;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $delay;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -54,6 +64,30 @@ class Presence
     public function setUser(?User $user): self
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getAbsence(): ?\DateTime
+    {
+        return $this->absence;
+    }
+
+    public function setAbsence(\DateTime $absence): self
+    {
+        $this->absence = $absence;
+
+        return $this;
+    }
+
+    public function getDelay(): ?\DateTime
+    {
+        return $this->delay;
+    }
+
+    public function setDelay(\DateTime $delay): self
+    {
+        $this->delay = $delay;
 
         return $this;
     }
