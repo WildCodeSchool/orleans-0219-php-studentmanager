@@ -78,6 +78,11 @@ footer {
   left: 0;
   position: relative;
 
+  .container-fluid{
+    p {
+      margin-left: 1em;
+    }
+  }
 }
 
 .a-footer {
