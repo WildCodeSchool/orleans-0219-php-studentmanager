@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Presence;
-use App\Form\Presence1Type;
+use App\Form\PresenceType;
 use App\Repository\PresenceRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -31,7 +31,7 @@ class PresenceController extends AbstractController
     public function new(Request $request): Response
     {
         $presence = new Presence();
-        $form = $this->createForm(Presence1Type::class, $presence);
+        $form = $this->createForm(PresenceType::class, $presence);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -63,7 +63,7 @@ class PresenceController extends AbstractController
      */
     public function edit(Request $request, Presence $presence): Response
     {
-        $form = $this->createForm(Presence1Type::class, $presence);
+        $form = $this->createForm(PresenceType::class, $presence);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
