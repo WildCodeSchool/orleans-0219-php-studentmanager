@@ -69,7 +69,7 @@ class MonthlyRepository extends ServiceEntityRepository
     }
 
     /**
-     * @param \Int
+     * @param \DateTime $date
      * @param User $user
      * @return Presence
      */
