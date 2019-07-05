@@ -12,13 +12,6 @@
             <th>Date</th>
             <td>{{ presence.date ? presence.date|date('Y-m-d H:i:s') : '' }}</td>
         </tr>
-        {#        <tr>#}
-        {#            <th>Nombre d'heures</th>#}
-        {#            <td>{{ presence.time }}</td>#}
-        {#        </tr>#}
-        {#        <tr>#}
-        {#            <th>Justificatif ?</th>#}
-        {#        </tr>#}
         </tbody>
     </table>
     <a href="{{ path('presence_index') }}">Retour à la liste</a>
