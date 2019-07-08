@@ -46,15 +46,11 @@ P,a,input,label,h1,td,tr{
 /*-------footer-------*/
 footer {
   color: $wild-text-color;
-
-
   padding: 1em;
-  padding-top: 1em;
   box-sizing: inherit;
   width: 100%;
   bottom: 0;
   left: 0;
-
   position: relative;
 }
 
@@ -330,4 +326,103 @@ a:hover, a:focus {
 
 /*-------fin du signup-------*/
 
+/*---------début dash board-------*/
 
+.containerDashboardForm{
+  background-image: url('../images/wild-code-school-la-loupe-116.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: contrast(50%);
+}
+
+.dashboardTitle{
+  text-align: center;
+  font-family: $font-family;
+  font-size: 4em;
+  padding-top: 1em;
+  margin-bottom: 1em;
+  color: $title-color;
+  font-weight: 500;
+}
+.dashboardForm{
+  margin-left: 7%;
+  padding-bottom: 2em;
+}
+
+.dashboardTable{
+  max-width: 100%;
+  margin-top: 2em;
+  margin-left: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+  color: $title-color;
+  background-color: rgba($background-color,0.5);
+  padding-left: 4em;
+  padding-right: 4em;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  border-radius: 8px;
+  border: none;
+  font-size: 1em;
+  font-family: $font-family;
+}
+
+.dashboardLine{
+  border: none;
+}
+
+.table thead th{
+  border-top: none;
+}
+
+.btnDashboardShow{
+  background-color: $wild-color;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 4%;
+  color:$title-color
+}
+
+.btnDashboardShow:hover{
+  color: $title-color;
+  background-color: $background-color;
+  text-decoration: none;
+}
+
+.btnDashboardEdit{
+  background-color: $wild-color;
+  padding: 0.6em;
+  border-radius: 4%;
+  padding-left: 0.9em;
+  padding-right: 0.9em;
+  color: $title-color;
+}
+
+.btnDashboardEdit:hover{
+  color: $title-color;
+  background-color: $background-color;
+  text-decoration: none;
+}
+
+
+.btnDashboardNew{
+  background-color: $wild-color;
+  padding: 0.6em;
+  border-radius: 4%;
+  padding-left: 0.9em;
+  padding-right: 0.9em;
+  color: $title-color;
+  margin-left: 2em;
+  margin-bottom: 2em;
+}
+
+.btnDashboardNew:hover{
+  color: $title-color;
+  background-color: $background-color;
+  text-decoration: none;
+}
+
+/*---------fi dash board---------*/
