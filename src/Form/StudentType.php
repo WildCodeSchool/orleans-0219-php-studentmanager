@@ -28,8 +28,7 @@ class StudentType extends AbstractType
             ->add('town', TextType::class, ['label' => 'Ville'])
             ->add('phoneNumber', TextType::class, ['label' => 'Téléphone'])
             ->add('funding', ChoiceType::class, ['label' => 'Financement', 'choices' =>
-                ['Region' => true, 'Pole Emploi' => false, 'OPCA' => true, 'Autofinancement'
-                => false, 'CPF' => true, 'CPF + Autofinancement' => false, 'Autre' => true]])
+                ['Region', 'Pole Emploi', 'OPCA', 'Autofinancement', 'CPF', 'CPF + Autofinancement', 'Autre']])
             ->add('insuranceCompany', TextType::class, ['label' => 'Companie d\'assurance'])
             ->add('insuranceNumber', TextType::class, ['label' => 'Numéro de sociétaire'])
             ->add('poleEmploiId', TextType::class, ['label' => 'Identifiant Pole Emploi']);
