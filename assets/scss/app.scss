@@ -3,7 +3,7 @@
 // the ~ allows you to reference things in node_modules
 
 /*-------ALL SITE-------*/
-P,a,input,label,h1,td,tr{
+P, a, input, label, h1, td, tr {
   font-family: $font-family;
 }
 
@@ -11,13 +11,15 @@ P,a,input,label,h1,td,tr{
 
 /*-------NAVBAR-------*/
 .navbar {
+  display: flex;
   background-color: $background-color;
   border: solid 0.1px $border-color;
 }
 
-.navbutton{
+.navbutton {
   font-size: 1.2em;
 }
+
 .nav-item {
   font-size: 16px;
   margin: 8px;
@@ -41,6 +43,30 @@ P,a,input,label,h1,td,tr{
   margin-left: 60%;
 }
 
+  /*navbar_animation*/
+
+  .nav-item {
+    position: relative;
+  }
+
+  .nav-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: $link-color;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+  }
+
+  .nav-item:hover::before {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
+
 /*------- end NAVBAR-------*/
 
 /*-------footer-------*/
@@ -52,6 +78,12 @@ footer {
   bottom: 0;
   left: 0;
   position: relative;
+
+  .container-fluid{
+    p {
+      margin-left: 1em;
+    }
+  }
 }
 
 .a-footer {
@@ -71,6 +103,77 @@ footer {
 /*-------fin du footer-------*/
 
 /*-------Profile form-------*/
+
+/*------- fix - register -------*/
+.register-container{
+  background-image: url('../images/wild-code-school-la-loupe-115.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 1%;
+  margin-top: 6%;
+  margin-bottom: 6%;
+}
+/*-------end -fix - register -------*/
+
+/*-------edit-form -------*/
+
+.edit-form {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 1%;
+}
+
+.b-container {
+  background-image: url('../images/you-x-ventures-1437336-unsplash.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 1%;
+  font-size: 20px;
+  padding-bottom: 5%;
+}
+
+.form-control {
+  border: 1px solid $heart-color;
+  box-shadow: $heart-color;
+}
+
+.form-inline .form-control {
+  margin-right: 0.5%;
+}
+
+.container-modification {
+  background-image: url('../images/testLum72.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 1%;
+}
+
+.container-opacity {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: $background-color;
+  opacity: 0.9;
+  border-radius: 1%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.h1-edit {
+  text-align: center;
+  padding-bottom: 5%;
+  padding-top: 1%;
+  font-size: 45px;
+}
+
+/*-------end edit-form -------*/
+
+
 .h1-mes-informations {
   text-align: center;
   margin-top: 5%;
@@ -82,7 +185,7 @@ footer {
   border-radius: 5%;
 }
 
-.btn-student{
+.btn-student {
   background-color: $wild-color;
   color: $background-color;
   font-family: $font-family;
@@ -114,11 +217,12 @@ footer {
 
 /*-------modification -------*/
 
-.h1-modification{
+.h1-modification {
   padding-bottom: 5%;
 }
 
 /*------- end modification -------*/
+
 
 /*-------edit-------*/
 .a-edit {
@@ -129,11 +233,11 @@ footer {
 
 /* -------Base-------*/
 
-.button{
+.button {
   margin-top: 2em;
 }
 
-.containercheckindate{
+.containercheckindate {
 
   background-image: url('../images/wild-code-school-la-loupe-116.jpg');
   background-attachment: fixed;
@@ -148,8 +252,8 @@ footer {
   margin-left: 25em;
   margin-bottom: 2em;
   text-align: center;
-  color: $wild-color;
-  background-color: rgba($background-color,0.5);
+  color: $primary-color;
+  background-color: rgba($background-color, 0.5);
   padding-left: 4em;
   padding-right: 4em;
   padding-bottom: 2em;
@@ -158,15 +262,11 @@ footer {
 }
 
 .a-checkin {
-  color: $wild-color;
+  color: $primary-color;
 }
 
 a:hover, a:focus {
-  color: $wild-color;
-}
-
-.today-piece {
-
+  color: $primary-color;
 }
 
 .td-mes-informations {
@@ -262,14 +362,41 @@ a:hover, a:focus {
   background-color: $wild-color;
   color: $background-color;
   font-family: $font-family;
+  opacity: 1;
 }
 
-.h1-login{
+.h1-login {
   font-family: $font-family;
+  color: $title-color;
 }
 
-.h4-login{
+.p-login {
   font-family: $font-family;
+  color: $title-color;
+}
+
+.h4-login {
+  font-family: $font-family;
+  color: $title-color;
+}
+
+.form-login {
+  background-image: url('../images/wild-code-school-la-loupe-49.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 1%;
+  margin-top: 6%;
+  margin-bottom: 6%;
+}
+
+.container-p {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  background-color: $background-color;
+  opacity: 0.8;
+  border-radius: 1%;
+  padding:10%;
 }
 
 /*------- end login -------*/
@@ -298,9 +425,9 @@ a:hover, a:focus {
   font-family: $font-family;
 }
 
-.message{
+.message {
 
-  background-color: rgba($border-color,0);
+  background-color: rgba($border-color, 0);
   color: $title-color;
   margin-top: 5%;
   border: none;
@@ -442,3 +569,33 @@ a:hover, a:focus {
 }
 
 /*---------fin dash board---------*/
+
+/*----------début message flash------*/
+
+.alert-success{
+  background-color: $cellule-background-color;
+  color: $succes-message;
+  font-family: $font-family;
+  text-align: center;
+  font-size: 1.5em;
+  margin-left: 22.5%;
+  margin-right: 25.8%;
+  max-width: 60em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.alert-danger {
+  background-color: $cellule-background-color;
+  color: $wild-color;
+  font-family: $font-family;
+  text-align: center;
+  font-size: 1.5em;
+  margin-left: 22.5%;
+  margin-right: 25.8%;
+  max-width: 60em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+/*--------------fin message flash------------*/

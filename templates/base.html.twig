@@ -11,12 +11,12 @@
     {% endblock %}
 </head>
 <body>
-{% include ('navbar.html.twig')%}
+{% include ('navbar.html.twig') %}
 
 {# read and display all flash messages #}
 {% for label, messages in app.flashes %}
     {% for message in messages %}
-        <div class="alert alert-{{ label }}">
+        <div class="alert-{{ label }} alert container-fluid-">
             {{ message }}
         </div>
     {% endfor %}
