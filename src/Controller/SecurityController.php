@@ -6,11 +6,11 @@ use App\Entity\User;
 use Exception;
 use Swift_Mailer;
 use Swift_Message;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Csrf\TokenGenerator\TokenGeneratorInterface;
@@ -67,9 +67,11 @@ class SecurityController extends AbstractController
                 array('token' => $token),
                 UrlGeneratorInterface::ABSOLUTE_URL
             );
-            $message = (new Swift_Message('Forgot Password'))
-                ->setFrom('dreamcatcherswcs@gmail.com')
+            $message = (new Swift_Message('Mot de passe oublié'))
+//                ->setFrom('dreamcatcherswcs@gmail.com')
+                ->setFrom($this->getParameter('url'))
                 ->setTo($user->getEmail())
+                ->setCharset('utf-8')
                 ->setBody(
                     "Cliquez sur le lien pour renouveler votre mot de passe : " . $url,
                     'text/html'

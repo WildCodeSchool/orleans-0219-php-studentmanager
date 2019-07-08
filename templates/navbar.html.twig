@@ -3,15 +3,15 @@
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a href="https://odyssey.wildcodeschool.com/?locale=fr"><img class="navbar-item ml-auto"
+    <a href="{{ path('app_login') }}"><img class="navbar-item ml-auto"
                                                                  src="{{ asset('build/logo_pink.png') }}"
                                                                  alt="logo-wild"></a>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
             {% if app.user == false %}
-                    <li class="nav-item ml-auto">
-                        <a class="navbutton nav-link" href="{{ path ('user_registration') }}">Créer son compte</a>
-                    </li>
+                <li class="nav-item ml-auto">
+                    <a class="navbutton nav-link" href="{{ path ('user_registration') }}">Créer son compte</a>
+                </li>
             {% endif %}
             {% if is_granted('ROLE_USER') %}
                 <li class="nav-item ml-auto">
@@ -24,11 +24,11 @@
                 </li>
             {% endif %}
             {% if app.user %}
-            <li class="nav-item">
+                <li class="nav-item">
 
-                <a class="navbutton nav-link" href="{{ path ('security_logout') }}">Déconnexion</a>
+                    <a class="navbutton nav-link" href="{{ path ('security_logout') }}">Déconnexion</a>
 
-            </li>
+                </li>
             {% endif %}
         </ul>
     </div>
