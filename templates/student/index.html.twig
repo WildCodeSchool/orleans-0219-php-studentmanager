@@ -21,7 +21,7 @@
                         <th class="dashboardLine">id pole emploi</th>
                         <th class="dashboardLine">Assurance</th>
                         <th class="dashboardLine">Numéro d'assurance</th>
-                        <th class="dashboardLine" colspan="2">Actions</th>
+                        <th class="dashboardLine" colspan="3">Actions</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -45,6 +45,10 @@
                         <td>
                             <a href="{{ path('student_edit', {'id': student.id}) }}"
                                class="btnDashboardEdit btn-success">modifier</a>
+                        </td>
+                        <td>
+                            <a href="{{ path('student_delete', {'id': student.id}) }}"
+                               class="btnDashBoardDelete btn-danger">supprimer</a>
                         </td>
                         <a href="{{ path('student_new') }}" class="btnDashboardNew btn-success">Créer un nouveau
                             profil</a>
