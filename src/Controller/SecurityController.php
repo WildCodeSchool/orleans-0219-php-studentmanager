@@ -68,8 +68,7 @@ class SecurityController extends AbstractController
                 UrlGeneratorInterface::ABSOLUTE_URL
             );
             $message = (new Swift_Message('Mot de passe oublié'))
-//                ->setFrom('dreamcatcherswcs@gmail.com')
-                ->setFrom($this->getParameter('url'))
+                ->setFrom($this->getParameter('mailer_from'))
                 ->setTo($user->getEmail())
                 ->setCharset('utf-8')
                 ->setBody(
