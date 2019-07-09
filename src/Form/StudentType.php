@@ -22,15 +22,15 @@ class StudentType extends AbstractType
             ->add('firstname', TextType::class, ['label' => 'Prénom'])
             ->add('lastname', TextType::class, ['label' => 'Nom'])
             ->add('birthday', BirthdayType::class, ['label' => 'Date de Naissance'])
+            ->add('phoneNumber', TextType::class, ['label' => 'Téléphone'])
             ->add('postalAdress', TextType::class, ['label' => 'Adresse'])
             ->add('postalCode', TextType::class, ['label' => 'Code Postal'])
-            ->add('socialSecurityNumber', TextType::class, ['label' => 'Numéro Sécurité Sociale'])
             ->add('town', TextType::class, ['label' => 'Ville'])
-            ->add('phoneNumber', TextType::class, ['label' => 'Téléphone'])
+            ->add('insuranceCompany', TextType::class, ['label' => 'Compagnie d\'assurance'])
+            ->add('insuranceNumber', TextType::class, ['label' => 'Numéro de sociétaire'])
+            ->add('socialSecurityNumber', TextType::class, ['label' => 'Numéro Sécurité Sociale'])
             ->add('funding', ChoiceType::class, ['label' => 'Financement', 'choices' =>
                 ['Region', 'Pole Emploi', 'OPCA', 'Autofinancement', 'CPF', 'CPF + Autofinancement', 'Autre']])
-            ->add('insuranceCompany', TextType::class, ['label' => 'Companie d\'assurance'])
-            ->add('insuranceNumber', TextType::class, ['label' => 'Numéro de sociétaire'])
             ->add('poleEmploiId', TextType::class, ['label' => 'Identifiant Pole Emploi']);
     }
 
