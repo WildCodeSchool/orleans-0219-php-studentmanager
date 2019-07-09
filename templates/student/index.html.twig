@@ -6,6 +6,11 @@
     <div class="containerDashboardForm container-fluid">
         <div class="dashboardForm col-sm-offset-1 col-md-offset-3 col-xs-8 col-sm-10 col-md-10">
             <h1 class="dashboardTitle">Tableau de bord</h1>
+            <div class="form-group">
+                <a href="{{ path('student_new') }}">
+                    <button type="button" class="btnDashboardNew btn-success">Créer un nouveau profil</button>
+                </a>
+            </div>
             <div class="dashBoardForm2">
                 <table class="dashboardTable table">
                     <thead class="dashboardLine">
@@ -26,41 +31,43 @@
                     </thead>
                     <tbody>
                     {% for student in students %}
-                    <tr>
-                        <td>{{ student.firstname }}</td>
-                        <td>{{ student.lastname }}</td>
-                        <td>{{ student.birthday ? student.birthday|date('d-m-Y') : '' }}</td>
-                        <td>{{ student.postalAdress }}</td>
-                        <td>{{ student.postalCode }}</td>
-                        <td>{{ student.town }}</td>
-                        <td>{{ student.phoneNumber }}</td>
-                        <td>{{ student.funding }}</td>
-                        <td>{{ student.poleEmploiId }}</td>
-                        <td>{{ student.insuranceCompany }}</td>
-                        <td>{{ student.insuranceNumber }}</td>
-                        <td>
-                            <a href="{{ path('student_show', {'id': student.id}) }}"
-                               class="btnDashboardShow btn-success"> voir </a>
-                        </td>
-                        <td>
-                            <a href="{{ path('student_edit', {'id': student.id}) }}"
-                               class="btnDashboardEdit btn-success">modifier</a>
-                        </td>
-                        <td>
-                            <a href="{{ path('student_delete', {'id': student.id}) }}"
-                               class="btnDashBoardDelete btn-danger">supprimer</a>
-                        </td>
-                        <a href="{{ path('student_new') }}" class="btnDashboardNew btn-success">Créer un nouveau
-                            profil</a>
-                    </tr>
-            {% else %}
-                <tr>
-                    <td colspan="12">Wilder absent</td>
-                </tr>
-            {% endfor %}
+                        <tr>
+                            <td>{{ student.firstname }}</td>
+                            <td>{{ student.lastname }}</td>
+                            <td>{{ student.birthday ? student.birthday|date('d-m-Y') : '' }}</td>
+                            <td>{{ student.postalAdress }}</td>
+                            <td>{{ student.postalCode }}</td>
+                            <td>{{ student.town }}</td>
+                            <td>{{ student.phoneNumber }}</td>
+                            <td>{{ student.funding }}</td>
+                            <td>{{ student.poleEmploiId }}</td>
+                            <td>{{ student.insuranceCompany }}</td>
+                            <td>{{ student.insuranceNumber }}</td>
+                            <td>
+                                <a href="{{ path('student_show', {'id': student.id}) }}"
+                                   class="btnDashboardShow btn-success"> voir </a>
+                            </td>
+                            <td>
+                                <a href="{{ path('student_edit', {'id': student.id}) }}"
+                                   class="btnDashboardEdit btn-success">modifier</a>
+                            </td>
+                            <td>
+                                <a href="{{ path('student_delete', {'id': student.id}) }}"
+                                   class="btnDashBoardDelete btn-danger">supprimer</a>
+                            </td>
 
-            </tbody>
-            </table>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="12">Wilder absent</td>
+                        </tr>
+                    {% endfor %}
+
+
+
+
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
