@@ -4,16 +4,8 @@
 
 {% block body %}
     <div class="form-login container-fluid">
-<<<<<<< HEAD
-        <form class="d-flex justify-content-center" method="post">
-            <div class="col-sm-offset-2 col-md-offset-3 col-xs-6 col-sm-8 col-md-6">
-||||||| merged common ancestors
-        <form class="d-flex justify-content-center" method="post">
-            <div class="col-sm-offset-2 col-md-offset-3 col-xs-6 col-sm-8 col-md-4">
-=======
         <form class="d-flex justify-content-center" action="{{ path('app_login') }}"  method="post">
             <div class="col-sm-offset-2 col-md-offset-3 col-xs-6 col-sm-8 col-md-4">
->>>>>>> bc8527c96ece630ece02aec6c8488d36736a3b8f
                 {% if error %}
                     <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                 {% endif %}
@@ -48,6 +40,11 @@
                             <input type="checkbox" id="remember_me" name="_remember_me"> Se souvenir de moi
                         </label>
                     </div>
+<<<<<<< HEAD
+                <div class="justify-content-right">
+                    <a class="a-login" href="#">Tu as oublié ton mot de passe ?</a>
+                </div>
+||||||| merged common ancestors
 
                     <div class="justify-content-right">
                         <a class="a-login" href="#">Tu as oublié ton mot de passe ?</a>
@@ -57,6 +54,13 @@
                 <div class="justify-content-right">
                     <a class="a-login" href="#">Tu as oublié ton mot de passe ?</a>
                 </div>
+=======
+
+                    <div class="justify-content-right">
+                        <a class="a-login" href="{{ path('app_forgotten_password') }}">Tu as oublié ton mot de passe ?</a>
+                    </div>
+                </div>
+>>>>>>> f402a58e532b5b4bb881514a1ac1f845c5c54bf2
             </div>
         </form>
     </div>
