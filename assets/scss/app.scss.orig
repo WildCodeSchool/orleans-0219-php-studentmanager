@@ -72,7 +72,22 @@ P, a, input, label, h1, td, tr {
 /*-------footer-------*/
 footer {
   color: $wild-text-color;
+<<<<<<< HEAD
+  padding: 1em;
+||||||| merged common ancestors
+<<<<<<<<< Temporary merge branch 1
   padding-top: 1em;
+||||||||| merged common ancestors
+
+
+  padding: 1em;
+  padding-top: 1em;
+=========
+  padding: 1em;
+>>>>>>>>> Temporary merge branch 2
+=======
+  padding-top: 1em;
+>>>>>>> 845aa687cdf50ab817be755decede22f6006e9bc
   box-sizing: inherit;
   width: 100%;
   bottom: 0;
@@ -136,8 +151,8 @@ footer {
 }
 
 .form-control {
-  border: 1px solid $title-color;
-  box-shadow: $title-color;
+  border: 1px solid $heart-color;
+  box-shadow: $heart-color;
 }
 
 .form-inline .form-control {
@@ -453,19 +468,6 @@ a:hover, a:focus {
 
 /*-------fin du signup-------*/
 
-.alert-danger{
-  background-color: $cellule-background-color;
-  color: $wild-color;
-  font-family: $font-family;
-  text-align: center;
-  font-size: 1.5em;
-  margin-left: 22.5%;
-  margin-right: 25.8%;
-  max-width: 60em;
-  margin-bottom: 1em;
-  margin-top: 1em;
-}
-
 /*---------début dash board-------*/
 
 .containerDashboardForm{
@@ -564,6 +566,7 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 .btnDashBoardDelete{
   background-color: $background-color;
   padding: 0.6em;
@@ -584,6 +587,25 @@ a:hover, a:focus {
 
 /*----------début message flash------*/
 
+||||||| merged common ancestors
+<<<<<<<<< Temporary merge branch 1
+=======
+/*---------fin dash board---------*/
+/*---------début message flash------*/
+.alert-danger{
+  background-color: $cellule-background-color;
+  color: $wild-color;
+  font-family: $font-family;
+  text-align: center;
+  font-size: 1.5em;
+  margin-left: 22.5%;
+  margin-right: 25.8%;
+  max-width: 60em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+>>>>>>> 845aa687cdf50ab817be755decede22f6006e9bc
 .alert-success{
   background-color: $cellule-background-color;
   color: $succes-message;
@@ -596,6 +618,7 @@ a:hover, a:focus {
   margin-bottom: 1em;
   margin-top: 1em;
 }
+<<<<<<< HEAD
 
 .alert-danger {
   background-color: $cellule-background-color;
@@ -611,3 +634,11 @@ a:hover, a:focus {
 }
 
 /*--------------fin message flash------------*/
+||||||| merged common ancestors
+||||||||| merged common ancestors
+=========
+/*---------fi dash board---------*/
+>>>>>>>>> Temporary merge branch 2
+=======
+/*--------fin message flash-------*/
+>>>>>>> 845aa687cdf50ab817be755decede22f6006e9bc
