@@ -8,6 +8,7 @@
 
 1. Check composer is installed
 2. Check yarn & node are installed
+3. Check php is installed
 
 ### Install
 
@@ -19,11 +20,7 @@
 
 1. Run `php bin/console server:run` to launch your local php web server
 2. Run `yarn run dev --watch` to launch your local server for assets
-
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+3. In your browser, go to `http://localhost:8000/`
 
 ## Built With
 
@@ -42,7 +39,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Authors
 
-Wild Code School trainers team
+Wild Code School trainers team & dev team of students 
 
 ## License
 
@@ -69,4 +66,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Acknowledgments
+
+Thank's to Victoria B. for her patience and special thanks to Sylvain B. & Bertrand G. for help
 
