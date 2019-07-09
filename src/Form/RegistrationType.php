@@ -18,11 +18,11 @@ class RegistrationType extends AbstractType
         $builder
             ->add('email', EmailType::class)
             ->add('username', TextType::class)
-            ->add('plainPassword', RepeatedType::class, array(
+            ->add('plainPassword', RepeatedType::class, [
                 'type' => PasswordType::class,
                 'first_options'  => array('label' => 'Mot de passe'),
                 'second_options' => array('label' => 'Confirmation du mot de passe'),
-            ))
+            ])
         ;
     }
 
