@@ -43,29 +43,41 @@ P, a, input, label, h1, td, tr {
   margin-left: 60%;
 }
 
-  /*navbar_animation*/
+/*navbar_animation*/
 
-  .nav-item {
-    position: relative;
-  }
-
+.nav-item {
+  position: relative;
+}
   .nav-item::before {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 1px;
+    height: 2px;
     background-color: $link-color;
     transform-origin: bottom right;
     transform: scaleX(0);
     transition: transform 0.5s ease;
   }
 
-  .nav-item:hover::before {
-    transform-origin: bottom left;
-    transform: scaleX(1);
-  }
+.nav-item::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: $link-color;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.nav-item:hover::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
 
 /*------- end NAVBAR-------*/
 
@@ -79,7 +91,7 @@ footer {
   left: 0;
   position: relative;
 
-  .container-fluid{
+  .container-fluid {
     p {
       margin-left: 1em;
     }
@@ -105,7 +117,7 @@ footer {
 /*-------Profile form-------*/
 
 /*------- fix - register -------*/
-.register-container{
+.register-container {
   background-image: url('../images/wild-code-school-la-loupe-115.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -114,6 +126,7 @@ footer {
   margin-top: 6%;
   margin-bottom: 6%;
 }
+
 /*-------end -fix - register -------*/
 
 /*-------edit-form -------*/
@@ -125,7 +138,7 @@ footer {
   padding-top: 1%;
 }
 
-.b-container {
+.btn-container {
   background-image: url('../images/you-x-ventures-1437336-unsplash.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -136,8 +149,7 @@ footer {
 }
 
 .form-control {
-  border: 1px solid $title-color;
-  box-shadow: $title-color;
+  border: 1px solid rgba($title-color, 0.2);
 }
 
 .form-inline .form-control {
@@ -396,118 +408,203 @@ a:hover, a:focus {
   background-color: $background-color;
   opacity: 0.8;
   border-radius: 1%;
-  padding:10%;
+  padding: 10%;
 }
 
-   /*animation*/
-//.container {
+/*btn animation*/
+//body {
 //  align-items: center;
-//  background: #000;
-//  border-radius: 40px;
-//  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 //  display: flex;
-//  height: 80px;
+//  font-family: sans-serif;
+//  font-weight: 600;
+//  font-size: 26px;
+//  height: 100vh;
 //  justify-content: center;
-//  position: relative;
-//  width: 200px;
+//  margin: 0;
 //}
-//.text {
-//  color: white;
-//  position: absolute;
-//  transition: opacity 300ms;
-//  user-select: none;
-//  -moz-user-select: none;
-//}
-//.fingerprint {
-//  /* height: 80px; */
-//  left: -8px;
-//  opacity: 0;
-//  position: absolute;
-//  stroke: #777;
-//  top: -9px;
-//  transition: opacity 1ms;
-//}
-//.fingerprint-active {
-//  stroke: #fff;
-//}
-//.fingerprint-out {
-//  opacity: 1;
-//}
-//.odd {
-//  stroke-dasharray: 0px 50px;
-//  stroke-dashoffset: 1px;
-//  transition: stroke-dasharray 1ms;
-//}
-//.even {
-//  stroke-dasharray: 50px 50px;
-//  stroke-dashoffset: -41px;
-//  transition: stroke-dashoffset 1ms;
-//}
-//.ok {
-//  opacity: 0;
-//}
-//.active.container {
-//  animation: 6s Container;
-//}
-//.active .text {
-//  opacity: 0;
-//  animation: 6s Text forwards;
-//}
-//.active .fingerprint {
-//  opacity: 1;
-//  transition: opacity 300ms 200ms;
-//}
-//.active .fingerprint-base .odd {
-//  stroke-dasharray: 50px 50px;
-//  transition: stroke-dasharray 800ms 100ms;
-//}
-//.active .fingerprint-base .even {
-//  stroke-dashoffset: 0px;
-//  transition: stroke-dashoffset 800ms;
-//}
-//.active .fingerprint-active .odd {
-//  stroke-dasharray: 50px 50px;
-//  transition: stroke-dasharray 2000ms 1500ms;
-//}
-//.active .fingerprint-active .even {
-//  stroke-dashoffset: 0px;
-//  transition: stroke-dashoffset 2000ms 1300ms;
-//}
-//.active .fingerprint-out {
-//  opacity: 0;
-//  transition: opacity 300ms 4100ms;
-//}
-//.active .ok {
-//  opacity: 1;
-//  animation: 6s Ok forwards;
-//}
-//@keyframes Container {
-//  0% { width: 200px }
-//  6% { width: 80px }
-//  71% { transform: scale(1); }
-//  75% { transform: scale(1.2); }
-//  77% { transform: scale(1); }
-//
-//  94% { width: 80px }
-//  100% { width: 200px }
-//}
-//@keyframes Text {
-//  0% { opacity: 1; transform: scale(1); }
-//  6% { opacity: 0; transform: scale(0.5); }
-//
-//  94% { opacity: 0; transform: scale(0.5); }
-//  100% { opacity: 1; transform: scale(1); }
-//}
-//@keyframes Ok {
-//  0% { opacity: 0 }
-//  70% { opacity: 0; transform: scale(0); }
-//  75% { opacity: 1; transform: scale(1.1); }
-//  77% { opacity: 1; transform: scale(1); }
-//  92% { opacity: 1; transform: scale(1); }
-//  96% { opacity: 0; transform: scale(0.5); }
-//  100% { opacity: 0 }
-//}
-  /*end animation*/
+
+.btn-animation {
+}
+
+.btn-container {
+  margin-top: -15%;
+  margin-left: 70%;
+  justify-content: center;
+  align-items: center;
+  background: $wild-color;
+  border-radius: 100%;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  height: 100px;
+  position: relative;
+  width: 100px;
+  display: flex;
+}
+
+.text {
+  text-align: center;
+  color: white;
+  position: absolute;
+  transition: opacity 300ms;
+  user-select: none;
+  -moz-user-select: none;
+  top: 30px;
+}
+
+.fingerprint {
+  /* height: 80px; */
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  position: absolute;
+  stroke: #777;
+  top: 1px;
+  transition: opacity 1ms;
+  left: 1px;
+}
+
+.fingerprint-active {
+  stroke: #fff;
+}
+
+.fingerprint-out {
+  opacity: 1;
+}
+
+.odd {
+  stroke-dasharray: 0px 50px;
+  stroke-dashoffset: 1px;
+  transition: stroke-dasharray 1ms;
+}
+
+.even {
+  stroke-dasharray: 50px 50px;
+  stroke-dashoffset: -41px;
+  transition: stroke-dashoffset 1ms;
+}
+
+.ok {
+  opacity: 0;
+}
+
+.active.container {
+  animation: 6s Container;
+}
+
+.active .text {
+  opacity: 0;
+  animation: 6s Text forwards;
+}
+
+.active .fingerprint {
+  opacity: 1;
+  transition: opacity 300ms 200ms;
+}
+
+.active .fingerprint-base .odd {
+  stroke-dasharray: 50px 50px;
+  transition: stroke-dasharray 800ms 100ms;
+}
+
+.active .fingerprint-base .even {
+  stroke-dashoffset: 0px;
+  transition: stroke-dashoffset 800ms;
+}
+
+.active .fingerprint-active .odd {
+  stroke-dasharray: 50px 50px;
+  transition: stroke-dasharray 2000ms 1500ms;
+}
+
+.active .fingerprint-active .even {
+  stroke-dashoffset: 0px;
+  transition: stroke-dashoffset 2000ms 1300ms;
+}
+
+.active .fingerprint-out {
+  opacity: 0;
+  transition: opacity 300ms 4100ms;
+}
+
+.active .ok {
+  opacity: 1;
+  animation: 6s Ok forwards;
+}
+
+@keyframes Container {
+  0% {
+    width: 200px
+  }
+  6% {
+    width: 80px
+  }
+  71% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  77% {
+    transform: scale(1);
+  }
+
+  94% {
+    width: 80px
+  }
+  100% {
+    width: 200px
+  }
+}
+
+@keyframes Text {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  6% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  94% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes Ok {
+  0% {
+    opacity: 0
+  }
+  70% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  77% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  92% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  96% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 0
+  }
+}
+
+/*end animation*/
 
 /*------- end login -------*/
 
@@ -563,9 +660,22 @@ a:hover, a:focus {
 
 /*-------fin du signup-------*/
 
+.alert-danger{
+  background-color: $cellule-background-color;
+  color: $wild-color;
+  font-family: $font-family;
+  text-align: center;
+  font-size: 1.5em;
+  margin-left: 22.5%;
+  margin-right: 25.8%;
+  max-width: 60em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
 /*---------début dash board-------*/
 
-.containerDashboardForm{
+.containerDashboardForm {
   background-image: url('../images/wild-code-school-la-loupe-116.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -573,7 +683,7 @@ a:hover, a:focus {
   backdrop-filter: contrast(50%);
 }
 
-.dashboardTitle{
+.dashboardTitle {
   text-align: center;
   font-family: $font-family;
   font-size: 4em;
@@ -582,18 +692,19 @@ a:hover, a:focus {
   color: $title-color;
   font-weight: 500;
 }
-.dashboardForm{
-  margin-left: 5%;
+
+.dashboardForm {
+  margin-left: 7%;
   padding-bottom: 2em;
 }
 
-.dashboardTable{
+.dashboardTable {
   max-width: 100%;
   margin-top: 2em;
   margin-bottom: 2em;
   text-align: center;
   color: $title-color;
-  background-color: rgba($background-color,0.5);
+  background-color: rgba($background-color, 0.5);
   padding-left: 4em;
   padding-right: 4em;
   padding-bottom: 2em;
@@ -604,15 +715,15 @@ a:hover, a:focus {
   font-family: $font-family;
 }
 
-.dashboardLine thead th{
+.dashboardLine thead th {
   border: none;
 }
 
-.table thead th{
+.table thead th {
   border-top: none;
 }
 
-.btnDashboardShow{
+.btnDashboardShow {
   background-color: $wild-color;
   padding-top: 0.6em;
   padding-bottom: 0.6em;
@@ -623,13 +734,13 @@ a:hover, a:focus {
   margin-right: 5em;
 }
 
-.btnDashboardShow:hover{
+.btnDashboardShow:hover {
   color: $title-color;
   background-color: $background-color;
   text-decoration: none;
 }
 
-.btnDashboardEdit{
+.btnDashboardEdit {
   background-color: $wild-color;
   padding: 0.6em;
   border-radius: 4%;
@@ -638,13 +749,13 @@ a:hover, a:focus {
   color: $title-color;
 }
 
-.btnDashboardEdit:hover{
+.btnDashboardEdit:hover {
   color: $title-color;
   background-color: $background-color;
   text-decoration: none;
 }
 
-.btnDashboardNew{
+.btnDashboardNew {
   background-color: $wild-color;
   padding: 0.6em;
   padding-left: 0.9em;
@@ -654,13 +765,13 @@ a:hover, a:focus {
   border-color: transparent;
 }
 
-.btnDashboardNew:hover{
+.btnDashboardNew:hover {
   color: $title-color;
   background-color: $background-color;
   text-decoration: none;
 }
 
-.btnDashBoardDelete{
+.btnDashBoardDelete {
   background-color: $background-color;
   padding: 0.6em;
   border-radius: 4%;
@@ -670,7 +781,7 @@ a:hover, a:focus {
   margin-left: 3em;
 }
 
-.btnDashBoardDelete:hover{
+.btnDashBoardDelete:hover {
   color: $title-color;
   background-color: $wild-color;
   text-decoration: none;
@@ -680,7 +791,7 @@ a:hover, a:focus {
 
 /*----------début message flash------*/
 
-.alert-success{
+.alert-success {
   background-color: $cellule-background-color;
   color: $succes-message;
   font-family: $font-family;
