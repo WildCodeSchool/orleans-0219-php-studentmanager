@@ -19,7 +19,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityController extends AbstractController
 {
     /**
-     * @Route("/login", name="app_login")
+     * @Route("/", name="app_login")
      * @param AuthenticationUtils $authenticationUtils
      * @return Response
      */
@@ -76,7 +76,7 @@ class SecurityController extends AbstractController
                     'text/html'
                 );
             $mailer->send($message);
-            $this->addFlash('notice', 'Mail envoyé');
+            $this->addFlash('success', 'Mail envoyé');
             return $this->redirectToRoute('app_login');
         }
         return $this->render('security/forgotten_password.html.twig');
@@ -102,7 +102,7 @@ class SecurityController extends AbstractController
             $user->setResetToken(null);
             $user->setPassword($passwordEncoder->encodePassword($user, $request->request->get('password')));
             $entityManager->flush();
-            $this->addFlash('notice', 'Mot de passe mis à jour');
+            $this->addFlash('success', 'Mot de passe mis à jour');
             return $this->redirectToRoute('app_login');
         } else {
             return $this->render('security/reset_password.html.twig', ['token' => $token]);

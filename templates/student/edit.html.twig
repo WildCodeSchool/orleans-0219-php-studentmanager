@@ -4,14 +4,12 @@
 
 {% block body %}
 
-
     <div class="container-modification container">
         <div class="container">
             <h1 class="h1-modification">Apporter vos modifications</h1>
             {{ form_start(form) }}
             <a class="a-edit" href="{{ path('student_show',{'id': student.id}) }}"></a>
             {{ form_widget(form) }}
-
             <div class="form-group">
                 {{ include('student/_form.html.twig', {'button_label': 'Sauvegarder'}) }}
             </div>
