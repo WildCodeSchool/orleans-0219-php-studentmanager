@@ -145,11 +145,13 @@ footer {
 }
 
 .container-modification {
-  background-image: url('../images/testLum72.jpg');
+  background-image: url('../images/you-x-ventures-1437336-unsplash.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 1%;
+  max-width: 100%;
+  background-attachment: fixed;
+  //backdrop-filter: contrast(50%);
 }
 
 .container-opacity {
@@ -203,9 +205,55 @@ footer {
 /*-------modification -------*/
 
 .h1-modification {
-  padding-bottom: 5%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+  font-size: 4em;
+  font-family: $font-family;
+  color: $wild-color;
+  font-weight: 500;
 }
 
+.modificationsForm{
+  max-width: 60em;
+  margin-top: 2em;
+  margin-left: 25em;
+  margin-bottom: 2em;
+  text-align: center;
+  color: $title-color;
+  background-color: rgba($background-color, 0.5);
+  padding-left: 4em;
+  padding-right: 4em;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  border-radius: 8px;
+}
+
+.btn-modification{
+  background-color: $wild-color;
+  color: $background-color;
+  font-family: $font-family;
+  font-size: 1.5em;
+  padding: 0.5em;
+  margin-top: 1em;
+  margin-left: 2em;
+  border-radius: 8px;
+  border-color: transparent;
+  max-width: 50%;
+}
+
+.btn-modification:hover{
+  background-color: $background-color;
+  color: $wild-color;
+  font-family: $font-family;
+  font-size: 1.5em;
+  padding: 0.5em;
+  margin-top: 1em;
+  margin-left: 2em;
+  border-radius: 8px;
+  border-color: transparent;
+  max-width: 50%;
+}
 /*------- end modification -------*/
 
 
@@ -434,6 +482,7 @@ a:hover, a:focus {
   background-color: $wild-color;
   color: $background-color;
   font-family: $font-family;
+  max-width: 30%;
 }
 
 /*-------fin du signup-------*/
