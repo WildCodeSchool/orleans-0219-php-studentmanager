@@ -4,8 +4,8 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <a href="{{ path('app_login') }}"><img class="navbar-item ml-auto"
-                                                                 src="{{ asset('build/logo_pink.png') }}"
-                                                                 alt="logo-wild"></a>
+                                           src="{{ asset('build/logo_pink.png') }}"
+                                           alt="logo-wild"></a>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
             {% if app.user == false %}
@@ -15,7 +15,7 @@
             {% endif %}
             {% if is_granted('ROLE_USER') %}
                 <li class="nav-item ml-auto">
-                    <a class="navbutton nav-link" href="{{ path ('student_new') }}">Profil</a>
+                    <a class="navbutton nav-link" href="{{ path('student_show', {id: app.user.id}) }}">Profil</a>
                 </li>
             {% endif %}
             {% if is_granted('ROLE_ADMIN') %}
