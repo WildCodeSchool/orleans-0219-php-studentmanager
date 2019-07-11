@@ -55,7 +55,7 @@ P, a, input, label, h1, td, tr {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 2px;
+    height: 1px;
     background-color: $link-color;
     transform-origin: bottom right;
     transform: scaleX(0);
@@ -480,7 +480,7 @@ a:hover, a:focus {
   margin-top: 5%;
   border: none;
   font-size: 1.1em;
-  margin-bottom: 0em;
+  margin-bottom: 0;
 }
 
 /*----------end checkin button---------------*/
@@ -502,19 +502,6 @@ a:hover, a:focus {
 
 /*-------fin du signup-------*/
 
-.alert-danger{
-  background-color: $cellule-background-color;
-  color: $wild-color;
-  font-family: $font-family;
-  text-align: center;
-  font-size: 1.5em;
-  margin-left: 22.5%;
-  margin-right: 25.8%;
-  max-width: 60em;
-  margin-bottom: 1em;
-  margin-top: 1em;
-}
-
 /*---------début dash board-------*/
 
 .containerDashboardForm{
@@ -535,14 +522,13 @@ a:hover, a:focus {
   font-weight: 500;
 }
 .dashboardForm{
-  margin-left: 7%;
+  margin-left: 5%;
   padding-bottom: 2em;
 }
 
 .dashboardTable{
   max-width: 100%;
   margin-top: 2em;
-  margin-left: 2em;
   margin-bottom: 2em;
   text-align: center;
   color: $title-color;
@@ -572,7 +558,8 @@ a:hover, a:focus {
   padding-left: 2em;
   padding-right: 2em;
   border-radius: 4%;
-  color:$title-color
+  color:$title-color;
+  margin-right: 5em;
 }
 
 .btnDashboardShow:hover{
@@ -599,12 +586,11 @@ a:hover, a:focus {
 .btnDashboardNew{
   background-color: $wild-color;
   padding: 0.6em;
-  border-radius: 4%;
   padding-left: 0.9em;
   padding-right: 0.9em;
   color: $title-color;
-  margin-left: 2em;
   margin-bottom: 2em;
+  border-color: transparent;
 }
 
 .btnDashboardNew:hover{
