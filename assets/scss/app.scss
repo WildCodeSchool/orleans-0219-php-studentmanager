@@ -460,42 +460,29 @@ a:hover, a:focus {
 }
 
 /*btn animation*/
-//body {
-//  align-items: center;
-//  display: flex;
-//  font-family: sans-serif;
-//  font-weight: 600;
-//  font-size: 26px;
-//  height: 100vh;
-//  justify-content: center;
-//  margin: 0;
-//}
-
-.btn-animation {
-}
-
-.btn-container {
+.container {
   margin-top: -15%;
   margin-left: 70%;
   justify-content: center;
   align-items: center;
   background: $wild-color;
-  border-radius: 100%;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  height: 100px;
   position: relative;
   width: 100px;
   display: flex;
+  border: none;
+  border-radius: 100%;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  height: 100px;
 }
 
-.text {
+.text{
   text-align: center;
   color: white;
   position: absolute;
   transition: opacity 300ms;
   user-select: none;
   -moz-user-select: none;
-  top: 30px;
+  top: 35px;
 }
 
 .fingerprint {
@@ -576,31 +563,6 @@ a:hover, a:focus {
 .active .ok {
   opacity: 1;
   animation: 6s Ok forwards;
-}
-
-@keyframes Container {
-  0% {
-    width: 200px
-  }
-  6% {
-    width: 80px
-  }
-  71% {
-    transform: scale(1);
-  }
-  75% {
-    transform: scale(1.2);
-  }
-  77% {
-    transform: scale(1);
-  }
-
-  94% {
-    width: 80px
-  }
-  100% {
-    width: 200px
-  }
 }
 
 @keyframes Text {
@@ -705,6 +667,8 @@ a:hover, a:focus {
   color: $background-color;
   font-family: $font-family;
   max-width: 30%;
+  text-align: center;
+  justify-content: center;
 }
 
 /*-------fin du signup-------*/
