@@ -45,10 +45,9 @@ P, a, input, label, h1, td, tr {
 
   /*------------navbar_animation--------------*/
 
-  .nav-item {
-    position: relative;
-  }
-
+.nav-item {
+  position: relative;
+}
   .nav-item::before {
     content: '';
     position: absolute;
@@ -659,6 +658,19 @@ a:hover, a:focus {
 
 /*-------fin du signup-------*/
 
+.alert-danger{
+  background-color: $cellule-background-color;
+  color: $wild-color;
+  font-family: $font-family;
+  text-align: center;
+  font-size: 1.5em;
+  margin-left: 22.5%;
+  margin-right: 25.8%;
+  max-width: 60em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
 /*---------début dash board-------*/
 
 .containerDashboardForm {
@@ -678,9 +690,8 @@ a:hover, a:focus {
   color: $title-color;
   font-weight: 500;
 }
-
-.dashboardForm {
-  margin-left: 7%;
+.dashboardForm{
+  margin-left: 5%;
   padding-bottom: 2em;
 }
 

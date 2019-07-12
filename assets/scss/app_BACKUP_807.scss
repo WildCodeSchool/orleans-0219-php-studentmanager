@@ -43,29 +43,55 @@ P, a, input, label, h1, td, tr {
   margin-left: 60%;
 }
 
+<<<<<<< HEAD
+/*navbar_animation*/
+||||||| merged common ancestors
+  /*navbar_animation*/
+
+  .nav-item {
+    position: relative;
+  }
+=======
   /*------------navbar_animation--------------*/
 
   .nav-item {
     position: relative;
   }
+>>>>>>> e454765fffa35c2e1912780974bf6df665e6d3cb
 
+.nav-item {
+  position: relative;
+}
   .nav-item::before {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 1px;
+    height: 2px;
     background-color: $link-color;
     transform-origin: bottom right;
     transform: scaleX(0);
     transition: transform 0.5s ease;
   }
 
-  .nav-item:hover::before {
-    transform-origin: bottom left;
-    transform: scaleX(1);
-  }
+.nav-item::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: $link-color;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.nav-item:hover::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
 
 /*------- end NAVBAR-------*/
 
@@ -126,7 +152,7 @@ footer {
   padding-top: 1%;
 }
 
-.b-container {
+.btn-container {
   background-image: url('../images/you-x-ventures-1437336-unsplash.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -659,6 +685,19 @@ a:hover, a:focus {
 
 /*-------fin du signup-------*/
 
+.alert-danger{
+  background-color: $cellule-background-color;
+  color: $wild-color;
+  font-family: $font-family;
+  text-align: center;
+  font-size: 1.5em;
+  margin-left: 22.5%;
+  margin-right: 25.8%;
+  max-width: 60em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
 /*---------début dash board-------*/
 
 .containerDashboardForm {
@@ -779,7 +818,7 @@ a:hover, a:focus {
 
 .alert-success {
   background-color: $cellule-background-color;
-  color: $succes-message;
+  color: $success-message;
   font-family: $font-family;
   text-align: center;
   font-size: 1.5em;
