@@ -43,7 +43,7 @@ P, a, input, label, h1, td, tr {
   margin-left: 60%;
 }
 
-  /*navbar_animation*/
+  /*------------navbar_animation--------------*/
 
   .nav-item {
     position: relative;
@@ -55,7 +55,7 @@ P, a, input, label, h1, td, tr {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 2px;
+    height: 1px;
     background-color: $link-color;
     transform-origin: bottom right;
     transform: scaleX(0);
@@ -136,8 +136,8 @@ footer {
 }
 
 .form-control {
-  border: 1px solid $heart-color;
-  box-shadow: $heart-color;
+  border: 1px solid $title-color;
+  box-shadow: $title-color;
 }
 
 .form-inline .form-control {
@@ -145,11 +145,13 @@ footer {
 }
 
 .container-modification {
-  background-image: url('../images/testLum72.jpg');
+  background-image: url('../images/you-x-ventures-1437336-unsplash.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 1%;
+  max-width: 100%;
+  background-attachment: fixed;
+  //backdrop-filter: contrast(50%);
 }
 
 .container-opacity {
@@ -200,27 +202,58 @@ footer {
   padding-right: 44%;
 }
 
-.tr-mes-informations {
-  background-color: $wild-text-color;
-  border-radius: 50%;
-  padding: 1.6rem;
-  font-size: 1.25em;
-  text-align: center;
-  background: $cellule-background-color;
-}
-
-.th-mes-informations {
-  border: solid 1px $background-color;
-  border-radius: 5%;
-}
-
-
 /*-------modification -------*/
 
 .h1-modification {
-  padding-bottom: 5%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+  font-size: 4em;
+  font-family: $font-family;
+  color: $wild-color;
+  font-weight: 500;
 }
 
+.modificationsForm{
+  max-width: 60em;
+  margin-top: 2em;
+  margin-left: 25em;
+  margin-bottom: 2em;
+  text-align: center;
+  color: $title-color;
+  background-color: rgba($background-color, 0.5);
+  padding-left: 4em;
+  padding-right: 4em;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  border-radius: 8px;
+}
+
+.btn-modification{
+  background-color: $wild-color;
+  color: $background-color;
+  font-family: $font-family;
+  font-size: 1.5em;
+  padding: 0.5em;
+  margin-top: 1em;
+  margin-left: 2em;
+  border-radius: 8px;
+  border-color: transparent;
+  max-width: 50%;
+}
+
+.btn-modification:hover{
+  background-color: $background-color;
+  color: $wild-color;
+  font-family: $font-family;
+  font-size: 1.5em;
+  padding: 0.5em;
+  margin-top: 1em;
+  margin-left: 2em;
+  border-radius: 8px;
+  border-color: transparent;
+  max-width: 50%;
+}
 /*------- end modification -------*/
 
 
@@ -259,6 +292,15 @@ footer {
   padding-bottom: 2em;
   padding-top: 2em;
   border-radius: 8px;
+}
+
+.HourCheckinDate{
+  text-decoration: underline;
+}
+
+.strongHourCheckinDate{
+  font-size: 1.5em;
+  color: $heart-color;
 }
 
 .a-checkin {
@@ -330,7 +372,7 @@ a:hover, a:focus {
   padding-bottom: 1em;
   letter-spacing: 0.35em;
   padding-top: 0;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 500;
   text-transform: uppercase;
   color: $title-color;
@@ -347,7 +389,7 @@ a:hover, a:focus {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 500;
   color: $secondary-color;
   font-family: $font-family;
@@ -407,11 +449,16 @@ a:hover, a:focus {
   color: $background-color;
   font-family: $font-family;
   font-size: 1.5em;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   padding-left: 3em;
   padding-right: 3em;
   margin-top: 2em;
+}
+
+.btn-checkin:hover{
+  background-color: $background-color;
+  color: $wild-color;
 }
 
 .disabled {
@@ -429,10 +476,9 @@ a:hover, a:focus {
 
   background-color: rgba($border-color, 0);
   color: $title-color;
-  margin-top: 5%;
+  margin-top: 1em;
   border: none;
   font-size: 1.1em;
-  margin-bottom: 0em;
 }
 
 /*----------end checkin button---------------*/
@@ -449,8 +495,222 @@ a:hover, a:focus {
   background-color: $wild-color;
   color: $background-color;
   font-family: $font-family;
+  max-width: 30%;
 }
 
 /*-------fin du signup-------*/
 
+/*---------début dash board-------*/
 
+.containerDashboardForm{
+  background-image: url('../images/wild-code-school-la-loupe-116.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: contrast(50%);
+}
+
+.dashboardTitle{
+  text-align: center;
+  font-family: $font-family;
+  font-size: 4em;
+  padding-top: 1em;
+  margin-bottom: 1em;
+  color: $title-color;
+  font-weight: 500;
+}
+.dashboardForm{
+  margin-left: 5%;
+  padding-bottom: 2em;
+}
+
+.dashboardTable{
+  max-width: 100%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+  color: $title-color;
+  background-color: rgba($background-color,0.5);
+  padding-left: 4em;
+  padding-right: 4em;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  border-radius: 8px;
+  border: none;
+  font-size: 1em;
+  font-family: $font-family;
+}
+
+.dashboardLine thead th{
+  border: none;
+}
+
+.table thead th{
+  border-top: none;
+}
+
+.btnDashboardShow{
+  background-color: $wild-color;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 4%;
+  color:$title-color;
+  margin-right: 5em;
+}
+
+.btnDashboardShow:hover{
+  color: $title-color;
+  background-color: $background-color;
+  text-decoration: none;
+}
+
+.btnDashboardEdit{
+  background-color: $wild-color;
+  padding: 0.6em;
+  border-radius: 4%;
+  padding-left: 0.9em;
+  padding-right: 0.9em;
+  color: $title-color;
+}
+
+.btnDashboardEdit:hover{
+  color: $title-color;
+  background-color: $background-color;
+  text-decoration: none;
+}
+
+.btnDashboardNew{
+  background-color: $wild-color;
+  padding: 0.6em;
+  padding-left: 0.9em;
+  padding-right: 0.9em;
+  color: $title-color;
+  margin-bottom: 2em;
+  border-color: transparent;
+}
+
+.btnDashboardNew:hover{
+  color: $title-color;
+  background-color: $background-color;
+  text-decoration: none;
+}
+
+.btnDashBoardDelete{
+  background-color: $background-color;
+  padding: 0.6em;
+  border-radius: 4%;
+  padding-left: 0.9em;
+  padding-right: 0.9em;
+  color: $title-color;
+  margin-left: 3em;
+}
+
+.btnDashBoardDelete:hover{
+  color: $title-color;
+  background-color: $wild-color;
+  text-decoration: none;
+}
+
+/*---------fin dash board---------*/
+
+/*----------début message flash------*/
+
+.alert-success{
+  background-color: $cellule-background-color;
+  color: $success-message;
+  font-family: $font-family;
+  text-align: center;
+  font-size: 1.5em;
+  margin-left: 22.5%;
+  margin-right: 25.8%;
+  max-width: 60em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.alert-danger {
+  background-color: $cellule-background-color;
+  color: $wild-color;
+  font-family: $font-family;
+  text-align: center;
+  font-size: 1.5em;
+  margin-left: 22.5%;
+  margin-right: 25.8%;
+  max-width: 60em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+/*--------------fin message flash------------*/
+
+/*------------student show ---------------*/
+
+.containerStudentShow{
+  background-image: url('../images/wild-code-school-la-loupe-116.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.titleStudentShow{
+  text-align: center;
+  font-family: $font-family;
+  font-size: 4em;
+  padding-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: $title-color;
+  font-weight: 500;
+}
+
+.studentShowTable {
+  max-width: 70%;
+  margin-top: 2em;
+  margin-left: 12em;
+  margin-bottom: 2em;
+  color: $title-color;
+  background-color: rgba($background-color, 0.5);
+  padding: 2em;
+  border-radius: 8px;
+  border: transparent;
+  font-size: 1.5em;
+  font-family: $font-family;
+}
+
+.btnStudentShow {
+  background-color: $wild-color;
+  color: $background-color;
+  font-family: $font-family;
+  font-size: 1.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-top: 2em;
+  border: transparent;
+  margin-left: 35em;
+  border-radius: 5px;
+}
+
+.btnStudentShow2 {
+  background-color: $wild-color;
+  color: $background-color;
+  font-family: $font-family;
+  font-size: 1.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-top: 2em;
+  border: transparent;
+  margin-left: 30em;
+  margin-bottom: 2em;
+  border-radius: 5px;
+}
+
+.btnStudentShow:hover, .btnStudentShow2:hover{
+  color: $wild-color;
+  background-color: $background-color;
+  text-decoration: none;
+}

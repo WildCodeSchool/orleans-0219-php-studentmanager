@@ -21,10 +21,11 @@
                                 <input type="submit" class="btn btn-checkin btn-lg center-block" name="submit"
                                        value="Signale ta présence !">
                                 {{ form_end(form) }}
-                                <div class=" message alert alert-success" role="alert">
-                                    <p>Les horaires pour signaler ta présence sont :</p>
-                                    <p><strong>7h-12h</strong> le matin et <strong>12h-14h</strong> pour l'après-midi</p>
-                                    <p class="mb-0">Au delà de <strong>09h05 et 14h05</strong> tu seras considéré comme étant en retard</p>
+                                <div class=" message alert alert-horaire" role="alert">
+                                    <p class="HourCheckinDate">Les horaires pour signaler ta présence sont :</p>
+                                    <p><strong class="strongHourCheckinDate">7h-10h</strong> le matin et <strong class="strongHourCheckinDate">12h-15h</strong> pour l'après-midi</p>
+                                    <p class="mb-0">Au delà de <strong class="strongHourCheckinDate">09h05 et 14h05</strong> tu seras considéré comme étant <strong class="strongHourCheckinDate">en retard</strong></p>
+                                    <p class="mb-0">Et au delà de <strong class="strongHourCheckinDate">10h et 15h</strong>, tu seras considéré comme étant <strong class="strongHourCheckinDate">absent</strong></p>
                                 </div>
                             </div>
                         </div>
