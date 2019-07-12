@@ -294,6 +294,15 @@ footer {
   border-radius: 8px;
 }
 
+.HourCheckinDate{
+  text-decoration: underline;
+}
+
+.strongHourCheckinDate{
+  font-size: 1.5em;
+  color: $heart-color;
+}
+
 .a-checkin {
   color: $primary-color;
 }
@@ -363,7 +372,7 @@ a:hover, a:focus {
   padding-bottom: 1em;
   letter-spacing: 0.35em;
   padding-top: 0;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 500;
   text-transform: uppercase;
   color: $title-color;
@@ -380,7 +389,7 @@ a:hover, a:focus {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 500;
   color: $secondary-color;
   font-family: $font-family;
@@ -440,11 +449,16 @@ a:hover, a:focus {
   color: $background-color;
   font-family: $font-family;
   font-size: 1.5em;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   padding-left: 3em;
   padding-right: 3em;
   margin-top: 2em;
+}
+
+.btn-checkin:hover{
+  background-color: $background-color;
+  color: $wild-color;
 }
 
 .disabled {
@@ -462,10 +476,9 @@ a:hover, a:focus {
 
   background-color: rgba($border-color, 0);
   color: $title-color;
-  margin-top: 5%;
+  margin-top: 1em;
   border: none;
   font-size: 1.1em;
-  margin-bottom: 0;
 }
 
 /*----------end checkin button---------------*/
