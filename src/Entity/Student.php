@@ -107,9 +107,9 @@ class Student
     private $lastname;
 
     /**
-     * @ORM\Column(type="string", length=13, options={"fixed" = true})
+     * @ORM\Column(type="string", length=15, options={"fixed" = true})
      * @Assert\NotBlank(message="Ce champ ne doit pas etre vide")
-     * @Assert\Length(min=13,max=13,
+     * @Assert\Length(min=15,max=15,
      * exactMessage = "Ce champs doit contenir {{ limit }} caractères.")
      */
     private $socialSecurityNumber;
