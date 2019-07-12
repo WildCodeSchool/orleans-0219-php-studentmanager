@@ -43,7 +43,7 @@ P, a, input, label, h1, td, tr {
   margin-left: 60%;
 }
 
-  /*navbar_animation*/
+  /*------------navbar_animation--------------*/
 
   .nav-item {
     position: relative;
@@ -201,21 +201,6 @@ footer {
   padding-left: 50%;
   padding-right: 44%;
 }
-
-.tr-mes-informations {
-  background-color: $wild-text-color;
-  border-radius: 50%;
-  padding: 1.6rem;
-  font-size: 1.25em;
-  text-align: center;
-  background: $cellule-background-color;
-}
-
-.th-mes-informations {
-  border: solid 1px $background-color;
-  border-radius: 5%;
-}
-
 
 /*-------modification -------*/
 
@@ -621,7 +606,7 @@ a:hover, a:focus {
 
 .alert-success{
   background-color: $cellule-background-color;
-  color: $succes-message;
+  color: $success-message;
   font-family: $font-family;
   text-align: center;
   font-size: 1.5em;
@@ -646,3 +631,73 @@ a:hover, a:focus {
 }
 
 /*--------------fin message flash------------*/
+
+/*------------student show ---------------*/
+
+.containerStudentShow{
+  background-image: url('../images/wild-code-school-la-loupe-116.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.titleStudentShow{
+  text-align: center;
+  font-family: $font-family;
+  font-size: 4em;
+  padding-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: $title-color;
+  font-weight: 500;
+}
+
+.studentShowTable {
+  max-width: 70%;
+  margin-top: 2em;
+  margin-left: 12em;
+  margin-bottom: 2em;
+  color: $title-color;
+  background-color: rgba($background-color, 0.5);
+  padding: 2em;
+  border-radius: 8px;
+  border: transparent;
+  font-size: 1.5em;
+  font-family: $font-family;
+}
+
+.btnStudentShow {
+  background-color: $wild-color;
+  color: $background-color;
+  font-family: $font-family;
+  font-size: 1.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-top: 2em;
+  border: transparent;
+  margin-left: 35em;
+  border-radius: 5px;
+}
+
+.btnStudentShow2 {
+  background-color: $wild-color;
+  color: $background-color;
+  font-family: $font-family;
+  font-size: 1.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-top: 2em;
+  border: transparent;
+  margin-left: 30em;
+  margin-bottom: 2em;
+  border-radius: 5px;
+}
+
+.btnStudentShow:hover, .btnStudentShow2:hover{
+  color: $wild-color;
+  background-color: $background-color;
+  text-decoration: none;
+}
