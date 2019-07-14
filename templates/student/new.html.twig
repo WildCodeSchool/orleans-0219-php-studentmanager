@@ -3,12 +3,14 @@
 {% block title %}New Student{% endblock %}
 
 {% block body %}
-    <div class="b-container">
-        <div class="container-opacity container">
-            <div class="edit-form container">
-                <h1 class="h1-edit">Crée ton profil</h1>
-                {{ include('student/_form.html.twig') }}
+    <body class="body-new">
+        <div class="b-container">
+            <div class="container-opacity container">
+                <div class="edit-form container">
+                    <h1 class="h1-edit"><strong>Crée ton profil</strong></h1>
+                    {{ include('student/_form.html.twig') }}
+                </div>
             </div>
         </div>
-    </div>
+    </body>
 {% endblock %}

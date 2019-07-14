@@ -11,8 +11,7 @@ P, a, input, label, h1, td, tr {
 
 /*-------NAVBAR-------*/
 .navbar {
-  display: flex;
-  background-color: $background-color;
+  background-color: rgba($background-color, 0.8);
   border: solid 0.1px $border-color;
 }
 
@@ -43,29 +42,29 @@ P, a, input, label, h1, td, tr {
   margin-left: 60%;
 }
 
-  /*------------navbar_animation--------------*/
+/*------------navbar_animation--------------*/
 
-  .nav-item {
-    position: relative;
-  }
+.nav-item {
+  position: relative;
+}
 
-  .nav-item::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: $link-color;
-    transform-origin: bottom right;
-    transform: scaleX(0);
-    transition: transform 0.5s ease;
-  }
+.nav-item::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: $link-color;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
 
-  .nav-item:hover::before {
-    transform-origin: bottom left;
-    transform: scaleX(1);
-  }
+.nav-item:hover::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
 
 /*------- end NAVBAR-------*/
 
@@ -126,62 +125,56 @@ footer {
   padding-top: 1%;
 }
 
-.b-container {
+.body-new {
   background-image: url('../images/you-x-ventures-1437336-unsplash.jpg');
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.b-container {
   padding-top: 1%;
   font-size: 20px;
   padding-bottom: 5%;
+  color: $title-color;
 }
 
 .form-control {
-  border: 1px solid rgba($title-color, 0.2);
+  border: 1px solid rgba($title-color, 0.5);
 }
 
 .form-inline .form-control {
   margin-right: 0.5%;
 }
 
-.container-modification {
+.body-edit {
   background-image: url('../images/you-x-ventures-1437336-unsplash.jpg');
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.container-modification {
   max-width: 100%;
-  background-attachment: fixed;
-  //backdrop-filter: contrast(50%);
+  max-height: 100%;
 }
 
 .container-opacity {
   margin-top: 5%;
   margin-bottom: 5%;
   background-color: $background-color;
-  opacity: 0.9;
+  opacity: 0.7;
   border-radius: 1%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 5%;
 }
 
 .h1-edit {
   text-align: center;
   padding-bottom: 5%;
   padding-top: 1%;
-  font-size: 45px;
+  font-size: 2.5em;
+  color: $title-color;
 }
 
 /*-------end edit-form -------*/
-
-
-.h1-mes-informations {
-  text-align: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
 .td-mes-informations {
   border: solid 1px $background-color;
   border-radius: 5%;
@@ -208,13 +201,12 @@ footer {
   padding-top: 1em;
   padding-bottom: 1em;
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   font-family: $font-family;
-  color: $wild-color;
-  font-weight: 500;
+  color: $title-color;
 }
 
-.modificationsForm{
+.modificationsForm {
   max-width: 60em;
   margin-top: 2em;
   margin-left: 25em;
@@ -222,27 +214,23 @@ footer {
   text-align: center;
   color: $title-color;
   background-color: rgba($background-color, 0.5);
-  padding-left: 4em;
-  padding-right: 4em;
-  padding-bottom: 2em;
-  padding-top: 2em;
+  padding: 2em 4em;
   border-radius: 8px;
 }
 
-.btn-modification{
+.btn-modification {
   background-color: $wild-color;
   color: $background-color;
   font-family: $font-family;
   font-size: 1.5em;
   padding: 0.5em;
   margin-top: 1em;
-  margin-left: 2em;
   border-radius: 8px;
   border-color: transparent;
   max-width: 50%;
 }
 
-.btn-modification:hover{
+.btn-modification:hover {
   background-color: $background-color;
   color: $wild-color;
   font-family: $font-family;
@@ -254,6 +242,7 @@ footer {
   border-color: transparent;
   max-width: 50%;
 }
+
 /*------- end modification -------*/
 
 
@@ -287,18 +276,15 @@ footer {
   text-align: center;
   color: $primary-color;
   background-color: rgba($background-color, 0.5);
-  padding-left: 4em;
-  padding-right: 4em;
-  padding-bottom: 2em;
-  padding-top: 2em;
+  padding: 2em 4em;
   border-radius: 8px;
 }
 
-.HourCheckinDate{
+.HourCheckinDate {
   text-decoration: underline;
 }
 
-.strongHourCheckinDate{
+.strongHourCheckinDate {
   font-size: 1.5em;
   color: $heart-color;
 }
@@ -442,7 +428,7 @@ a:hover, a:focus {
 }
 
 /*btn animation*/
-.container {
+.btn-container {
   margin-top: -15%;
   margin-left: 70%;
   justify-content: center;
@@ -453,11 +439,11 @@ a:hover, a:focus {
   display: flex;
   border: none;
   border-radius: 100%;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   height: 100px;
 }
 
-.text{
+.text {
   text-align: center;
   color: white;
   position: absolute;
@@ -488,7 +474,7 @@ a:hover, a:focus {
 }
 
 .odd {
-  stroke-dasharray: 0px 50px;
+  stroke-dasharray: 0 50px;
   stroke-dashoffset: 1px;
   transition: stroke-dasharray 1ms;
 }
@@ -504,47 +490,47 @@ a:hover, a:focus {
 }
 
 .active.container {
-  animation: 6s Container;
+  animation: 3s Container;
 }
 
 .active .text {
   opacity: 0;
-  animation: 6s Text forwards;
+  animation: 3s Text forwards;
 }
 
 .active .fingerprint {
   opacity: 1;
-  transition: opacity 300ms 200ms;
+  transition: opacity 150ms 100ms;
 }
 
 .active .fingerprint-base .odd {
   stroke-dasharray: 50px 50px;
-  transition: stroke-dasharray 800ms 100ms;
+  transition: stroke-dasharray 400ms 50ms;
 }
 
 .active .fingerprint-base .even {
-  stroke-dashoffset: 0px;
-  transition: stroke-dashoffset 800ms;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 400ms;
 }
 
 .active .fingerprint-active .odd {
   stroke-dasharray: 50px 50px;
-  transition: stroke-dasharray 2000ms 1500ms;
+  transition: stroke-dasharray 1000ms 750ms;
 }
 
 .active .fingerprint-active .even {
-  stroke-dashoffset: 0px;
-  transition: stroke-dashoffset 2000ms 1300ms;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1000ms 650ms;
 }
 
 .active .fingerprint-out {
   opacity: 0;
-  transition: opacity 300ms 4100ms;
+  transition: opacity 150ms 2050ms;
 }
 
 .active .ok {
   opacity: 1;
-  animation: 6s Ok forwards;
+  animation: 3s Ok forwards;
 }
 
 @keyframes Text {
@@ -606,14 +592,11 @@ a:hover, a:focus {
   color: $background-color;
   font-family: $font-family;
   font-size: 1.5em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding: 0.5em 3em;
   margin-top: 2em;
 }
 
-.btn-checkin:hover{
+.btn-checkin:hover {
   background-color: $background-color;
   color: $wild-color;
 }
@@ -630,7 +613,6 @@ a:hover, a:focus {
 }
 
 .message {
-
   background-color: rgba($border-color, 0);
   color: $title-color;
   margin-top: 1em;
@@ -659,7 +641,7 @@ a:hover, a:focus {
 
 /*-------fin du signup-------*/
 
-/*---------début dash board-------*/
+/*---------dash board-------*/
 
 .containerDashboardForm {
   background-image: url('../images/wild-code-school-la-loupe-116.jpg');
@@ -691,10 +673,7 @@ a:hover, a:focus {
   text-align: center;
   color: $title-color;
   background-color: rgba($background-color, 0.5);
-  padding-left: 4em;
-  padding-right: 4em;
-  padding-bottom: 2em;
-  padding-top: 2em;
+  padding: 2em 4em;
   border-radius: 8px;
   border: none;
   font-size: 1em;
@@ -711,12 +690,9 @@ a:hover, a:focus {
 
 .btnDashboardShow {
   background-color: $wild-color;
-  padding-top: 0.6em;
-  padding-bottom: 0.6em;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding: 0.6em 2em;
   border-radius: 4%;
-  color:$title-color;
+  color: $title-color;
   margin-right: 5em;
 }
 
@@ -728,10 +704,8 @@ a:hover, a:focus {
 
 .btnDashboardEdit {
   background-color: $wild-color;
-  padding: 0.6em;
   border-radius: 4%;
-  padding-left: 0.9em;
-  padding-right: 0.9em;
+  padding: 0.6em 0.9em;
   color: $title-color;
 }
 
@@ -743,9 +717,7 @@ a:hover, a:focus {
 
 .btnDashboardNew {
   background-color: $wild-color;
-  padding: 0.6em;
-  padding-left: 0.9em;
-  padding-right: 0.9em;
+  padding: 0.6em 0.9em;
   color: $title-color;
   margin-bottom: 2em;
   border-color: transparent;
@@ -759,10 +731,8 @@ a:hover, a:focus {
 
 .btnDashBoardDelete {
   background-color: $background-color;
-  padding: 0.6em;
   border-radius: 4%;
-  padding-left: 0.9em;
-  padding-right: 0.9em;
+  padding: 0.6em 0.9em;
   color: $title-color;
   margin-left: 3em;
 }
@@ -783,11 +753,8 @@ a:hover, a:focus {
   font-family: $font-family;
   text-align: center;
   font-size: 1.5em;
-  margin-left: 22.5%;
-  margin-right: 25.8%;
   max-width: 60em;
-  margin-bottom: 1em;
-  margin-top: 1em;
+  margin: 1em 25.8% 1em 22.5%;
 }
 
 .alert-danger {
@@ -796,25 +763,22 @@ a:hover, a:focus {
   font-family: $font-family;
   text-align: center;
   font-size: 1.5em;
-  margin-left: 22.5%;
-  margin-right: 25.8%;
   max-width: 60em;
-  margin-bottom: 1em;
-  margin-top: 1em;
+  margin: 1em 25.8% 1em 22.5%;
 }
 
 /*--------------fin message flash------------*/
 
 /*------------student show ---------------*/
 
-.containerStudentShow{
+.body-show{
   background-image: url('../images/wild-code-school-la-loupe-116.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.titleStudentShow{
+.titleStudentShow {
   text-align: center;
   font-family: $font-family;
   font-size: 4em;
@@ -843,10 +807,7 @@ a:hover, a:focus {
   color: $background-color;
   font-family: $font-family;
   font-size: 1.5em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding: 0.5em 2em;
   margin-top: 2em;
   border: transparent;
   margin-left: 35em;
@@ -858,10 +819,7 @@ a:hover, a:focus {
   color: $background-color;
   font-family: $font-family;
   font-size: 1.5em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding: 0.5em 2em;
   margin-top: 2em;
   border: transparent;
   margin-left: 30em;
@@ -869,8 +827,40 @@ a:hover, a:focus {
   border-radius: 5px;
 }
 
-.btnStudentShow:hover, .btnStudentShow2:hover{
+.btnStudentShow:hover, .btnStudentShow2:hover {
   color: $wild-color;
   background-color: $background-color;
   text-decoration: none;
+}
+
+/*forgotten password*/
+.body-forgotten{
+  background-image: url("../images/wild-code-school-la-loupe-116.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.forgotten{
+  margin: 25%;
+  background-color: $background-color;
+  opacity: 0.7;
+  border-radius: 1%;
+  padding: 3%;
+}
+
+/*reset password*/
+.body-reset{
+  background-image: url("../images/wild-code-school-la-loupe-116.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.reset{
+  margin: 25%;
+  background-color: $background-color;
+  opacity: 0.7;
+  border-radius: 1%;
+  padding: 3%;
 }

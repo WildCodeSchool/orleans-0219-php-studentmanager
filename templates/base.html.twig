@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>{% block title %}Student Manager{% endblock %}</title>
-    {% block stylesheets %}
-        {{ encore_entry_link_tags('app') }}
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
     {% endblock %}
 </head>
 <body>
@@ -23,9 +22,9 @@
 {% endfor %}
 
 {% block body %}{% endblock %}
-{% block javascripts %}
-    {{ encore_entry_script_tags('app') }}
-{% endblock %}
 {% include ('footer.html.twig') %}
+{% block stylesheets %}
+    {{ encore_entry_link_tags('app') }}
+{% endblock %}
 </body>
 </html>
