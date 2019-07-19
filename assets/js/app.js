@@ -21,8 +21,13 @@ require('bootstrap');
 // require('bootstrap/js/dist/tooltip');
 // require('bootstrap/js/dist/popover');
 
-$(document).ready(function() {
+$(document).ready(function () {
     $('[data-toggle="popover"]').popover();
 });
 import './checkindate';
 // returns the final, public path to this file
+
+const container = document.querySelector('.container');
+container.addEventListener('animationend', () => {
+    container.classList.remove('active');
+});

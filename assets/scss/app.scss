@@ -253,14 +253,12 @@ footer {
 
 /*------- end edit-------*/
 
-/* -------Base-------*/
-
+/*-----base-----*/
 .button {
   margin-top: 2em;
 }
 
 .containercheckindate {
-
   background-image: url('../images/wild-code-school-la-loupe-116.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -278,15 +276,6 @@ footer {
   background-color: rgba($background-color, 0.5);
   padding: 2em 4em;
   border-radius: 8px;
-}
-
-.HourCheckinDate {
-  text-decoration: underline;
-}
-
-.strongHourCheckinDate {
-  font-size: 1.5em;
-  color: $heart-color;
 }
 
 .a-checkin {
@@ -313,7 +302,6 @@ a:hover, a:focus {
 }
 
 /*------- end base -------*/
-
 /* -------Piece positions-------*/
 .top {
   border-bottom-right-radius: 0;
@@ -330,7 +318,6 @@ a:hover, a:focus {
 }
 
 /*-------end Piece positions-------*/
-
 /* -------Piece categories ------- */
 .day, .year {
   font-size: 2em;
@@ -354,12 +341,11 @@ a:hover, a:focus {
   text-transform: uppercase;
 }
 
-
 .date {
   padding-bottom: 1em;
   letter-spacing: 0.35em;
   padding-top: 0;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 500;
   text-transform: uppercase;
   color: $title-color;
@@ -368,15 +354,13 @@ a:hover, a:focus {
 }
 
 /*------- end piece categories -------*/
-
 /*-------hour-------*/
-
 .hour {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 4em;
+  font-size: 5em;
   font-weight: 500;
   color: $secondary-color;
   font-family: $font-family;
@@ -772,7 +756,7 @@ a:hover, a:focus {
 
 /*------------student show ---------------*/
 
-.body-show{
+.body-show {
   background-image: url('../images/wild-code-school-la-loupe-116.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -835,14 +819,14 @@ a:hover, a:focus {
 }
 
 /*forgotten password*/
-.body-forgotten{
+.body-forgotten {
   background-image: url("../images/wild-code-school-la-loupe-116.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.forgotten{
+.forgotten {
   margin: 25%;
   background-color: $background-color;
   opacity: 0.7;
@@ -851,14 +835,14 @@ a:hover, a:focus {
 }
 
 /*reset password*/
-.body-reset{
+.body-reset {
   background-image: url("../images/wild-code-school-la-loupe-116.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.reset{
+.reset {
   margin: 25%;
   background-color: $background-color;
   opacity: 0.7;
