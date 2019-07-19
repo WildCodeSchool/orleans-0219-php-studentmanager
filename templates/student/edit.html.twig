@@ -3,12 +3,10 @@
 {% block title %}Apporter vos modifications{% endblock %}
 
 {% block body %}
-
+    <body class="body-edit">
     <div class="container-modification container">
-        <div class="container">
-            <h1 class="h1-modification">Apportes tes modifications</h1>
-        </div>
         <div class="modificationsForm container">
+            <h1 class="h1-modification"><strong>Apportes tes modifications</strong></h1>
             {{ form_start(form) }}
             <a class="a-edit" href="{{ path('student_show',{'id': student.id}) }}"></a>
             {{ form_widget(form) }}
@@ -26,5 +24,6 @@
             {{ form_end(form) }}
         </div>
     </div>
+    </body>
 
 {% endblock %}
