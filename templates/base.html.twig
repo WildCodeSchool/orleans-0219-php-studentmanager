@@ -5,13 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Student Manager{% endblock %}</title>
-    {% block javascripts %}
-        {{ encore_entry_script_tags('app') }}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
     {% endblock %}
 </head>
 <body>
 {% include ('navbar.html.twig') %}
-
 {# read and display all flash messages #}
 {% for label, messages in app.flashes %}
     {% for message in messages %}
@@ -20,11 +19,10 @@
         </div>
     {% endfor %}
 {% endfor %}
-
 {% block body %}{% endblock %}
 {% include ('footer.html.twig') %}
-{% block stylesheets %}
-    {{ encore_entry_link_tags('app') }}
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
 {% endblock %}
 </body>
 </html>
