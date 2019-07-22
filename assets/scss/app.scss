@@ -16,6 +16,8 @@ P, a, input, label, h1, td, tr {
 }
 
 .navbutton {
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
   font-size: 1.2em;
 }
 
@@ -71,8 +73,8 @@ P, a, input, label, h1, td, tr {
 /*-------footer-------*/
 footer {
   color: $wild-text-color;
-  padding-top: 1em;
   box-sizing: inherit;
+  font-size: $size-footer;
   width: 100%;
   bottom: 0;
   left: 0;
@@ -101,8 +103,13 @@ footer {
 
 .footer{
   background-color: rgba($background-color, 0.8);
+  padding-top: 1em;
+}
+
+.footerText{
+  margin-bottom: 0;
   padding-bottom: 1.5em;
-  padding-top: 2em;
+  padding-top: 1em;
 }
 
 /*-------fin du footer-------*/
@@ -116,8 +123,6 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 1%;
-  margin-top: 6%;
-  margin-bottom: 6%;
 }
 
 /*-------end -fix - register -------*/
@@ -274,13 +279,13 @@ footer {
 
 .body-checkin {
   max-width: 60em;
-  margin-top: 2em;
+  margin-top: 1em;
   margin-left: 25em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   text-align: center;
   color: $primary-color;
   background-color: rgba($background-color, 0.5);
-  padding: 2em 4em;
+  padding: 1em 3em;
   border-radius: 8px;
 }
 
@@ -348,7 +353,7 @@ a:hover, a:focus {
 }
 
 .date {
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
   letter-spacing: 0.35em;
   padding-top: 0;
   font-size: 2em;
@@ -410,15 +415,20 @@ a:hover, a:focus {
 }
 
 .container-p {
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-top: 9%;
+  margin-bottom: 9%;
   background-color: $background-color;
   opacity: 0.8;
   border-radius: 1%;
   padding: 10%;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
-/*btn animation*/
+/*------- end login -------*/
+
+/*-------------btn animation-----------*/
+
 .btn-container {
   margin-top: -15%;
   margin-left: 70%;
@@ -445,7 +455,6 @@ a:hover, a:focus {
 }
 
 .fingerprint {
-  /* height: 80px; */
   justify-content: center;
   align-items: center;
   opacity: 0;
@@ -573,9 +582,7 @@ a:hover, a:focus {
   }
 }
 
-/*end animation*/
-
-/*------- end login -------*/
+/*-----------end animation------------*/
 
 /*----------checkin button---------------*/
 .btn-checkin {
@@ -584,7 +591,7 @@ a:hover, a:focus {
   font-family: $font-family;
   font-size: 1.5em;
   padding: 0.5em 3em;
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 .btn-checkin:hover {
@@ -630,7 +637,7 @@ a:hover, a:focus {
   justify-content: center;
 }
 
-/*-------fin du signup-------*/
+/*-------end signup-------*/
 
 /*---------dash board-------*/
 
@@ -652,8 +659,8 @@ a:hover, a:focus {
   font-weight: 500;
 }
 
-.dashboardForm {
-  margin-left: 7%;
+.dashboardFormStudent {
+  margin-left: 5.5em;
   padding-bottom: 2em;
 }
 
@@ -725,7 +732,7 @@ a:hover, a:focus {
   border-radius: 4%;
   padding: 0.6em 0.9em;
   color: $title-color;
-  margin-left: 3em;
+  margin-left: 1em;
 }
 
 .btnDashBoardDelete:hover {
@@ -734,9 +741,9 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
-/*---------fin dash board---------*/
+/*---------end dash board---------*/
 
-/*----------début message flash------*/
+/*----------flash message------*/
 
 .alert-success {
   background-color: $cellule-background-color;
@@ -751,14 +758,14 @@ a:hover, a:focus {
 .alert-danger {
   background-color: $cellule-background-color;
   color: $wild-color;
-  font-family: $font-family;
+  font-family: $wild-font;
   text-align: center;
   font-size: 1.5em;
   max-width: 60em;
   margin: 1em 25.8% 1em 22.5%;
 }
 
-/*--------------fin message flash------------*/
+/*--------------end flash message------------*/
 
 /*------------student show ---------------*/
 
@@ -788,7 +795,7 @@ a:hover, a:focus {
   background-color: rgba($background-color, 0.5);
   padding: 2em;
   border-radius: 8px;
-  border: transparent;
+  border-style: hidden;
   font-size: 1.5em;
   font-family: $font-family;
 }
@@ -824,7 +831,10 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
-/*forgotten password*/
+/*---------end student show-------------*/
+
+/*----------forgotten password------------*/
+
 .body-forgotten {
   background-image: url("../images/wild-code-school-la-loupe-116.jpg");
   background-attachment: fixed;
@@ -833,7 +843,7 @@ a:hover, a:focus {
 }
 
 .forgotten {
-  margin: 25%;
+  margin: 15em;
   background-color: $background-color;
   opacity: 0.7;
   border-radius: 1%;
