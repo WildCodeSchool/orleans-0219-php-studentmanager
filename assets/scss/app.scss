@@ -657,8 +657,8 @@ a:hover, a:focus {
   font-weight: 500;
 }
 
-.dashboardForm {
-  margin-left: 7%;
+.dashboardFormStudent {
+  margin-left: 5.5em;
   padding-bottom: 2em;
 }
 
@@ -730,7 +730,7 @@ a:hover, a:focus {
   border-radius: 4%;
   padding: 0.6em 0.9em;
   color: $title-color;
-  margin-left: 3em;
+  margin-left: 1em;
 }
 
 .btnDashBoardDelete:hover {
@@ -793,7 +793,7 @@ a:hover, a:focus {
   background-color: rgba($background-color, 0.5);
   padding: 2em;
   border-radius: 8px;
-  border: transparent;
+  border-style: hidden;
   font-size: 1.5em;
   font-family: $font-family;
 }
