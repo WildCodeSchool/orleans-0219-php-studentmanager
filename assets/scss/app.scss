@@ -13,11 +13,11 @@ P, a, input, label, h1, td, tr {
 .navbar {
   background-color: rgba($background-color, 0.8);
   border: solid 0.1px $border-color;
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
 }
 
 .navbutton {
-  padding-bottom: 1.5em;
-  padding-top: 1.5em;
   font-size: 1.2em;
 }
 
@@ -420,9 +420,7 @@ a:hover, a:focus {
   background-color: $background-color;
   opacity: 0.8;
   border-radius: 1%;
-  padding: 10%;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding: 2em 10%;
 }
 
 /*------- end login -------*/
@@ -635,6 +633,7 @@ a:hover, a:focus {
   max-width: 30%;
   text-align: center;
   justify-content: center;
+  font-size: 1.2rem;
 }
 
 /*-------end signup-------*/
