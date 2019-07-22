@@ -16,6 +16,8 @@ P, a, input, label, h1, td, tr {
 }
 
 .navbutton {
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
   font-size: 1.2em;
 }
 
@@ -71,8 +73,8 @@ P, a, input, label, h1, td, tr {
 /*-------footer-------*/
 footer {
   color: $wild-text-color;
-  padding-top: 1em;
   box-sizing: inherit;
+  font-size: $size-footer;
   width: 100%;
   bottom: 0;
   left: 0;
@@ -101,6 +103,12 @@ footer {
 
 .footer{
   background-color: rgba($background-color, 0.8);
+  padding-top: 2em;
+}
+
+.footerText{
+  margin-bottom: 0;
+  padding-bottom: 2em;
 }
 
 /*-------fin du footer-------*/
@@ -414,7 +422,10 @@ a:hover, a:focus {
   padding: 10%;
 }
 
-/*btn animation*/
+/*------- end login -------*/
+
+/*-------------btn animation-----------*/
+
 .btn-container {
   margin-top: -15%;
   margin-left: 70%;
@@ -441,7 +452,6 @@ a:hover, a:focus {
 }
 
 .fingerprint {
-  /* height: 80px; */
   justify-content: center;
   align-items: center;
   opacity: 0;
@@ -569,9 +579,7 @@ a:hover, a:focus {
   }
 }
 
-/*end animation*/
-
-/*------- end login -------*/
+/*-----------end animation------------*/
 
 /*----------checkin button---------------*/
 .btn-checkin {
@@ -626,7 +634,7 @@ a:hover, a:focus {
   justify-content: center;
 }
 
-/*-------fin du signup-------*/
+/*-------end signup-------*/
 
 /*---------dash board-------*/
 
@@ -730,9 +738,9 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
-/*---------fin dash board---------*/
+/*---------end dash board---------*/
 
-/*----------début message flash------*/
+/*----------begining flash message------*/
 
 .alert-success {
   background-color: $cellule-background-color;
@@ -754,7 +762,7 @@ a:hover, a:focus {
   margin: 1em 25.8% 1em 22.5%;
 }
 
-/*--------------fin message flash------------*/
+/*--------------end flash message------------*/
 
 /*------------student show ---------------*/
 
@@ -829,7 +837,7 @@ a:hover, a:focus {
 }
 
 .forgotten {
-  margin: 25%;
+  margin: 15em;
   background-color: $background-color;
   opacity: 0.7;
   border-radius: 1%;
