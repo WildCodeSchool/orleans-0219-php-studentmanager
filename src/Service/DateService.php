@@ -27,16 +27,16 @@ class DateService
 
     public function getMorningMaxDate(\DateTime $date): \DateTime
     {
-        return new \DateTime($date->format('Y-m-d 10:00:00'));
+        return new \DateTime($date->format('Y-m-d 12:00:00'));
     }
 
     public function getAfternoonMinDate(\DateTime $date): \DateTime
     {
-        return new \DateTime($date->format('Y-m-d 12:00:00'));
+        return $this->getMorningMaxDate($date);
     }
 
     public function getAfternoonMaxDate(\DateTime $date): \DateTime
     {
-        return new \DateTime($date->format('Y-m-d 15:00:00'));
+        return new \DateTime($date->format('Y-m-d 18:00:00'));
     }
 }
