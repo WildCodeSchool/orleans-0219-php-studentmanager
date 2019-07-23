@@ -84,8 +84,8 @@ class Student
     private $insuranceNumber;
 
     /**
-     * @ORM\Column(type="string", length=7,options={"fixed" = true}, nullable=true)
-     * @Assert\Length(min=7,max=7,
+     * @ORM\Column(type="string", length=8,options={"fixed" = true}, nullable=true)
+     * @Assert\Length(min=8,max=8,
      * exactMessage = "Ce champs doit contenir {{ limit }} caractères.")
      */
     private $poleEmploiId;
