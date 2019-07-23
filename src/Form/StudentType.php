@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Form;
 
 use App\Entity\Student;
@@ -36,14 +37,16 @@ class StudentType extends AbstractType
                 ['Region' => 'Region', 'Pole Emploi' => 'Pole Emploi', 'OPCA' => 'OPCA',
                     'Autofinancement' => 'Autofinancement', 'CPF' => 'CPF',
                     'CPF + Autofinancement' => 'CPF', 'Autre' => 'Autre']])
-            ->add('poleEmploiId', TextType::class, ['label' => 'Identifiant Pole Emploi']);
+            ->add('poleEmploiId', TextType::class, ['required' => false]);
     }
+
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
             'data_class' => Student::class,
         ]);
     }
+
     private function getYears()
     {
         $years = [];
