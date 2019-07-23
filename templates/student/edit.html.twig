@@ -12,7 +12,7 @@
             {{ form_widget(form) }}
             <div class="form-group">
                 {{ include('student/_form.html.twig', {'button_label': 'Sauvegarder'}) }}
-
+                {% if is_granted('ROLE_ADMIN') %}
                 <a href="{{ path('student_show', {'id': student.id}) }}">
                     <button type="button" class="btn-modification">Voir le profil individuel</button>
                 </a>
@@ -20,6 +20,7 @@
                 <a href="{{ path('student_index', {'id': student.id}) }}">
                     <button type="button" class="btn-modification">Revenir au tableau de bord</button>
                 </a>
+                {% endif %}
             </div>
             {{ form_end(form) }}
         </div>
