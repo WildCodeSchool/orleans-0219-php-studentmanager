@@ -13,12 +13,12 @@
                     <a class="navbutton nav-link" href="{{ path ('user_registration') }}">Créer son compte</a>
                 </li>
             {% endif %}
-            {% if is_granted('ROLE_USER') %}
+            {% if is_granted('ROLE_USER')and app.user.student %}
                 <li class="nav-item ml-auto">
                     <a class="navbutton nav-link" href="{{ path('student_show', {id: app.user.id}) }}">Profil</a>
                 </li>
             {% endif %}
-            {% if is_granted('ROLE_USER') %}
+            {% if is_granted('ROLE_USER') and not app.user.student %}
                 <li class="nav-item ml-auto">
                     <a class="navbutton nav-link" href="{{ path('student_new') }}">Crée ton profil</a>
                 </li>
