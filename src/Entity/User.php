@@ -228,6 +228,11 @@ class User implements UserInterface, \Serializable
     protected $resetToken;
 
     /**
+     * @ORM\OneToOne(targetEntity="App\Entity\Student", mappedBy="user", cascade={"persist", "remove"})
+     */
+    private $student;
+
+    /**
      * @return string
      */
     public function getResetToken(): string
@@ -241,5 +246,23 @@ class User implements UserInterface, \Serializable
     public function setResetToken(?string $resetToken): void
     {
         $this->resetToken = $resetToken;
+    }
+
+    public function getStudent(): ?Student
+    {
+        return $this->student;
+    }
+
+    public function setStudent(?Student $student): self
+    {
+        $this->student = $student;
+
+        // set (or unset) the owning side of the relation if necessary
+        $newUser = $student === null ? null : $this;
+        if ($newUser !== $student->getUser()) {
+            $student->setUser($newUser);
+        }
+
+        return $this;
     }
 }

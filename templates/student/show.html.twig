@@ -73,12 +73,16 @@
             </tbody>
         </table>
         <div>
-            <a href="{{ path('student_edit', {'id': student.id}) }}">
-                <button type="button" class="btnStudentShow">Modifier</button>
-                <a href="{{ path('student_index') }}">
-                    <button type="button" class="btnStudentShow2">Revenir au tableau de bord</button>
+            <div class="form-group">
+                <a href="{{ path('student_edit', {'id': student.id}) }}">
+                    <button type="button" class="btnStudentShow">Modifier</button>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <a href="{{ path('student_index') }}">
+                            <button type="button" class="btnStudentShow2">Revenir au tableau de bord</button>
+                        </a>
+                    {% endif %}
                 </a>
-            </a>
+            </div>
         </div>
     </div>
     </body>

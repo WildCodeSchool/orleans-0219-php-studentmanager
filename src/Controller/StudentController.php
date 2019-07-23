@@ -40,7 +40,7 @@ class StudentController extends AbstractController
             $entityManager->persist($student);
             $entityManager->flush();
 
-            return $this->redirectToRoute('student_index');
+            return $this->redirectToRoute('app_login');
         }
 
         return $this->render('student/new.html.twig', [
