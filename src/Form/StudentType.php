@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Form;
+
 use App\Entity\Student;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
@@ -7,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+
 class StudentType extends AbstractType
 {
     /**
@@ -34,14 +37,16 @@ class StudentType extends AbstractType
                 ['Region' => 'Region', 'Pole Emploi' => 'Pole Emploi', 'OPCA' => 'OPCA',
                     'Autofinancement' => 'Autofinancement', 'CPF' => 'CPF',
                     'CPF + Autofinancement' => 'CPF', 'Autre' => 'Autre']])
-            ->add('poleEmploiId', TextType::class, ['label' => 'Identifiant Pole Emploi']);
+            ->add('poleEmploiId', TextType::class, ['required' => false]);
     }
+
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
             'data_class' => Student::class,
         ]);
     }
+
     private function getYears()
     {
         $years = [];

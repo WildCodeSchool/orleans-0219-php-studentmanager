@@ -2,10 +2,10 @@ function DateTime() {
     function getDaySuffix(a) {
         var b = "" + a,
             c = b.length,
-            d = parseInt(b.substring(c-2, c-1)),
-            e = parseInt(b.substring(c-1));
+            d = parseInt(b.substring(c - 2, c - 1)),
+            e = parseInt(b.substring(c - 1));
         if (c == 2 && d == 1) return "";
-        switch(e) {
+        switch (e) {
             case 1:
                 return "";
                 break;
@@ -18,11 +18,12 @@ function DateTime() {
             default:
                 return "";
                 break;
-        };
+        }
+        ;
     };
 
-    this.getDoY = function(a) {
-        var b = new Date(a.getFullYear(),0,1);
+    this.getDoY = function (a) {
+        var b = new Date(a.getFullYear(), 0, 1);
         return Math.ceil((a - b) / 86400000);
     }
 
@@ -61,7 +62,7 @@ function DateTime() {
             mm: (this.date.getMonth() + 1) < 10 ? "0" + (this.date.getMonth() + 1) : this.date.getMonth() + 1,
             mmm: this.months[this.date.getMonth()].substring(0, 3),
             mmmm: this.months[this.date.getMonth()],
-            yy: (""+this.date.getFullYear()).substr(2, 2),
+            yy: ("" + this.date.getFullYear()).substr(2, 2),
             yyyy: this.date.getFullYear()
         }
     };
@@ -77,26 +78,25 @@ function DateTime() {
 };
 
 
-
 var dt = new DateTime();
 $('.day').text(dt.formats.pretty.a);
 $('.date').text(dt.formats.pretty.b);
 $('.month').text(dt.formats.pretty.c);
 $('.year').text(dt.formats.pretty.d);
 
-$(function(){
-    function horloge(){
+$(function () {
+    function horloge() {
         laDate = new Date();
         h = laDate.getHours();
-        if(h < 10){
+        if (h < 10) {
             h = '0' + h;
         }
         m = laDate.getMinutes();
-        if(m < 10){
+        if (m < 10) {
             m = '0' + m;
         }
         s = laDate.getSeconds();
-        if(s < 10){
+        if (s < 10) {
             s = '0' + s;
         }
         var time = h + ":" + m + ":" + s;

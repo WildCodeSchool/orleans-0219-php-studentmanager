@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>{% block title %}Student Manager{% endblock %}</title>
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
@@ -12,20 +11,18 @@
 </head>
 <body>
 {% include ('navbar.html.twig') %}
-
-{# read and display all flash messages #}
 {% for label, messages in app.flashes %}
     {% for message in messages %}
-        <div class="alert-{{ label }} alert container-fluid-">
+        <div class="alert-{{ label }} container-fluid-">
             {{ message }}
         </div>
     {% endfor %}
 {% endfor %}
-
 {% block body %}{% endblock %}
+{% include ('footer.html.twig') %}
 {% block javascripts %}
     {{ encore_entry_script_tags('app') }}
 {% endblock %}
-{% include ('footer.html.twig') %}
+
 </body>
 </html>
