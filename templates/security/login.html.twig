@@ -10,19 +10,19 @@
                     <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                 {% endif %}
                 <div class="container-p">
-                    <h1 class="h1-login h1 font-weight-bold">Hello wilder !</h1>
+                    <h1 class="h1-login h1 font-weight-bold">Salut wilder !</h1>
                     <h4 class="h4-login">par <a class="a-login" target="_blank"
                                                 href="https://odyssey.wildcodeschool.com/?locale=fr">wildcodeschool.com</a>
                     </h4>
                     <p class="p-login">L'avenir appartient au wilder qui pointe tôt <i class="far fa-smile"></i></p>
                     <div class="form-group">
-                        <label for="inputUsername" class="sr-only">Username</label>
+                        <label for="inputUsername" class="sr-only">Pseudo</label>
                         <input type="text" value="{{ last_username }}" name="username" id="inputUsername"
                                class="form-control"
                                placeholder="Username" required autofocus>
                     </div>
                     <div class="form-group">
-                        <label for="inputPassword" class="sr-only">Password</label>
+                        <label for="inputPassword" class="sr-only">Mot de passe</label>
                         <input type="password" name="password" id="inputPassword" class="form-control"
                                placeholder="Password"
                                required>
